@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  inexum::OSP::ArrayObject</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">inexum::OSP::ArrayObject</A></H2></H2><BLOCKQUOTE>Java object parser symbol encapsulates the object description of an array.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=125>
+<param name=classes value="MEntity,M,CObject,MObject.html,CClassObject,MClassObject.html,CArrayObject,MArrayObject.html">
+<param name=before value="M,M,M,M">
+<param name=after value="Md_SPSP,Md_SP,Md_,M">
+<param name=indent value="0,1,2,3">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.2.1">ArrayObject</A></B>()
+<DD><I>Default constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.2.2">ArrayObject</A></B>(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)
+<DD><I>Construct the array object wrapper with the specified name.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.2.3">ArrayObject</A></B>(const <!1><A HREF="Class.html">Class</A>&amp; aClass)
+<DD><I>Construct the array object wrapper with the reference to the.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Object.html">Object</A>* <B><A HREF="#DOC.1.1.2.4">clone</A></B>() const 
+<DD><I>Clones array object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.2.5">addElements</A></B>(int count)
+<DD><I>Add specified number of elements.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.1.1.2.6">getEndToken</A></B>() const 
+<DD><I>Return the end of array token.</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="ClassObject.html">ClassObject</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>isComplete</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>isLastMember</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>setClass</B>(<!1><A HREF="Class.html">Class</A>* pClass)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>int <B>membersCount</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>moveToMember</B>(int index)
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="Object.html">Object</A>&amp; <B>nextMember</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="Class.html">Class</A>&amp; <B>type</B>()
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>void* <B>instantiateObject</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>initializeObject</B>(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>) const 
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Object.html">Object</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   JavaObjectParser::State <B>getState</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void* <B>instantiate</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>initialize</B>(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Java object parser symbol encapsulates the object description of
+an array.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="ArrayObject"></A>
+<A NAME="DOC.1.1.2.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ArrayObject()</B></TT>
+<DD>Default constructor
+<DL><DT><DD></DL><P>
+<A NAME="ArrayObject"></A>
+<A NAME="DOC.1.1.2.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ArrayObject(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)</B></TT>
+<DD>Construct the array object wrapper with the specified name.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> <!1><A HREF="Member.html#DOC.1.1.12.7">name</A><BR><DD></DL><P>
+<A NAME="ArrayObject"></A>
+<A NAME="DOC.1.1.2.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ArrayObject(const <!1><A HREF="Class.html">Class</A>&amp; aClass)</B></TT>
+<DD>Construct the array object wrapper with the reference to the.
+array description.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>aClass</B> -  - the reference to the objects class <!1><A HREF="Member.html#DOC.1.1.12.5">description</A><BR><DD></DL><P>
+<A NAME="clone"></A>
+<A NAME="DOC.1.1.2.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Object.html">Object</A>* clone() const </B></TT>
+<DD>Clones array object.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the created  object.<BR><DD></DL><P>
+<A NAME="addElements"></A>
+<A NAME="DOC.1.1.2.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void addElements(int count)</B></TT>
+<DD>Add specified number of elements.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>count</B> -  - the number of elements.<BR><DD></DL><P>
+<A NAME="getEndToken"></A>
+<A NAME="DOC.1.1.2.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getEndToken() const </B></TT>
+<DD>Return the end of array token.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the array token end token.<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Friends:</B><DD>  util::DebugClass&lt;<!1><A HREF="ArrayObject.html">ArrayObject</A>&gt;<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>#define serialize_array</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>#define <A HREF="#DOC.DOCU">serialize_array</A></H2><H2>(java_type_name,  cpp_type,<BR>&nbsp; serial_version_uid)</H2><BLOCKQUOTE>Define the serializable array.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Define the serializable array. The Java builtin types are supported. The macro
+can be used for user specified classes that act as C++ builtin types.
+
+<P>Example (file java_lang.cpp):
+
+<P>. serialize_array("I", int, 0x4DBA602676EAB2A5);
+
+<P></BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>java_type_name</B> -  - a Java <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> as a string of the array elements.
+<BR><B>cpp_type</B> -  - the C++ <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> the array elements.
+<BR><B>serial_version_uid</B> -  - a serial <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.33">version</A> uid number as specified in <!1><A HREF="java.html">java</A> implementation of the class
+'private static final long <!1><A HREF="SerializableVoidPointerArray.html#DOC.1.1.22.5">serialVersionUID</A>' variable should be specified for
+any serializable class. More then one class can have the same serialVersionUID. 
+Java 2 SDK provides 'serialver' RMI tool that returns a class serialVersionUID.
+<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DT><B>See Also:</B><DD><!1><A HREF="SerializableArray.html">inexum::OSP::SerializableArray</A>
+<BR>inexum::OSP::StringLableCreator
+<BR><!1><A HREF="serialize.2.html">serialize</A>
+<BR><!1><A HREF="serialize_pointer_array.html">serialize_pointer_array</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

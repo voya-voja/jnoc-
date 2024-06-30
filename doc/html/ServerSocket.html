@@ -1,0 +1,475 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  DeclarationSpecifier java::net::ServerSocket</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  DeclarationSpecifier <A HREF="#DOC.DOCU">java::net::ServerSocket</A></H2></H2><BLOCKQUOTE>This class implements server sockets.</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.6.3.2.1">ServerSocket</A></B>() throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Creates an unbound server socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.6.3.2.2">ServerSocket</A></B>(int port) throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Creates a server socket, bound to the specified port.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.6.3.2.3">ServerSocket</A></B>(int port, int backlog) throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Creates a server socket and binds it to the specified local port  number, with the specified backlog.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.6.3.2.4">ServerSocket</A></B>(int port, int backlog, const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; bindAddr) throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Create a server with the specified port, listen backlog, and local IP address to bind to.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.2.5">bind</A></B>(const SocketAddress&amp; endpoint) throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Binds the ServerSocket to a specific address (IP address and port  number).</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.2.6">bind</A></B>(const SocketAddress&amp; endpoint, int backlog) throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Binds the ServerSocket to a specific address (IP address and port  number).</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; <B><A HREF="#DOC.6.3.2.7">getInetAddress</A></B>() const 
+<DD><I>Returns the local address of this server socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.6.3.2.8">getLocalPort</A></B>() const 
+<DD><I>Returns the port on which this socket is listening.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const SocketAddress&amp; <B><A HREF="#DOC.6.3.2.9">getLocalSocketAddress</A></B>() const 
+<DD><I>Returns the address of the endpoint this socket is bound to, or  null if it is not bound yet.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Socket.html">Socket</A>* <B><A HREF="#DOC.6.3.2.10">accept</A></B>() throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Listens for a connection to be made to this socket and accepts it.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.2.11">close</A></B>() throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Closes this socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const ServerSocketChannel&amp; <B><A HREF="#DOC.6.3.2.12">getChannel</A></B>() const 
+<DD><I>Returns the unique ServerSocketChannel object associated with this  socket, if any.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.2.13">isBound</A></B>() const 
+<DD><I>Returns the binding state of the ServerSocket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.2.14">isClosed</A></B>() const 
+<DD><I>Returns the closed state of the ServerSocket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.2.15">setSoTimeout</A></B>(int timeout) throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Enable/disable SO_TIMEOUT with the specified timeout, in milliseconds.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.6.3.2.16">getSoTimeout</A></B>() throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Retrive setting for SO_TIMEOUT.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.2.17">setReuseAddress</A></B>(boolean on) throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Enable/disable the SO_REUSEADDR socket option.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.2.18">getReuseAddress</A></B>() const  throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Tests if SO_REUSEADDR is enabled.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const std::string&amp; <B><A HREF="#DOC.6.3.2.19">toString</A></B>() const 
+<DD><I>Returns the implementation address and implementation port of this socket as a String.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   void <B><A HREF="#DOC.6.3.2.20">setSocketFactory</A></B>(SocketImplFactory&amp; fac) throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Sets the server socket implementation factory for the application.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.2.21">setReceiveBufferSize</A></B>(int size) throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Sets a default proposed value for the SO_RCVBUF option for sockets  accepted from this ServerSocket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.6.3.2.22">getReceiveBufferSize</A></B>() const  throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Gets the value of the SO_RCVBUF option for this ServerSocket, that is the proposed buffer size that will be used for Sockets accepted from this ServerSocket.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.2.23">implAccept</A></B>(<!1><A HREF="Socket.html">Socket</A>&amp; s) throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Subclasses of ServerSocket use this method to override accept() to  return their own subclass of socket.</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>This class implements server sockets. A server socket waits for 
+requests to come in over the network. It performs some operation 
+based on that request, and then possibly returns a result to the 
+requester. 
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="ServerSocket"></A>
+<A NAME="DOC.6.3.2.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ServerSocket() throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Creates an unbound server socket.
+Throws: 
+SocketException* - IO error when opening the socket.
+<DL><DT><DD></DL><P>
+<A NAME="ServerSocket"></A>
+<A NAME="DOC.6.3.2.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ServerSocket(int port) throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Creates a server socket, bound to the specified port. A port of 0 
+creates a socket on any free port. 
+The maximum queue length for incoming connection indications 
+(a request to connect) is set to 50. If a connection indication 
+arrives when the queue is full, the connection is refused. 
+If the application has specified a server socket factory, that 
+factory's createSocketImpl method is called to create the actual 
+socket implementation. Otherwise a "plain" socket is created. 
+If there is a security manager, its checkListen method is called 
+with the port argument as its argument to ensure the operation is 
+allowed. This could result in a SecurityException. 
+Parameters:
+port - the port number, or 0 to use any free port. 
+Throws: 
+SocketException* - if an I/O error occurs when opening the socket. 
+SecurityException - if a security manager exists and its checkListen 
+method doesn't allow the operation.
+See Also:
+SocketImpl, SocketImplFactory.createSocketImpl(), 
+setSocketFactory(java.net.SocketImplFactory), 
+SecurityManager.checkListen(int)
+<DL><DT><DD></DL><P>
+<A NAME="ServerSocket"></A>
+<A NAME="DOC.6.3.2.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ServerSocket(int port, int backlog) throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Creates a server socket and binds it to the specified local port 
+number, with the specified backlog. A port number of 0 creates a 
+socket on any free port.
+The maximum queue length for incoming connection indications 
+(a request to connect) is set to the backlog parameter. If a 
+connection indication arrives when the queue is full, the 
+connection is refused. 
+If the application has specified a server socket factory, that 
+factory's createSocketImpl method is called to create the actual 
+socket implementation. Otherwise a "plain" socket is created. 
+If there is a security manager, its checkListen method is called 
+with the port argument as its argument to ensure the operation is
+allowed. This could result in a SecurityException. 
+The backlog argument must be a positive value greater than 0. If 
+the value passed if equal or less than 0, then the default value 
+will be assumed. 
+Parameters:
+port - the specified port, or 0 to use any free port.
+backlog - the maximum length of the queue. 
+Throws: 
+SocketException* - if an I/O error occurs when opening the socket. 
+SecurityException - if a security manager exists and its checkListen 
+method doesn't allow the operation.
+See Also:
+SocketImpl, SocketImplFactory.createSocketImpl(), 
+setSocketFactory(java.net.SocketImplFactory), 
+SecurityManager.checkListen(int)
+<DL><DT><DD></DL><P>
+<A NAME="ServerSocket"></A>
+<A NAME="DOC.6.3.2.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ServerSocket(int port, int backlog, const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; bindAddr) throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Create a server with the specified port, listen backlog, and local
+IP address to bind to. The bindAddr argument can be used on a 
+multi-homed host for a ServerSocket that will only accept connect 
+requests to one of its addresses. If bindAddr is null, it will 
+default accepting connections on any/all local addresses. The port
+must be between 0 and 65535, inclusive. 
+If there is a security manager, this method calls its checkListen 
+method with the port argument as its argument to ensure the operation 
+is allowed. This could result in a SecurityException. 
+The backlog argument must be a positive value greater than 0. If the 
+value passed if equal or less than 0, then the default value will be 
+assumed. 
+Parameters:
+port - the local TCP port
+backlog - the listen backlog
+bindAddr - the local InetAddress the server will bind to 
+Throws: 
+SecurityException - if a security manager exists and its checkListen 
+method doesn't allow the operation. 
+SocketException* - if an I/O error occurs when opening the socket.
+See Also:
+SocketOptions, SocketImpl, SecurityManager.checkListen(int)
+<DL><DT><DD></DL><P>
+<A NAME="bind"></A>
+<A NAME="DOC.6.3.2.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void bind(const SocketAddress&amp; endpoint) throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Binds the ServerSocket to a specific address (IP address and port 
+number). 
+If the address is null, then the system will pick up an ephemeral 
+port and a valid local address to bind the socket. 
+Parameters:
+endpoint - The IP address &amp; port number to bind to. 
+Throws: 
+SocketException* - if the bind operation fails, or if the socket is 
+already bound. 
+SecurityException - if a SecurityManager is present and its 
+checkListen method doesn't allow the operation. 
+IllegalArgumentException - if endpoint is a SocketAddress subclass 
+not supported by this socket
+<DL><DT><DD></DL><P>
+<A NAME="bind"></A>
+<A NAME="DOC.6.3.2.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void bind(const SocketAddress&amp; endpoint, int backlog) throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Binds the ServerSocket to a specific address (IP address and port 
+number). 
+If the address is null, then the system will pick up an ephemeral 
+port and a valid local address to bind the socket. 
+The backlog argument must be a positive value greater than 0. If the
+value passed if equal or less than 0, then the default value will be
+assumed. 
+Parameters:
+endpoint - The IP address &amp; port number to bind to.
+backlog - The listen backlog length. 
+Throws: 
+SocketException* - if the bind operation fails, or if the socket is 
+already bound. 
+SecurityException - if a SecurityManager is present and its 
+checkListen method doesn't allow the operation. 
+IllegalArgumentException - if endpoint is a SocketAddress subclass 
+not supported by this socket
+<DL><DT><DD></DL><P>
+<A NAME="getInetAddress"></A>
+<A NAME="DOC.6.3.2.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; getInetAddress() const </B></TT>
+<DD>Returns the local address of this server socket.
+Returns:
+the address to which this socket is bound, or null if the socket is
+unbound.
+<DL><DT><DD></DL><P>
+<A NAME="getLocalPort"></A>
+<A NAME="DOC.6.3.2.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getLocalPort() const </B></TT>
+<DD>Returns the port on which this socket is listening.
+Returns:
+the port number to which this socket is listening or -1 if the 
+socket is not bound yet.
+<DL><DT><DD></DL><P>
+<A NAME="getLocalSocketAddress"></A>
+<A NAME="DOC.6.3.2.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const SocketAddress&amp; getLocalSocketAddress() const </B></TT>
+<DD>Returns the address of the endpoint this socket is bound to, or 
+null if it is not bound yet. 
+Returns:
+a SocketAddress representing the local endpoint of this socket, or
+null if it is not bound yet.
+See Also:
+getInetAddress(), getLocalPort(), bind(SocketAddress)
+<DL><DT><DD></DL><P>
+<A NAME="accept"></A>
+<A NAME="DOC.6.3.2.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Socket.html">Socket</A>* accept() throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Listens for a connection to be made to this socket and accepts it. 
+The method blocks until a connection is made. 
+A new Socket s is created and, if there is a security manager, the 
+security manager's checkAccept method is called with 
+s.getInetAddress().getHostAddress() and s.getPort() as its arguments
+to ensure the operation is allowed. This could result in a 
+SecurityException. 
+Returns:
+the new Socket 
+Throws: 
+SocketException* - if an I/O error occurs when waiting for a connection. 
+SecurityException - if a security manager exists and its checkListen
+method doesn't allow the operation. 
+SocketTimeoutException - if a timeout was previously set with
+setSoTimeout and the timeout has been reached. 
+IllegalBlockingModeException - if this socket has an associated
+channel, and the channel is in non-blocking mode.
+See Also:
+SecurityManager.checkAccept(java.lang.String, int)
+<DL><DT><DD></DL><P>
+<A NAME="close"></A>
+<A NAME="DOC.6.3.2.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void close() throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Closes this socket. Any thread currently blocked in accept() will 
+throw a SocketException. 
+If this socket has an associated channel then the channel is closed 
+as well. 
+Throws: 
+SocketException* - if an I/O error occurs when closing the socket.
+<DL><DT><DD></DL><P>
+<A NAME="getChannel"></A>
+<A NAME="DOC.6.3.2.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const ServerSocketChannel&amp; getChannel() const </B></TT>
+<DD>Returns the unique ServerSocketChannel object associated with this 
+socket, if any. 
+A server socket will have a channel if, and only if, the channel 
+itself was created via the ServerSocketChannel.open method. 
+Returns:
+the server-socket channel associated with this socket, or null if 
+this socket was not created for a channel
+<DL><DT><DD></DL><P>
+<A NAME="isBound"></A>
+<A NAME="DOC.6.3.2.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isBound() const </B></TT>
+<DD>Returns the binding state of the ServerSocket. 
+Returns:
+true if the ServerSocket succesfuly bound to an address
+<DL><DT><DD></DL><P>
+<A NAME="isClosed"></A>
+<A NAME="DOC.6.3.2.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isClosed() const </B></TT>
+<DD>Returns the closed state of the ServerSocket. 
+Returns:
+true if the socket has been closed
+<DL><DT><DD></DL><P>
+<A NAME="setSoTimeout"></A>
+<A NAME="DOC.6.3.2.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setSoTimeout(int timeout) throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Enable/disable SO_TIMEOUT with the specified timeout, in milliseconds. With this option set to a non-zero timeout, a call to accept() for this ServerSocket will block for only this amount of time. If the timeout expires, a java.net.SocketTimeoutException is raised, though the ServerSocket is still valid. The option must be enabled prior to entering the blocking operation to have effect. The timeout must be &gt; 0. A timeout of zero is interpreted as an infinite timeout. 
+Parameters:
+timeout - the specified timeout, in milliseconds 
+Throws: 
+SocketException - if there is an error in the underlying protocol, such as a TCP error.
+Since: 
+See Also:
+getSoTimeout()
+<DL><DT><DD></DL><P>
+<A NAME="getSoTimeout"></A>
+<A NAME="DOC.6.3.2.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getSoTimeout() throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Retrive setting for SO_TIMEOUT. 0 returns implies that the option is disabled (i.e., timeout of infinity). 
+Returns:
+the SO_TIMEOUT value 
+Throws: 
+SocketException* - if an I/O error occurs
+See Also:
+setSoTimeout(int)
+<DL><DT><DD></DL><P>
+<A NAME="setReuseAddress"></A>
+<A NAME="DOC.6.3.2.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setReuseAddress(boolean on) throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Enable/disable the SO_REUSEADDR socket option.
+When a TCP connection is closed the connection may remain in a 
+timeout state for a period of time after the connection is closed
+(typically known as the TIME_WAIT state or 2MSL wait state). For
+applications using a well known socket address or port it may not be
+possible to bind a socket to the required SocketAddress if there is
+a connection in the timeout state involving the socket address or 
+port. 
+Enabling SO_REUSEADDR prior to binding the socket using bind(
+SocketAddress) allows the socket to be bound even though a previous 
+connection is in a timeout state. 
+When a ServerSocket is created the initial setting of SO_REUSEADDR is
+not defined. Applications can use getReuseAddress() to determine the
+initial setting of SO_REUSEADDR. 
+The behaviour when SO_REUSEADDR is enabled or disabled after a socket
+is bound (See isBound()) is not defined. 
+Parameters:
+on - whether to enable or disable the socket option 
+Throws: 
+SocketException - if an error occurs enabling or disabling the
+SO_RESUEADDR socket option, or the socket is closed.
+See Also:
+getReuseAddress(), bind(SocketAddress), isBound(), isClosed()
+<DL><DT><DD></DL><P>
+<A NAME="getReuseAddress"></A>
+<A NAME="DOC.6.3.2.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool getReuseAddress() const  throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Tests if SO_REUSEADDR is enabled. 
+Returns:
+a boolean indicating whether or not SO_REUSEADDR is enabled. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, 
+such as a TCP error.
+See Also:
+setReuseAddress(boolean)
+<DL><DT><DD></DL><P>
+<A NAME="toString"></A>
+<A NAME="DOC.6.3.2.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const std::string&amp; toString() const </B></TT>
+<DD>Returns the implementation address and implementation port of this
+socket as a String. 
+Overrides:
+toString in class Object
+Returns:
+a string representation of this socket.
+<DL><DT><DD></DL><P>
+<A NAME="setSocketFactory"></A>
+<A NAME="DOC.6.3.2.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void setSocketFactory(SocketImplFactory&amp; fac) throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Sets the server socket implementation factory for the application.
+The factory can be specified only once. 
+When an application creates a new server socket, the socket 
+implementation factory's createSocketImpl method is called to create
+the actual socket implementation. 
+If there is a security manager, this method first calls the security
+manager's checkSetFactory method to ensure the operation is allowed.
+This could result in a SecurityException. 
+Parameters:
+fac - the desired factory. 
+Throws: 
+SocketException* - if an I/O error occurs when setting the socket factory. 
+SocketException - if the factory has already been defined. 
+SecurityException - if a security manager exists and its checkSetFactory 
+method doesn't allow the operation.
+See Also:
+SocketImplFactory.createSocketImpl(), SecurityManager.checkSetFactory()
+<DL><DT><DD></DL><P>
+<A NAME="setReceiveBufferSize"></A>
+<A NAME="DOC.6.3.2.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setReceiveBufferSize(int size) throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Sets a default proposed value for the SO_RCVBUF option for sockets 
+accepted from this ServerSocket. The value actually set in the 
+accepted socket must be determined by calling 
+Socket.getReceiveBufferSize() after the socket is returned by 
+accept(). 
+The value of SO_RCVBUF is used both to set the size of the internal 
+socket receive buffer, and to set the size of the TCP receive window
+that is advertized to the remote peer. 
+It is possible to change the value subsequently, by calling 
+Socket.setReceiveBufferSize(int). However, if the application wishes
+to allow a receive window larger than 64K bytes, as defined by 
+RFC1323 then the proposed value must be set in the ServerSocket 
+before it is bound to a local address. This implies, that the 
+ServerSocket must be created with the no-argument constructor,
+then setReceiveBufferSize() must be called and lastly the 
+ServerSocket is bound to an address by calling bind(). 
+Failure to do this will not cause an error, and the buffer size may
+be set to the requested value but the TCP receive window in sockets
+accepted from this ServerSocket will be no larger than 64K bytes. 
+Parameters:
+size - the size to which to set the receive buffer size. This value 
+must be greater than 0. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, 
+such as a TCP error. 
+IllegalArgumentException - if the value is 0 or is negative.
+See Also:
+getReceiveBufferSize()
+<DL><DT><DD></DL><P>
+<A NAME="getReceiveBufferSize"></A>
+<A NAME="DOC.6.3.2.22"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getReceiveBufferSize() const  throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Gets the value of the SO_RCVBUF option for this ServerSocket, that is the proposed buffer size that will be used for Sockets accepted from this ServerSocket. 
+Note, the value actually set in the accepted socket is determined by calling Socket.getReceiveBufferSize(). 
+Returns:
+the value of the SO_RCVBUF option for this Socket. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, such as a TCP error.
+See Also:
+setReceiveBufferSize(int)
+<DL><DT><DD></DL><P>
+<A NAME="implAccept"></A>
+<A NAME="DOC.6.3.2.23"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void implAccept(<!1><A HREF="Socket.html">Socket</A>&amp; s) throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Subclasses of ServerSocket use this method to override accept() to 
+return their own subclass of socket. So a FooServerSocket will 
+typically hand this method an empty FooSocket. On return from 
+implAccept the FooSocket will be connected to a client. 
+Parameters:
+s - the Socket 
+Throws: 
+IllegalBlockingModeException - if this socket has an associated 
+channel, and the channel is in non-blocking mode 
+SocketException* - if an I/O error occurs when waiting for a connection.
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

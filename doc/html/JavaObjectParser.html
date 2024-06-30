@@ -1,0 +1,483 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  inexum::OSP::JavaObjectParser</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">inexum::OSP::JavaObjectParser</A></H2></H2><BLOCKQUOTE>A Java object parser encapsulates the parsing of Java object stream.</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Fields</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   const unsigned <B><A HREF="#DOC.1.1.9.7">c_baseWireHandle</A></B>
+<DD><I>Java object stream base handle 0x007e0000</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.9.2">JavaObjectParser</A></B>(istream&amp; input)
+<DD><I>Overloaded constructor:</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.9.3">~JavaObjectParser</A></B>()
+<DD><I>Destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.4">run</A></B>()
+<DD><I>Runs the parser.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Object.html">Object</A>* <B><A HREF="#DOC.1.1.9.5">object</A></B>()
+<DD><I>The symbol of a paresed object loaded with parsed values.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   int <B><A HREF="#DOC.1.1.9.6">InsertNoToken</A></B>()
+<DD><I>The parsers InsertNoToken token.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.8">reset</A></B>()
+<DD><I>Reset the parser state</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Members</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>enum  <B><A HREF="#DOC.1.1.9.1">State</A></B>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>istream&amp; <B><A HREF="#DOC.1.1.9.11">getStream</A></B>()
+<DD><I>The Java object stream getter</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="JavaObjectParser.html#DOC.1.1.9.1">State</A> <B><A HREF="#DOC.1.1.9.12">state</A></B>() const 
+<DD><I>The parser state getter</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.13">state</A></B>(<!1><A HREF="JavaObjectParser.html#DOC.1.1.9.1">State</A> aState)
+<DD><I>The parser state setter</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.14">addClassDescription</A></B>(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>, <!1><A HREF="JLong.html">JLong</A> uid, int <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.6">handle</A>)
+<DD><I>Add a class or array description to the stack of entities.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.15">classDescriptionFlags</A></B>(<!1><A HREF="byte.2.html">byte</A> flags)
+<DD><I>The class description flags setter</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.16">superClass</A></B>(<!1><A HREF="Class.html">Class</A>* pClass)
+<DD><I>The super class setter</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Class.html">Class</A>* <B><A HREF="#DOC.1.1.9.17">classDescriptionEnd</A></B>()
+<DD><I>Class description end indicator.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.18">addMembers</A></B>(int count)
+<DD><I>Sets the number of members to the class description on the top of  the entities stack.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.19">addMember</A></B>(char <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A>, const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)
+<DD><I>Add a member of Java builtin type to the class description on the top of the entities stack.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.20">addMember</A></B>(char <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A>, const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>, const std::string&amp; typeName)
+<DD><I>Add a member object to the class description on the top of the entities stack.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.21">newObject</A></B>(<!1><A HREF="Class.html">Class</A>* pClass, int <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.6">handle</A>)
+<DD><I>Add a object of the class description type is created and added to the list of referenced entities.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.22">classDataListStart</A></B>()
+<DD><I>Indicates the begining of the object's data sector</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.23">arrayStart</A></B>()
+<DD><I>Indicates the array description</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.24">elementArrayStart</A></B>(int size)
+<DD><I>Sets the number of array elements to the array description from the top of entity stack.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.25">add</A></B>(<!1><A HREF="Value.html">Value</A>* <!1><A HREF="StringObject.html#DOC.1.1.27.5">value</A>)
+<DD><I>Sets the value into the object description of Java builtin type</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.26">valueStart</A></B>()
+<DD><I>Indicates the value is about to be set.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.27">valueEnd</A></B>()
+<DD><I>Indicates the value is about to be set.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.28">newString</A></B>(const std::string&amp; <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.28">newString</A>)
+<DD><I>Sets the string value into the string object description.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.29">newString</A></B>(const std::string&amp; <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.29">newString</A>, int <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.6">handle</A>)
+<DD><I>Sets the string value into the string object description and adds the reference on a string to the list of referenced entities.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.30">readString</A></B>(int size, int <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.37">tokenCount</A> = 0)
+<DD><I>Positions the parser to read a new string after reading specified  number of tokens.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.1.1.9.31">getStringSize</A></B>() const 
+<DD><I>Current string size getter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.32">magic</A></B>(short magicNo)
+<DD><I>Sets the magic number.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.33">version</A></B>(short <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.33">version</A>)
+<DD><I>Sets the version.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.34">serialVersionUID</A></B>(long id)
+<DD><I>Sets the serial version unique identifier.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.1.1.9.35">insertToken</A></B>()
+<DD><I>Returns the token expected to be inserted into the stream.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.36">incrementTokenCount</A></B>()
+<DD><I>Counts the parser tokens for error reports</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.1.1.9.37">tokenCount</A></B>() const 
+<DD><I>Token counter getter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.1.1.9.38">finalState</A></B>()
+<DD><I>Return a final state of yyparse function.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.39">endTest</A></B>(int yystate)
+<DD><I>Request to do test for the end of object transmition.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.40">newBlockData</A></B>(int size)
+<DD><I>Create a new BlockData object and add to the top of the stack.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.9.41">addByte</A></B>(<!1><A HREF="byte.2.html">byte</A> aByte)
+<DD><I>Add a new byte into a BlockData object that is on the top of the stack.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Members</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::stack&lt;Entity*&gt; <B><A HREF="#DOC.1.1.9.9">EntityStack</A></B>
+<DD><I>The stack of entities</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::vector&lt;Entity*&gt; <B><A HREF="#DOC.1.1.9.10">EntityVector</A></B>
+<DD><I>The list of referenced entities</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>A Java object parser encapsulates the parsing of Java object stream.
+It provides the access to a object symbol sent using Java object stream,
+if the stream has been parsed without error(s).
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="State"></A>
+<A NAME="DOC.1.1.9.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  State</B></TT>
+<DD>The states of a JavaObjectParser when reading the object 
+stream:
+
+<P>k_ReadBoolean,
+k_ReadByte, 
+k_ReadChar,	
+k_ReadShort,
+k_ReadInt,	
+k_ReadLong,	
+k_ReadFloat,
+k_ReadDouble,
+k_ReadString,
+k_ReturnByte
+<DL><DT><DD></DL><P>
+<A NAME="JavaObjectParser"></A>
+<A NAME="DOC.1.1.9.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> JavaObjectParser(istream&amp; input)</B></TT>
+<DD>Overloaded constructor:
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>input</B> -  - the input <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.5">object</A> stream<BR><DD></DL><P>
+<A NAME="~JavaObjectParser"></A>
+<A NAME="DOC.1.1.9.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~JavaObjectParser()</B></TT>
+<DD>Destructor
+<DL><DT><DD></DL><P>
+<A NAME="run"></A>
+<A NAME="DOC.1.1.9.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void run()</B></TT>
+<DD>Runs the parser. At the end of successful run the parser refers to
+a symbol representing the object sent through the stream.
+<DL><DT><DD></DL><P>
+<A NAME="object"></A>
+<A NAME="DOC.1.1.9.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Object.html">Object</A>* object()</B></TT>
+<DD>The symbol of a paresed object loaded with parsed values.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a reference to the parsed object symbol<BR><DD></DL><P>
+<A NAME="InsertNoToken"></A>
+<A NAME="DOC.1.1.9.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   int InsertNoToken()</B></TT>
+<DD>The parsers InsertNoToken token.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a value of InsertNoToken token.<BR><DD></DL><P>
+<A NAME="c_baseWireHandle"></A>
+<A NAME="DOC.1.1.9.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   const unsigned c_baseWireHandle</B></TT>
+<DD>Java object stream base handle 0x007e0000
+<DL><DT><DD></DL><P>
+<A NAME="reset"></A>
+<A NAME="DOC.1.1.9.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void reset()</B></TT>
+<DD>Reset the parser state
+<DL><DT><DD></DL><P>
+<A NAME="EntityStack"></A>
+<A NAME="DOC.1.1.9.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::stack&lt;Entity*&gt; EntityStack</B></TT>
+<DD>The stack of entities
+<DL><DT><DD></DL><P>
+<A NAME="EntityVector"></A>
+<A NAME="DOC.1.1.9.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::vector&lt;Entity*&gt; EntityVector</B></TT>
+<DD>The list of referenced entities
+<DL><DT><DD></DL><P>
+<A NAME="getStream"></A>
+<A NAME="DOC.1.1.9.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>istream&amp; getStream()</B></TT>
+<DD>The Java object stream getter
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the input stream<BR><DD></DL><P>
+<A NAME="state"></A>
+<A NAME="DOC.1.1.9.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="JavaObjectParser.html#DOC.1.1.9.1">State</A> state() const </B></TT>
+<DD>The parser state getter
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the state of parser<BR><DD></DL><P>
+<A NAME="state"></A>
+<A NAME="DOC.1.1.9.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void state(<!1><A HREF="JavaObjectParser.html#DOC.1.1.9.1">State</A> aState)</B></TT>
+<DD>The parser state setter
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>aState</B> -  - a <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.13">state</A> to move parser to<BR><DD></DL><P>
+<A NAME="addClassDescription"></A>
+<A NAME="DOC.1.1.9.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void addClassDescription(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>, <!1><A HREF="JLong.html">JLong</A> uid, int <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.6">handle</A>)</B></TT>
+<DD>Add a class or array description to the stack of entities. If the name
+of the class description adds array, othervise adds a class description.
+Also, the added entity will be added to the list of referenced entities.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the class <!1><A HREF="Member.html#DOC.1.1.12.5">description</A> <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string
+<BR><B>uid</B> -  - the unique identifier of teh class <!1><A HREF="Member.html#DOC.1.1.12.5">description</A>
+<BR><B></B> - <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.6">handle</A> - the <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.6">handle</A> for list of entities<BR><DD></DL><P>
+<A NAME="classDescriptionFlags"></A>
+<A NAME="DOC.1.1.9.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void classDescriptionFlags(<!1><A HREF="byte.2.html">byte</A> flags)</B></TT>
+<DD>The class description flags setter
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>flags</B> -  - the class <!1><A HREF="Member.html#DOC.1.1.12.5">description</A> flags<BR><DD></DL><P>
+<A NAME="superClass"></A>
+<A NAME="DOC.1.1.9.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void superClass(<!1><A HREF="Class.html">Class</A>* pClass)</B></TT>
+<DD>The super class setter
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>pClass</B> -  - the pointer to a super class<BR><DD></DL><P>
+<A NAME="classDescriptionEnd"></A>
+<A NAME="DOC.1.1.9.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Class.html">Class</A>* classDescriptionEnd()</B></TT>
+<DD>Class description end indicator. Remove the entity from the top of 
+the parser's stack of entities.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the pointer to the class description removed from the top of
+stack<BR><DD></DL><P>
+<A NAME="addMembers"></A>
+<A NAME="DOC.1.1.9.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void addMembers(int count)</B></TT>
+<DD>Sets the number of members to the class description on the top of 
+the entities stack.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>count</B> -  - the number of class <!1><A HREF="Serialize.html#DOC.1.1.24.6">members</A><BR><DD></DL><P>
+<A NAME="addMember"></A>
+<A NAME="DOC.1.1.9.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void addMember(char <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A>, const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)</B></TT>
+<DD>Add a member of Java builtin type to the class description on the top of
+the entities stack.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> - a character identifing Java built in type: 
+'B' - <!1><A HREF="byte.2.html">byte</A>;
+'C' - char;
+'D' - double;
+'F' - float;
+'I' - integer;
+'J' - long;
+'S' - short;
+'Z' - boolean.
+<BR><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the member <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string<BR><DD></DL><P>
+<A NAME="addMember"></A>
+<A NAME="DOC.1.1.9.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void addMember(char <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A>, const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>, const std::string&amp; typeName)</B></TT>
+<DD>Add a member object to the class description on the top of
+the entities stack.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> - a character identifing Java class instance:
+'[' - array;
+'J' - object.
+<BR><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the member <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string
+<BR><B>typeName</B> -  - the member's class <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string<BR><DD></DL><P>
+<A NAME="newObject"></A>
+<A NAME="DOC.1.1.9.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void newObject(<!1><A HREF="Class.html">Class</A>* pClass, int <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.6">handle</A>)</B></TT>
+<DD>Add a object of the class description type is created and added to the
+list of referenced entities. If it is first object in the stream it will
+be added to the top of the stack.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>pClass</B> -  - a pointer to the <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.5">object</A>'s class description.
+<BR><B></B> - <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.6">handle</A> - the objects <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.6">handle</A> number<BR><DD></DL><P>
+<A NAME="classDataListStart"></A>
+<A NAME="DOC.1.1.9.22"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void classDataListStart()</B></TT>
+<DD>Indicates the begining of the object's data sector
+<DL><DT><DD></DL><P>
+<A NAME="arrayStart"></A>
+<A NAME="DOC.1.1.9.23"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void arrayStart()</B></TT>
+<DD>Indicates the array description
+<DL><DT><DD></DL><P>
+<A NAME="elementArrayStart"></A>
+<A NAME="DOC.1.1.9.24"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void elementArrayStart(int size)</B></TT>
+<DD>Sets the number of array elements to the array description from the top
+of entity stack.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>size</B> -  - the number of array elements.<BR><DD></DL><P>
+<A NAME="add"></A>
+<A NAME="DOC.1.1.9.25"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void add(<!1><A HREF="Value.html">Value</A>* <!1><A HREF="StringObject.html#DOC.1.1.27.5">value</A>)</B></TT>
+<DD>Sets the value into the object description of Java builtin type
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="StringObject.html#DOC.1.1.27.5">value</A> - the pointer to a holder of the value.<BR><DD></DL><P>
+<A NAME="valueStart"></A>
+<A NAME="DOC.1.1.9.26"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void valueStart()</B></TT>
+<DD>Indicates the value is about to be set. Sets the next member of builtin
+type to the top of the entity stack.
+<DL><DT><DD></DL><P>
+<A NAME="valueEnd"></A>
+<A NAME="DOC.1.1.9.27"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void valueEnd()</B></TT>
+<DD>Indicates the value is about to be set. Removes the member of builtin
+type from the top of the entity stack. If the parent object completed
+loading of all its members, the end token of that entity will be 
+inserted into the parsing stream.
+<DL><DT><DD></DL><P>
+<A NAME="newString"></A>
+<A NAME="DOC.1.1.9.28"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void newString(const std::string&amp; <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.28">newString</A>)</B></TT>
+<DD>Sets the string value into the string object description.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.28">newString</A> - the string value.<BR><DD></DL><P>
+<A NAME="newString"></A>
+<A NAME="DOC.1.1.9.29"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void newString(const std::string&amp; <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.29">newString</A>, int <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.6">handle</A>)</B></TT>
+<DD>Sets the string value into the string object description and adds
+the reference on a string to the list of referenced entities.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.29">newString</A> - the string value.
+<BR><B></B> - <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.6">handle</A> - the <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.6">handle</A> number of the <!1><A HREF="JavaObjectSerializer.html#DOC.1.1.11.14">referenced</A> string<BR><DD></DL><P>
+<A NAME="readString"></A>
+<A NAME="DOC.1.1.9.30"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void readString(int size, int <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.37">tokenCount</A> = 0)</B></TT>
+<DD>Positions the parser to read a new string after reading specified 
+number of tokens.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>size</B> -  - the string size.
+<BR><B></B> - <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.37">tokenCount</A> - the number of tokens upto the string<BR><DD></DL><P>
+<A NAME="getStringSize"></A>
+<A NAME="DOC.1.1.9.31"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getStringSize() const </B></TT>
+<DD>Current string size getter.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the string size.<BR><DD></DL><P>
+<A NAME="magic"></A>
+<A NAME="DOC.1.1.9.32"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void magic(short magicNo)</B></TT>
+<DD>Sets the magic number.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>magicNo</B> -  - the Java <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.5">object</A> stream <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.32">magic</A> number<BR><DD></DL><P>
+<A NAME="version"></A>
+<A NAME="DOC.1.1.9.33"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void version(short <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.33">version</A>)</B></TT>
+<DD>Sets the version.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.33">version</A> - the Java <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.5">object</A> stream <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.33">version</A> number<BR><DD></DL><P>
+<A NAME="serialVersionUID"></A>
+<A NAME="DOC.1.1.9.34"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void serialVersionUID(long id)</B></TT>
+<DD>Sets the serial version unique identifier.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.33">version</A> - the Java <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.5">object</A> stream serial <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.33">version</A> unique identifier<BR><DD></DL><P>
+<A NAME="insertToken"></A>
+<A NAME="DOC.1.1.9.35"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int insertToken()</B></TT>
+<DD>Returns the token expected to be inserted into the stream.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  inserted token.<BR><DD></DL><P>
+<A NAME="incrementTokenCount"></A>
+<A NAME="DOC.1.1.9.36"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void incrementTokenCount()</B></TT>
+<DD>Counts the parser tokens for error reports
+<DL><DT><DD></DL><P>
+<A NAME="tokenCount"></A>
+<A NAME="DOC.1.1.9.37"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int tokenCount() const </B></TT>
+<DD>Token counter getter.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  current token count.<BR><DD></DL><P>
+<A NAME="finalState"></A>
+<A NAME="DOC.1.1.9.38"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int finalState()</B></TT>
+<DD>Return a final state of yyparse function.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  YYFINAL value.<BR><DD></DL><P>
+<A NAME="endTest"></A>
+<A NAME="DOC.1.1.9.39"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void endTest(int yystate)</B></TT>
+<DD>Request to do test for the end of object transmition.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>yystate</B> -  - a <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.12">state</A> of a <!1><A HREF="yyparse.html">yyparse</A> function.<BR><DD></DL><P>
+<A NAME="newBlockData"></A>
+<A NAME="DOC.1.1.9.40"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void newBlockData(int size)</B></TT>
+<DD>Create a new BlockData object and add to the top of the stack.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>size</B> -  - a data block size.<BR><DD></DL><P>
+<A NAME="addByte"></A>
+<A NAME="DOC.1.1.9.41"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void addByte(<!1><A HREF="byte.2.html">byte</A> aByte)</B></TT>
+<DD>Add a new byte into a BlockData object that is on the top of the stack.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>size</B> -  - a data block size.<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Friends:</B><DD>  int <!1><A HREF="yylex.html">inexum::OSP::yylex</A> (YYSTYPE* yylval, void* pParser)<BR>  int <!1><A HREF="yyparse.html">inexum::OSP::yyparse</A>(void* pParser)<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

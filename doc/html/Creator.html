@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>template< class LABEL_TYPE, LABEL_TYPE LABEL, class BASE_PRODUCT, 					class PRODUCT = BASE_PRODUCT > class  inexum::stl::Creator</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>template&lt; class LABEL_TYPE, LABEL_TYPE LABEL, class BASE_PRODUCT, 					class PRODUCT = BASE_PRODUCT &gt; class  <A HREF="#DOC.DOCU">inexum::stl::Creator</A></H2></H2><BLOCKQUOTE>A labeled factory method creates a product specialized from a base product using product's default constructor.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="CMethod,MMethod.html,CCreator,MCreator.html,CCreateWithLable,MCreateWithLable.html">
+<param name=before value="M,M,M^_">
+<param name=after value="Md_,M,M">
+<param name=indent value="0,1,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.2.2.1">Creator</A></B>()
+<DD><I>The default constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <B><A HREF="#DOC.1.2.2.2">~Creator</A></B>()
+<DD><I>The Creator's destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   BASE_PRODUCT* <B><A HREF="#DOC.1.2.2.3">operator()</A></B>() const 
+<DD><I>Creates an instance of a PRODUCT using the PRODUCT's default  constructor.</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Method.html">Method</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   <!1><A HREF="Method.html">Method</A>&lt;LABEL_TYPE, BASE_PRODUCT&gt; * <B>clone</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>LABEL_TYPE <B>label</B>() const 
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>A labeled factory method creates a product specialized from a base product
+using product's default constructor. Once Creator temlate is instantiated 
+it will register it self into the factory instantiated for the same lable 
+type and base product. The same instance of the Creator will be used to 
+create instances of the product that would be returned by the factory as a 
+pointer to a base product.
+
+<P>NOTE:	Make an instance of this class in a cpp file, e.g. if 
+MyBaseProductClass is a base class of ProductClass0, then:
+
+<P>template Creator&lt; int, 0, MyBaseProductClass, ProductClass0&gt;;
+
+<P>
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="Creator"></A>
+<A NAME="DOC.1.2.2.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Creator()</B></TT>
+<DD>The default constructor
+<DL><DT><DD></DL><P>
+<A NAME="~Creator"></A>
+<A NAME="DOC.1.2.2.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~Creator()</B></TT>
+<DD>The Creator's destructor
+<DL><DT><DD></DL><P>
+<A NAME="operator()"></A>
+<A NAME="DOC.1.2.2.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   BASE_PRODUCT* operator()() const </B></TT>
+<DD>Creates an instance of a PRODUCT using the PRODUCT's default 
+constructor.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a created instance as a BSAE_PRODUCT pointer.<BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="CreateWithLable.html">CreateWithLable</A><BR>
+</DL>
+
+<DL><DT><DT><B>Parameters:</B><DD><B>LABEL_TYPE</B> -  - allows for any C++ builtin <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> to be used as a lable
+of a creator in a factory
+<BR><B>LABEL</B> -  - is the lable associated with a creator of a PRODUCT
+<BR><B>BASE_PRODUCT</B> -  - a base class of a PRODUCT used to represent different
+products in a factory
+<BR><B>PRODUCT</B> -  - the class for which the objects would be generated, it is
+defaulted to a BASE_PRODUCT.
+<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DT><B>See Also:</B><DD>inexum::Factory
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  inexum::OSP::Object</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">inexum::OSP::Object</A></H2></H2><BLOCKQUOTE>An encapsulation of a class as an element for the table of symbols   of a Java object parser.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=185>
+<param name=classes value="MEntity,M,CObject,MObject.html,CStringObject,MStringObject.html,CPrimitiveObject,MPrimitiveObject.html,CClassObject,MClassObject.html,CBlockData,MBlockData.html">
+<param name=before value="M,M,M|_,MR_,MR_,Mr_">
+<param name=after value="Md_,M,M,M,M,M">
+<param name=indent value="0,1,1,1,1,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.14.1">Object</A></B>()
+<DD><I>Object symbol default constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.14.2">Object</A></B>(const <!1><A HREF="Object.html#DOC.1.1.14.2">Object</A>&amp; right)
+<DD><I>Object symbol copy constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.14.3">Object</A></B>(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)
+<DD><I>Overloaded Object symbol constructor:</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <B><A HREF="#DOC.1.1.14.4">~Object</A></B>()
+<DD><I>Object symbol destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <!1><A HREF="Object.html">Object</A>* <B><A HREF="#DOC.1.1.14.5">clone</A></B>() const  = 0
+<DD><I>Object symbol clone method:</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   JavaObjectParser::State <B><A HREF="#DOC.1.1.14.6">getState</A></B>() const 
+<DD><I>Return the parser's read state for the next token.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   int <B><A HREF="#DOC.1.1.14.7">getEndToken</A></B>() const 
+<DD><I>Return the parser's token for the end of the object if applicable.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void* <B><A HREF="#DOC.1.1.14.8">instantiate</A></B>()
+<DD><I>Override to create and initialize the appropriate C++ object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.1.14.9">initialize</A></B>(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)
+<DD><I>Override to initialize the provided C++ object that is of appropriate  type.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void* <B><A HREF="#DOC.1.1.14.10">instantiateObject</A></B>() const  = 0
+<DD><I>Override to create and initialize the appropriate C++ object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.1.14.11">initializeObject</A></B>(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>) const  = 0
+<DD><I>Override to initialize the provided C++ object that is of appropriate  type.</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>An encapsulation of a class as an element for the table of symbols  
+of a Java object parser.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="Object"></A>
+<A NAME="DOC.1.1.14.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Object()</B></TT>
+<DD>Object symbol default constructor
+<DL><DT><DD></DL><P>
+<A NAME="Object"></A>
+<A NAME="DOC.1.1.14.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Object(const <!1><A HREF="Object.html#DOC.1.1.14.2">Object</A>&amp; right)</B></TT>
+<DD>Object symbol copy constructor
+<DL><DT><DD></DL><P>
+<A NAME="Object"></A>
+<A NAME="DOC.1.1.14.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Object(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)</B></TT>
+<DD>Overloaded Object symbol constructor:
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string<BR><DD></DL><P>
+<A NAME="~Object"></A>
+<A NAME="DOC.1.1.14.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~Object()</B></TT>
+<DD>Object symbol destructor
+<DL><DT><DD></DL><P>
+<A NAME="clone"></A>
+<A NAME="DOC.1.1.14.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="Object.html">Object</A>* clone() const  = 0</B></TT>
+<DD>Object symbol clone method:
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a cloned instance of the Object symbol<BR><DD></DL><P>
+<A NAME="getState"></A>
+<A NAME="DOC.1.1.14.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   JavaObjectParser::State getState() const </B></TT>
+<DD>Return the parser's read state for the next token.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  default that is JavaObjectParser::k_ReturnByte<BR><DD></DL><P>
+<A NAME="getEndToken"></A>
+<A NAME="DOC.1.1.14.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   int getEndToken() const </B></TT>
+<DD>Return the parser's token for the end of the object if applicable.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  default that is no end token<BR><DD></DL><P>
+<A NAME="instantiate"></A>
+<A NAME="DOC.1.1.14.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void* instantiate()</B></TT>
+<DD>Override to create and initialize the appropriate C++ object.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the void pointer address of the object<BR><DD></DL><P>
+<A NAME="initialize"></A>
+<A NAME="DOC.1.1.14.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void initialize(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)</B></TT>
+<DD>Override to initialize the provided C++ object that is of appropriate 
+type.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the void pointer <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A><BR><DD></DL><P>
+<A NAME="instantiateObject"></A>
+<A NAME="DOC.1.1.14.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void* instantiateObject() const  = 0</B></TT>
+<DD>Override to create and initialize the appropriate C++ object.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the void pointer address of the object<BR><DD></DL><P>
+<A NAME="initializeObject"></A>
+<A NAME="DOC.1.1.14.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void initializeObject(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>) const  = 0</B></TT>
+<DD>Override to initialize the provided C++ object that is of appropriate 
+type.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the void pointer <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A><BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="StringObject.html">StringObject</A><BR>
+<A HREF="PrimitiveObject.html">PrimitiveObject</A><BR>
+<A HREF="ClassObject.html">ClassObject</A><BR>
+<A HREF="BlockData.html">BlockData</A><BR>
+</DL>
+
+<DL><DT><DT><B>Friends:</B><DD>  util::DebugClass&lt;<!1><A HREF="Object.html">Object</A>&gt;<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

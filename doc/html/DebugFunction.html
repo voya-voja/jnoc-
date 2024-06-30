@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  inexum::util::DebugFunction</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">inexum::util::DebugFunction</A></H2></H2><BLOCKQUOTE>Function debug statement.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="CDebug,MDebug.html,CDebugFunction,MDebugFunction.html,CDebugMethod,MDebugMethod.html">
+<param name=before value="M,M,M^_">
+<param name=after value="Md_,M,M">
+<param name=indent value="0,1,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.1">DebugFunction</A></B>(int mode, const std::string&amp; functionName)
+<DD><I>Overloaded constructor allows definition of debug statement for a function without arguments and return value.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.2">DebugFunction</A></B>(const std::string&amp; functionName, const char* formatMsg, ...)
+<DD><I>Overloaded constructor allows definition of function name, return object and variable list of arguments for the function.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.3">DebugFunction</A></B>(int mode, const std::string&amp; functionName, const char* formatMsg, ...)
+<DD><I>Overloaded constructor allows definition of function name, return object and variable list of arguments for the function.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.4">~DebugFunction</A></B>()
+<DD><I>DebugFunction destructor outputs the function's return debug statement</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.5">DebugFunction</A></B>(const std::string&amp; functionName, Debug::Mode mode = Debug::c_basic)
+<DD><I>Overloaded constructor allows the construction of derived classes that provide the function name and optionally debug statement mode.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.3.2.6">print</A></B>(const std::string&amp; formatMsg, va_list&amp; argList)
+<DD><I>Debug print method override to modify the format message and variable argument list, by preserving return object to be printed later.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>std::string <B><A HREF="#DOC.1.3.2.7">format</A></B>(const std::string&amp; formatMsg, va_list&amp; argList )
+<DD><I>Removes the return object reference for the formated message and  from the variable argument list.</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Debug.html">Debug</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>static   void <B>addMode</B>(int mode)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   <!1><A HREF="Debug.html#DOC.1.3.1.1">Mode</A> <B>getMode</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   ostream&amp; <B>output</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   void <B>increaseIndent</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   void <B>decreaseIndent</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   const std::string&amp; <B>indent</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>ostream&amp; <B>output</B>(const std::string&amp; msg)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   ostream&amp; <B>output</B>(const char* formatMsg, ...)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>const std::string&amp; <B>preMessage</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>const std::string&amp; <B>postMessage</B>() const 
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Members</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>enum  <B>Mode</B>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>std::string <B>time</B>() const 
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Function debug statement. The instance should be created at the begining
+of the function, with return object and argument list. At the place of 
+instance creation prints debug statement in following format:
+
+<P>&lt;function name&gt;([&lt;argument&gt; : &lt;value&gt;[,]]*) 
+
+<P>At the end of the function prints debug statement in following format:
+
+<P>&lt;function name&gt;(return : &lt;value&gt;|"NO return")
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="DebugFunction"></A>
+<A NAME="DOC.1.3.2.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DebugFunction(int mode, const std::string&amp; functionName)</B></TT>
+<DD>Overloaded constructor allows definition of debug statement for a function
+without arguments and return value.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>mode</B> -  - debug statement mode.
+<BR><B>functionName</B> -  - function <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string.<BR><DD></DL><P>
+<A NAME="DebugFunction"></A>
+<A NAME="DOC.1.3.2.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DebugFunction(const std::string&amp; functionName, const char* formatMsg, ...)</B></TT>
+<DD>Overloaded constructor allows definition of function name, return object
+and variable list of arguments for the function. It uses printf() formated 
+message, extended for %D referencing to a Debug instance. If the function 
+returns an object, the format message has to start (no space) with the 
+definition type of the return object and the reference to the return object 
+has to be specified first in the variable argument list, e.g.:
+
+<P>int myFunction(double amount, MyClass&amp; obj) {
+
+<P>int retValue = -1;	 initialize return variable
+
+<P>DebugFunction debugStm("myFunction", "%d amount: %5.3f, object: %D", 
+&amp;retValue, amount, &amp;DebugClass&lt;MyCLass&gt;(obj));
+
+<P>...
+
+<P>return(retValue);
+
+<P>}
+
+<P>Only if the debug mode includes c_base, the debug log output will be:
+
+<P>...
+
+<P>&lt;date time&gt; myFunction(amount: 1.321, object: MyClass{ x: 2 })
+
+<P>...
+
+<P>&lt;date time&gt; myFunction(return: 0)
+
+<P>...
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>functionName</B> -  - function <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string.
+<BR><B>formatMsg</B> -  - printf() <!1><A HREF="DebugFunction.html#DOC.1.3.2.7">format</A> message, extended for %D referencing 
+<!1><A HREF="Debug.html">Debug</A> instance. If function returns a <!1><A HREF="StringObject.html#DOC.1.1.27.5">value</A> the <!1><A HREF="DebugFunction.html#DOC.1.3.2.7">format</A>
+message has to start without spaces with the <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> of the
+return type.
+<BR><B>...</B> -  - variable argument list. If the function has a return <!1><A HREF="StringObject.html#DOC.1.1.27.5">value</A>
+the first argument has to be <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of the return object.<BR><DD></DL><P>
+<A NAME="DebugFunction"></A>
+<A NAME="DOC.1.3.2.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DebugFunction(int mode, const std::string&amp; functionName, const char* formatMsg, ...)</B></TT>
+<DD>Overloaded constructor allows definition of function name, return object
+and variable list of arguments for the function. It uses printf() formated 
+message, extended for %D referencing to a Debug instance. If the function 
+returns an object, the format message has to start (no space) with the 
+definition type of the return object and the reference to the return object
+has to be specified first in the variable argument list, e.g.:
+
+<P>int myFunction(double amount, MyClass&amp; obj) {
+
+<P>int retValue = -1;	 initialize return variable
+
+<P>DebugFunction debugStm(Debug::c_net, "myFunction", 
+"%d amount: %5.3f, object: %D", 
+&amp;retValue, amount, &amp;DebugClass&lt;MyCLass&gt;(obj));
+
+<P>...
+
+<P>return(retValue);
+
+<P>}
+
+<P>Only if the debug mode includes c_net, the debug log output will be:
+
+<P>...
+
+<P>&lt;date time&gt; myFunction(amount: 1.321, object: MyClass{ x: 2 })
+
+<P>...
+
+<P>&lt;date time&gt; myFunction(return: 0)
+
+<P>...
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>mode</B> -  - debug statement mode.
+<BR><B>functionName</B> -  - function <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string.
+<BR><B>formatMsg</B> -  - printf() <!1><A HREF="DebugFunction.html#DOC.1.3.2.7">format</A> message, extended for %D referencing 
+<!1><A HREF="Debug.html">Debug</A> instance. If function returns a <!1><A HREF="StringObject.html#DOC.1.1.27.5">value</A> the <!1><A HREF="DebugFunction.html#DOC.1.3.2.7">format</A>
+message has to start without spaces with the <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> of the 
+return type.
+<BR><B>...</B> -  - variable argument list. If the function has a return <!1><A HREF="StringObject.html#DOC.1.1.27.5">value</A>
+the first argument has to be <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of the return object.<BR><DD></DL><P>
+<A NAME="~DebugFunction"></A>
+<A NAME="DOC.1.3.2.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~DebugFunction()</B></TT>
+<DD>DebugFunction destructor outputs the function's return debug statement
+<DL><DT><DD></DL><P>
+<A NAME="DebugFunction"></A>
+<A NAME="DOC.1.3.2.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DebugFunction(const std::string&amp; functionName, Debug::Mode mode = Debug::c_basic)</B></TT>
+<DD>Overloaded constructor allows the construction of derived classes that
+provide the function name and optionally debug statement mode.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>functionName</B> -  - function <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string.
+<BR><B>mode</B> -  - debug statement mode.<BR><DD></DL><P>
+<A NAME="print"></A>
+<A NAME="DOC.1.3.2.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void print(const std::string&amp; formatMsg, va_list&amp; argList)</B></TT>
+<DD>Debug print method override to modify the format message and variable
+argument list, by preserving return object to be printed later.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>formatMsg</B> -  - a <!1><A HREF="DebugFunction.html#DOC.1.3.2.7">format</A> message describing the variable argument list
+<BR><B>argList</B> -  - variable argument list.<BR><DD></DL><P>
+<A NAME="format"></A>
+<A NAME="DOC.1.3.2.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::string format(const std::string&amp; formatMsg, va_list&amp; argList )</B></TT>
+<DD>Removes the return object reference for the formated message and 
+from the variable argument list.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>formatMsg</B> -  - a <!1><A HREF="DebugFunction.html#DOC.1.3.2.7">format</A> message describing the variable argument list
+<BR><B>argList</B> -  - variable argument list.<BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="DebugMethod.html">DebugMethod</A><BR>
+</DL>
+
+<DL><DT><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

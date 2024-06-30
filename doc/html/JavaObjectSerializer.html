@@ -1,0 +1,400 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  DeclarationSpecifier inexum::OSP::JavaObjectSerializer</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  DeclarationSpecifier <A HREF="#DOC.DOCU">inexum::OSP::JavaObjectSerializer</A></H2></H2><BLOCKQUOTE>A Java object serializer encapsulates the serialization of C++ objects in the format that can be sent through Java object stream.</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Fields</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const unsigned short <B><A HREF="#DOC.1.1.11.20">c_magic</A></B>
+<DD><I>Java object stream magic number</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const unsigned short <B><A HREF="#DOC.1.1.11.21">c_version</A></B>
+<DD><I>Java object stream varsion number</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.26">c_tcReference</A></B>
+<DD><I>Java object stream token character for a reference</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.27">c_tcObject</A></B>
+<DD><I>Java object stream token character for an object</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.28">c_tcClassDesription</A></B>
+<DD><I>Java object stream token character for a class description</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.29">c_tcString</A></B>
+<DD><I>Java object stream token character for a string</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.30">c_tcArray</A></B>
+<DD><I>Java object stream token character for an array</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.31">c_tcClass</A></B>
+<DD><I>Java object stream token character for a class</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.32">c_tcBlockData</A></B>
+<DD><I>Java object stream token character for a data block</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.33">c_tcEndBlockData</A></B>
+<DD><I>Java object stream token character for the end of data block</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.34">c_tcReset</A></B>
+<DD><I>Java object stream token character for a reset</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.35">c_tcBlockDataLong</A></B>
+<DD><I>Java object stream token character for a long block data</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.36">c_tcException</A></B>
+<DD><I>Java object stream token character for an exception</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.37">c_tcNull</A></B>
+<DD><I>Java object stream token character for null</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static  const <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.38">c_classDescriptionFlags</A></B>
+<DD><I>Java object stream class description flag</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.11.1">JavaObjectSerializer</A></B>(ostream&amp; <!1><A HREF="Debug.html#DOC.1.3.1.4">output</A>)
+<DD><I>Overloaded constructor:</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.11.2">~JavaObjectSerializer</A></B>()
+<DD><I>Destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.11.3">run</A></B>(const std::string&amp; <!1><A HREF="Serializable.html#DOC.1.1.17.8">className</A>, const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)
+<DD><I>Serialize object at provided address as an object of provided class.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.11.4">writeBuiltinObject</A></B>(const std::string&amp; typeName, const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)
+<DD><I>Serialize builtin object at provided address as an object of provided type.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.1.1.11.5">isSerialized</A></B>(const std::string&amp; entityName) const 
+<DD><I>Verify if the entity has been serialized.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>unsigned <B><A HREF="#DOC.1.1.11.6">handle</A></B>(const std::string&amp; entityName)
+<DD><I>Retreive the handle to an entity.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>unsigned <B><A HREF="#DOC.1.1.11.7">handle</A></B>(unsigned entityAddress)
+<DD><I>Retreive the handle to an entity.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.11.8">newHandle</A></B>(const std::string&amp; entityName)
+<DD><I>Create an entity handle.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.11.9">newHandle</A></B>(unsigned entityAddress)
+<DD><I>Create an entity handle.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.11.10">writeStreamHeader</A></B>()
+<DD><I>Write Object Stream header</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.1.11.11">write</A></B>(const <!1><A HREF="byte.2.html">byte</A>* bytes, int size)
+<DD><I>Write a byte array to the output object stream.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.1.11.12">writeReverse</A></B>(const <!1><A HREF="byte.2.html">byte</A>* bytes, int size)
+<DD><I>Write a byte array in reveresed order to the output object stream.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.11.13">writeString</A></B>(const std::string&amp; str)
+<DD><I>Write a string to the output object stream.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.1.1.11.14">referenced</A></B>(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)
+<DD><I>Verify if the entity has been serialized.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.1.1.11.15">referenced</A></B>(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)
+<DD><I>Verify if the entity has been serialized.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.11.16">remove</A></B>(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)
+<DD><I>If there is a reference to the entity the reference will be removed from the object stream.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.11.17">writeClassDescription</A></B>(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>, unsigned short memberSize, <!1><A HREF="JLong.html">JLong</A> <!1><A HREF="SerializableVoidPointerArray.html#DOC.1.1.22.5">serialVersionUID</A>)
+<DD><I>Write a class description.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.11.18">writeClassDescriptionEnd</A></B>(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, const std::string&amp; superClassName)
+<DD><I>Write a class description end.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.11.19">writeMember</A></B>(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, const std::string&amp; <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A>)
+<DD><I>Write a member.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.11.22">writeNull</A></B>()
+<DD><I>Write null to the object stream</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="JavaObjectSerializer.html">JavaObjectSerializer</A>&amp; <B><A HREF="#DOC.1.1.11.23">builtinObjectSerializer</A></B>()
+<DD><I>Return serializer for java builtin object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.11.24">tcArray</A></B>()
+<DD><I>Java object stream token character for an array</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.11.25">reset</A></B>()
+<DD><I>Send reset tocken character and reset the serializer</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>A Java object serializer encapsulates the serialization of C++ objects
+in the format that can be sent through Java object stream.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="JavaObjectSerializer"></A>
+<A NAME="DOC.1.1.11.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> JavaObjectSerializer(ostream&amp; <!1><A HREF="Debug.html#DOC.1.3.1.4">output</A>)</B></TT>
+<DD>Overloaded constructor:
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Debug.html#DOC.1.3.1.4">output</A> - the <!1><A HREF="Debug.html#DOC.1.3.1.4">output</A> <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> stream<BR><DD></DL><P>
+<A NAME="~JavaObjectSerializer"></A>
+<A NAME="DOC.1.1.11.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~JavaObjectSerializer()</B></TT>
+<DD>Destructor
+<DL><DT><DD></DL><P>
+<A NAME="run"></A>
+<A NAME="DOC.1.1.11.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void run(const std::string&amp; <!1><A HREF="Serializable.html#DOC.1.1.17.8">className</A>, const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)</B></TT>
+<DD>Serialize object at provided address as an object of provided class.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Serializable.html#DOC.1.1.17.8">className</A> - the Java class <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string
+<BR><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A>'s <!1><A HREF="Member.html#DOC.1.1.12.4">address</A><BR><DD></DL><P>
+<A NAME="writeBuiltinObject"></A>
+<A NAME="DOC.1.1.11.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void writeBuiltinObject(const std::string&amp; typeName, const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)</B></TT>
+<DD>Serialize builtin object at provided address as an object of provided type.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>typeName</B> -  - the Java class <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string
+<BR><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A>'s <!1><A HREF="Member.html#DOC.1.1.12.4">address</A><BR><DD></DL><P>
+<A NAME="isSerialized"></A>
+<A NAME="DOC.1.1.11.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isSerialized(const std::string&amp; entityName) const </B></TT>
+<DD>Verify if the entity has been serialized.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>entityName</B> -  - the entity <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string
+<BR><DT><B>Returns:</B><DD>  true if entity has been serialized, otherwise false.<BR><DD></DL><P>
+<A NAME="handle"></A>
+<A NAME="DOC.1.1.11.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned handle(const std::string&amp; entityName)</B></TT>
+<DD>Retreive the handle to an entity.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>entityName</B> -  - the entity <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string
+<BR><DT><B>Returns:</B><DD>  the handle to the entity.
+@throws SerializerException if the entity name can not be found.<BR><DD></DL><P>
+<A NAME="handle"></A>
+<A NAME="DOC.1.1.11.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned handle(unsigned entityAddress)</B></TT>
+<DD>Retreive the handle to an entity.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>entityAddress</B> -  - the <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of an entity
+<BR><DT><B>Returns:</B><DD>  the handle to the entity.
+@throws SerializerException if the entity name can not be found.<BR><DD></DL><P>
+<A NAME="newHandle"></A>
+<A NAME="DOC.1.1.11.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void newHandle(const std::string&amp; entityName)</B></TT>
+<DD>Create an entity handle.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>entityName</B> -  - the entity <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string<BR><DD></DL><P>
+<A NAME="newHandle"></A>
+<A NAME="DOC.1.1.11.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void newHandle(unsigned entityAddress)</B></TT>
+<DD>Create an entity handle.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>entityAddress</B> -  - the <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of an entity<BR><DD></DL><P>
+<A NAME="writeStreamHeader"></A>
+<A NAME="DOC.1.1.11.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void writeStreamHeader()</B></TT>
+<DD>Write Object Stream header
+<DL><DT><DD></DL><P>
+<A NAME="write"></A>
+<A NAME="DOC.1.1.11.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void write(const <!1><A HREF="byte.2.html">byte</A>* bytes, int size)</B></TT>
+<DD>Write a byte array to the output object stream.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>bytes</B> -  - the reference to a <!1><A HREF="byte.2.html">byte</A> array
+<BR><B>size</B> -  - the size of a <!1><A HREF="byte.2.html">byte</A> array<BR><DD></DL><P>
+<A NAME="writeReverse"></A>
+<A NAME="DOC.1.1.11.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void writeReverse(const <!1><A HREF="byte.2.html">byte</A>* bytes, int size)</B></TT>
+<DD>Write a byte array in reveresed order to the output object stream.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>bytes</B> -  - the reference to a <!1><A HREF="byte.2.html">byte</A> array
+<BR><B>size</B> -  - the size of a <!1><A HREF="byte.2.html">byte</A> array<BR><DD></DL><P>
+<A NAME="writeString"></A>
+<A NAME="DOC.1.1.11.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void writeString(const std::string&amp; str)</B></TT>
+<DD>Write a string to the output object stream.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>str</B> -  - the reference to a string<BR><DD></DL><P>
+<A NAME="referenced"></A>
+<A NAME="DOC.1.1.11.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool referenced(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)</B></TT>
+<DD>Verify if the entity has been serialized. If there is a reference
+to the entity the reference will be added to the object stream.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the entity <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>
+<BR><DT><B>Returns:</B><DD>  true if entity has been serialized, otherwise false.<BR><DD></DL><P>
+<A NAME="referenced"></A>
+<A NAME="DOC.1.1.11.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool referenced(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)</B></TT>
+<DD>Verify if the entity has been serialized. If there is a reference
+to the entity the reference will be added to the object stream.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the entity <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string
+<BR><DT><B>Returns:</B><DD>  true if entity has been serialized, otherwise false.<BR><DD></DL><P>
+<A NAME="remove"></A>
+<A NAME="DOC.1.1.11.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void remove(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)</B></TT>
+<DD>If there is a reference to the entity the reference will be
+removed from the object stream.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the entity <!1><A HREF="Member.html#DOC.1.1.12.4">address</A><BR><DD></DL><P>
+<A NAME="writeClassDescription"></A>
+<A NAME="DOC.1.1.11.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void writeClassDescription(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>, unsigned short memberSize, <!1><A HREF="JLong.html">JLong</A> <!1><A HREF="SerializableVoidPointerArray.html#DOC.1.1.22.5">serialVersionUID</A>)</B></TT>
+<DD>Write a class description.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the Java class <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string
+<BR><B>memberSize</B> -  - the number of class's <!1><A HREF="Serialize.html#DOC.1.1.24.6">members</A>
+<BR><B></B> - <!1><A HREF="SerializableVoidPointerArray.html#DOC.1.1.22.5">serialVersionUID</A> - the Java serial <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.33">version</A> unique identifier
+for the class<BR><DD></DL><P>
+<A NAME="writeClassDescriptionEnd"></A>
+<A NAME="DOC.1.1.11.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void writeClassDescriptionEnd(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, const std::string&amp; superClassName)</B></TT>
+<DD>Write a class description end.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A>
+<BR><B>superClassName</B> -  - the <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> of super class<BR><DD></DL><P>
+<A NAME="writeMember"></A>
+<A NAME="DOC.1.1.11.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void writeMember(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, const std::string&amp; <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A>)</B></TT>
+<DD>Write a member.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of a class member
+<BR><B></B> - <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> - the <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> of a member<BR><DD></DL><P>
+<A NAME="c_magic"></A>
+<A NAME="DOC.1.1.11.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const unsigned short c_magic</B></TT>
+<DD>Java object stream magic number
+<DL><DT><DD></DL><P>
+<A NAME="c_version"></A>
+<A NAME="DOC.1.1.11.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const unsigned short c_version</B></TT>
+<DD>Java object stream varsion number
+<DL><DT><DD></DL><P>
+<A NAME="writeNull"></A>
+<A NAME="DOC.1.1.11.22"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void writeNull()</B></TT>
+<DD>Write null to the object stream
+<DL><DT><DD></DL><P>
+<A NAME="builtinObjectSerializer"></A>
+<A NAME="DOC.1.1.11.23"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="JavaObjectSerializer.html">JavaObjectSerializer</A>&amp; builtinObjectSerializer()</B></TT>
+<DD>Return serializer for java builtin object.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  java builtin object serializer<BR><DD></DL><P>
+<A NAME="tcArray"></A>
+<A NAME="DOC.1.1.11.24"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="byte.2.html">byte</A> tcArray()</B></TT>
+<DD>Java object stream token character for an array
+<DL><DT><DD></DL><P>
+<A NAME="reset"></A>
+<A NAME="DOC.1.1.11.25"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void reset()</B></TT>
+<DD>Send reset tocken character and reset the serializer
+<DL><DT><DD></DL><P>
+<A NAME="c_tcReference"></A>
+<A NAME="DOC.1.1.11.26"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_tcReference</B></TT>
+<DD>Java object stream token character for a reference
+<DL><DT><DD></DL><P>
+<A NAME="c_tcObject"></A>
+<A NAME="DOC.1.1.11.27"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_tcObject</B></TT>
+<DD>Java object stream token character for an object
+<DL><DT><DD></DL><P>
+<A NAME="c_tcClassDesription"></A>
+<A NAME="DOC.1.1.11.28"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_tcClassDesription</B></TT>
+<DD>Java object stream token character for a class description
+<DL><DT><DD></DL><P>
+<A NAME="c_tcString"></A>
+<A NAME="DOC.1.1.11.29"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_tcString</B></TT>
+<DD>Java object stream token character for a string
+<DL><DT><DD></DL><P>
+<A NAME="c_tcArray"></A>
+<A NAME="DOC.1.1.11.30"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_tcArray</B></TT>
+<DD>Java object stream token character for an array
+<DL><DT><DD></DL><P>
+<A NAME="c_tcClass"></A>
+<A NAME="DOC.1.1.11.31"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_tcClass</B></TT>
+<DD>Java object stream token character for a class
+<DL><DT><DD></DL><P>
+<A NAME="c_tcBlockData"></A>
+<A NAME="DOC.1.1.11.32"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_tcBlockData</B></TT>
+<DD>Java object stream token character for a data block
+<DL><DT><DD></DL><P>
+<A NAME="c_tcEndBlockData"></A>
+<A NAME="DOC.1.1.11.33"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_tcEndBlockData</B></TT>
+<DD>Java object stream token character for the end of data block
+<DL><DT><DD></DL><P>
+<A NAME="c_tcReset"></A>
+<A NAME="DOC.1.1.11.34"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_tcReset</B></TT>
+<DD>Java object stream token character for a reset
+<DL><DT><DD></DL><P>
+<A NAME="c_tcBlockDataLong"></A>
+<A NAME="DOC.1.1.11.35"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_tcBlockDataLong</B></TT>
+<DD>Java object stream token character for a long block data
+<DL><DT><DD></DL><P>
+<A NAME="c_tcException"></A>
+<A NAME="DOC.1.1.11.36"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_tcException</B></TT>
+<DD>Java object stream token character for an exception
+<DL><DT><DD></DL><P>
+<A NAME="c_tcNull"></A>
+<A NAME="DOC.1.1.11.37"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_tcNull</B></TT>
+<DD>Java object stream token character for null
+<DL><DT><DD></DL><P>
+<A NAME="c_classDescriptionFlags"></A>
+<A NAME="DOC.1.1.11.38"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static  const <!1><A HREF="byte.2.html">byte</A> c_classDescriptionFlags</B></TT>
+<DD>Java object stream class description flag
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

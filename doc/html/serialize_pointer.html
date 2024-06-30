@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>#define serialize_pointer</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>#define <A HREF="#DOC.DOCU">serialize_pointer</A></H2><H2>(java_type_name,  java_member_name,<BR>&nbsp; cpp_member)</H2><BLOCKQUOTE>Define a serialize map of a class memeber.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Define a serialize map of a class memeber. The macro should be used in
+serialize block to map a class member that is owned as a pointer.
+
+<P>.serialize_begin("com.myPackage.MyClass", MyClass, "", 0)
+
+<P>..	serialize_by_value("com.myPackage.MyAnotherClass", "m_another", m_another)
+
+<P>..	serialize_pointer("java.lang.Integer", "m_int", m_pInt);
+
+<P>..	serialize_by_value("I", "m_i", m_int);
+
+<P>.serialize_end
+
+<P>The C++ class member name does not have to be the same as Java class member name.
+
+<P></BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>java_type_name</B> -  - a member's <!1><A HREF="java.html">java</A> <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> as a string. Builtin types are:
+<!1><A HREF="byte.2.html">byte</A> - B, char - C, double - D, float - F, integer - I, long - J, short - S, boolean - Z.
+If the member is an instance of an array, the <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> should start with '[' character and 
+and followed by the elements <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A>, e.g. "[I" or "[java.lang.Number".
+<BR><B>java_member_name</B> -  - a Java member <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> as a string.
+<BR><B>cpp_member</B> -  - a corresponding class member name.
+<BR><DT><B>Preconditions:</B><DD>  serialize_begin precedes the definition of one or more of 
+serialize_by_value or serialize_pointer macros
+<BR><DT><B>Postconditions:</B><DD>  The macro must be followed with a semicolon. Also, the 
+serialize block must be closed with serialize_end macro.
+<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DT><B>See Also:</B><DD><!1><A HREF="Serialize.html">inexum::OSP::Serialize</A>
+<BR><!1><A HREF="serialize.2.html">serialize</A>
+<BR><!1><A HREF="serialize_begin.html">serialize_begin</A>
+<BR><!1><A HREF="serialize_by_value.html">serialize_by_value</A>
+<BR><!1><A HREF="serialize_end.html">serialize_end</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

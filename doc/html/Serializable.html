@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  DeclarationSpecifier inexum::OSP::Serializable</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  DeclarationSpecifier <A HREF="#DOC.DOCU">inexum::OSP::Serializable</A></H2></H2><BLOCKQUOTE>The encapsulation of C++ Serializable pattern.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=185>
+<param name=classes value="CSerializable,MSerializable.html,CSerializeString,MSerializeString.html,CSerializeBuiltinType,MSerializeBuiltinType.html,CSerialize,MSerialize.html,CSerializablePointerArray,MSerializablePointerArray.html,CSerializableArray,MSerializableArray.html">
+<param name=before value="M,M|_,MR_,MR_,MR_,Mr_">
+<param name=after value="M,M,M,M,M,M">
+<param name=indent value="0,0,0,0,0,0">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <B><A HREF="#DOC.1.1.17.3">~Serializable</A></B>()
+<DD><I>The Serializable destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void* <B><A HREF="#DOC.1.1.17.4">object</A></B>()
+<DD><I>The getter of a void pointer address of the C++ serializable object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.1.17.5">initialize</A></B>(void* pObject, const <!1><A HREF="Class.html">Class</A>&amp; aClass )
+<DD><I>The setter of a void pointer address of the C++ serializable object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.1.17.6">initialize</A></B>(const <!1><A HREF="Class.html">Class</A>&amp; aClass)
+<DD><I>Initialize the C++ serializable object using the provided class  description.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.1.17.7">serialize</A></B>(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, <!1><A HREF="JavaObjectSerializer.html">JavaObjectSerializer</A>&amp; serializer) = 0
+<DD><I>Override to serialize the C++ serializable object using the provided Java object serializer.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.17.8">className</A></B>(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)
+<DD><I>A class name setter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.17.9">superClass</A></B>()
+<DD><I>The serializable wraps a super class</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.1.1.17.10">isSuperClass</A></B>()
+<DD><I>Verify does serializable wraps a super class.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <!1><A HREF="JLong.html">JLong</A> <B><A HREF="#DOC.1.1.17.11">serialVersionUID</A></B>() const 
+<DD><I>Override to return appropriate serial version unique identifier.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   const char <B><A HREF="#DOC.1.1.17.12">ArrayCode</A></B>()
+<DD><I>Java object stream array code.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   const size_t <B><A HREF="#DOC.1.1.17.13">ClassSize</A></B>()
+<DD><I>The size of word 'class'.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Members</H3><DD><DT>
+class  DeclarationSpecifier <B><A HREF="CppJavaNamesRegister.html">CppJavaNamesRegister</A></B>
+<DD><I>The functional object that registers names of serializable classes.</I>
+<DT>
+class  DeclarationSpecifier <B><A HREF="ObjectHandler.html">ObjectHandler</A></B>
+<DD><I>Remove object from referenced list if object is deleted.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.17.14">Serializable</A></B>(const std::string <!1><A HREF="Serializable.html#DOC.1.1.17.8">className</A>)
+<DD><I>Overloaded constructor.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.1.17.15">initializeObject</A></B>(void* pObject, const <!1><A HREF="Class.html">Class</A>&amp; aClass) = 0
+<DD><I>Override to initialize a serializable object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void* <B><A HREF="#DOC.1.1.17.16">instantiateObject</A></B>() = 0
+<DD><I>Override to instantiate an object of serializable class.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <!1><A HREF="byte.2.html">byte</A> <B><A HREF="#DOC.1.1.17.17">objectTypeCode</A></B>() const 
+<DD><I>Object type code getter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const std::string&amp; <B><A HREF="#DOC.1.1.17.18">className</A></B>() const 
+<DD><I>The class name getter.</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>The encapsulation of C++ Serializable pattern. Provides support
+for initialization of C++ objects with the values received from Java object
+stream.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="~Serializable"></A>
+<A NAME="DOC.1.1.17.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~Serializable()</B></TT>
+<DD>The Serializable destructor
+<DL><DT><DD></DL><P>
+<A NAME="object"></A>
+<A NAME="DOC.1.1.17.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void* object()</B></TT>
+<DD>The getter of a void pointer address of the C++ serializable object.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  void pointer address of the C++ serializable object.<BR><DD></DL><P>
+<A NAME="initialize"></A>
+<A NAME="DOC.1.1.17.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void initialize(void* pObject, const <!1><A HREF="Class.html">Class</A>&amp; aClass )</B></TT>
+<DD>The setter of a void pointer address of the C++ serializable object.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>pObject</B> -  - the void pointer <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of a C++ serializable object.<BR><DD></DL><P>
+<A NAME="initialize"></A>
+<A NAME="DOC.1.1.17.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void initialize(const <!1><A HREF="Class.html">Class</A>&amp; aClass)</B></TT>
+<DD>Initialize the C++ serializable object using the provided class 
+description.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>aClass</B> -  - the reference to a class <!1><A HREF="Member.html#DOC.1.1.12.5">description</A> containing 
+the values received from Java <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> stream.<BR><DD></DL><P>
+<A NAME="serialize"></A>
+<A NAME="DOC.1.1.17.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void serialize(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, <!1><A HREF="JavaObjectSerializer.html">JavaObjectSerializer</A>&amp; serializer) = 0</B></TT>
+<DD>Override to serialize the C++ serializable object using the
+provided Java object serializer.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> 
+<BR><B>serializer</B> -  - Java <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> serializer.<BR><DD></DL><P>
+<A NAME="className"></A>
+<A NAME="DOC.1.1.17.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void className(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)</B></TT>
+<DD>A class name setter.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the serializable class <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string.<BR><DD></DL><P>
+<A NAME="superClass"></A>
+<A NAME="DOC.1.1.17.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void superClass()</B></TT>
+<DD>The serializable wraps a super class
+<DL><DT><DD></DL><P>
+<A NAME="isSuperClass"></A>
+<A NAME="DOC.1.1.17.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isSuperClass()</B></TT>
+<DD>Verify does serializable wraps a super class.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  true if wraps a supr class , otherwise false..<BR><DD></DL><P>
+<A NAME="serialVersionUID"></A>
+<A NAME="DOC.1.1.17.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="JLong.html">JLong</A> serialVersionUID() const </B></TT>
+<DD>Override to return appropriate serial version unique identifier.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  0 as a serial version unique identifier.<BR><DD></DL><P>
+<A NAME="ArrayCode"></A>
+<A NAME="DOC.1.1.17.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   const char ArrayCode()</B></TT>
+<DD>Java object stream array code.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  '['<BR><DD></DL><P>
+<A NAME="ClassSize"></A>
+<A NAME="DOC.1.1.17.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   const size_t ClassSize()</B></TT>
+<DD>The size of word 'class'.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  6<BR><DD></DL><P>
+<A NAME="Serializable"></A>
+<A NAME="DOC.1.1.17.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Serializable(const std::string <!1><A HREF="Serializable.html#DOC.1.1.17.8">className</A>)</B></TT>
+<DD>Overloaded constructor.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Serializable.html#DOC.1.1.17.8">className</A> - the Java class <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> to be serialized.<BR><DD></DL><P>
+<A NAME="initializeObject"></A>
+<A NAME="DOC.1.1.17.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void initializeObject(void* pObject, const <!1><A HREF="Class.html">Class</A>&amp; aClass) = 0</B></TT>
+<DD>Override to initialize a serializable object.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>pObject</B> -  - the <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of an <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> to be initialized.
+<BR><B>aClass</B> -  - the class <!1><A HREF="Member.html#DOC.1.1.12.5">description</A> corresponding to the object.<BR><DD></DL><P>
+<A NAME="instantiateObject"></A>
+<A NAME="DOC.1.1.17.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void* instantiateObject() = 0</B></TT>
+<DD>Override to instantiate an object of serializable class.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the void pointer address of a serializable object.<BR><DD></DL><P>
+<A NAME="objectTypeCode"></A>
+<A NAME="DOC.1.1.17.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="byte.2.html">byte</A> objectTypeCode() const </B></TT>
+<DD>Object type code getter.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the Java object type TC_OBJECT.<BR><DD></DL><P>
+<A NAME="className"></A>
+<A NAME="DOC.1.1.17.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const std::string&amp; className() const </B></TT>
+<DD>The class name getter.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the class name string of serializable object.<BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="SerializeString.html">SerializeString</A><BR>
+<A HREF="SerializeBuiltinType.html">SerializeBuiltinType</A><BR>
+<A HREF="Serialize.html">Serialize</A><BR>
+<A HREF="SerializablePointerArray.html">SerializablePointerArray</A><BR>
+<A HREF="SerializableArray.html">SerializableArray</A><BR>
+</DL>
+
+<DL><DT><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

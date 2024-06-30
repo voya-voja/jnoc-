@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>template< class BASE_PRODUCT, class PRODUCT = BASE_PRODUCT > class  inexum::stl::StringLableCreator</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>template&lt; class BASE_PRODUCT, class PRODUCT = BASE_PRODUCT &gt; class  <A HREF="#DOC.DOCU">inexum::stl::StringLableCreator</A></H2></H2><BLOCKQUOTE>A string labeled factory Method for specific base product and  product type.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="CMethod,MMethod.html,CStringLableCreator,MStringLableCreator.html">
+<param name=before value="M,M">
+<param name=after value="Md_,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.2.10.1">StringLableCreator</A></B>( const std::string&amp; <!1><A HREF="Method.html#DOC.1.2.4.4">label</A> )
+<DD><I>Overloaded constructor expects the creators label as a string.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <B><A HREF="#DOC.1.2.10.2">~StringLableCreator</A></B>()
+<DD><I>Destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   BASE_PRODUCT* <B><A HREF="#DOC.1.2.10.3">operator()</A></B>() const 
+<DD><I>A factory method.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   <!1><A HREF="StringLableCreator.html">StringLableCreator</A>&lt;BASE_PRODUCT, PRODUCT&gt;  <B><A HREF="#DOC.1.2.10.6">g_Creator</A></B>
+<DD><I>When instantiated it would create an static instance of specified factory method</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.2.10.4">StringLableCreator</A></B>( const <!1><A HREF="StringLableCreator.html#DOC.1.2.10.4">StringLableCreator</A>&lt;BASE_PRODUCT, PRODUCT&gt;&amp; right)
+<DD><I>Copy constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Method.html">Method</A>&lt;std::string, BASE_PRODUCT&gt; * <B><A HREF="#DOC.1.2.10.5">clone</A></B>() const 
+<DD><I>The factory Method clone method.</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Method.html">Method</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>LABEL_TYPE <B>label</B>() const 
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>A string labeled factory Method for specific base product and 
+product type. Once Creator temlate is instantiated it will register it self
+into the factory instantiated for the same lable type and base product.
+The same instance of the Creator will be used to create instances of the 
+product that would be returned by the factory as a pointer to a base 
+product.
+
+<P>NOTE:	To instantiate this class for ProductClass0 that is specialization
+of MyProductClass:
+
+<P>template inexum::StringLableCreator&lt;MyProductClass, ProductClass0 &gt;;
+
+<P>inexum::StringLableCreator&lt;MyProductClass, ProductClass0 &gt; 
+inexum::StringLableCreator&lt;MyProductClass, ProductClass0 &gt;g_Creator( "ProductClass0" );
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="StringLableCreator"></A>
+<A NAME="DOC.1.2.10.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> StringLableCreator( const std::string&amp; <!1><A HREF="Method.html#DOC.1.2.4.4">label</A> )</B></TT>
+<DD>Overloaded constructor expects the creators label as a string.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Method.html#DOC.1.2.4.4">label</A> - the creator's <!1><A HREF="Method.html#DOC.1.2.4.4">label</A> used to register with a factory<BR><DD></DL><P>
+<A NAME="~StringLableCreator"></A>
+<A NAME="DOC.1.2.10.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~StringLableCreator()</B></TT>
+<DD>Destructor
+<DL><DT><DD></DL><P>
+<A NAME="operator()"></A>
+<A NAME="DOC.1.2.10.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   BASE_PRODUCT* operator()() const </B></TT>
+<DD>A factory method. Create the instance of the PRODUCT and return it
+as a pointer to BASE_PRODUCT.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a BASE_PRODUCT pointer to created instance of PRODUCT.<BR><DD></DL><P>
+<A NAME="StringLableCreator"></A>
+<A NAME="DOC.1.2.10.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> StringLableCreator( const <!1><A HREF="StringLableCreator.html#DOC.1.2.10.4">StringLableCreator</A>&lt;BASE_PRODUCT, PRODUCT&gt;&amp; right)</B></TT>
+<DD>Copy constructor
+<DL><DT><DD></DL><P>
+<A NAME="clone"></A>
+<A NAME="DOC.1.2.10.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Method.html">Method</A>&lt;std::string, BASE_PRODUCT&gt; * clone() const </B></TT>
+<DD>The factory Method clone method. Create the instance of 
+StringLableCreator and return it as a pointer to a factory Method.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a BASE_PRODUCT pointer to created instance of PRODUCT.<BR><DD></DL><P>
+<A NAME="g_Creator"></A>
+<A NAME="DOC.1.2.10.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="StringLableCreator.html">StringLableCreator</A>&lt;BASE_PRODUCT, PRODUCT&gt;  g_Creator</B></TT>
+<DD>When instantiated it would create an static instance of specified
+factory method
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Parameters:</B><DD><B>BASE_PRODUCT</B> -  - a base class of a PRODUCT used to represent different
+products in a factory
+<BR><B>PRODUCT</B> -  - the class for which the objects would be generated, it is
+defaulted to a BASE_PRODUCT.
+<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DT><B>See Also:</B><DD><!1><A HREF="Creator.html">Creator</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

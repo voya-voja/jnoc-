@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>template< class LABEL_TYPE, class PRODUCT > class  inexum::stl::Factory</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>template&lt; class LABEL_TYPE, class PRODUCT &gt; class  <A HREF="#DOC.DOCU">inexum::stl::Factory</A></H2></H2><BLOCKQUOTE>An encapsulation of a Factory pattern.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="CSingletonVictim,MSingletonVictim.html,CSingleton,MSingleton.html,CFactory,MFactory.html">
+<param name=before value="M,M,M">
+<param name=after value="Md-SP,Md_,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.2.5.1">assign</A></B>(  <!1><A HREF="Method.html">Method</A>&lt;LABEL_TYPE, PRODUCT&gt;&amp; factoryMethod )
+<DD><I>Assign new factory method to the factory instance.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>PRODUCT* <B><A HREF="#DOC.1.2.5.2">create</A></B>( LABEL_TYPE <!1><A HREF="Method.html#DOC.1.2.4.4">label</A> )
+<DD><I>Create a product associated with specified label.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <B><A HREF="#DOC.1.2.5.3">~Factory</A></B>()
+<DD><I>The Factory distractor</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Singleton.html">Singleton</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>static   CHILD&amp; <B>Instance</B>()
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="SingletonVictim.html">SingletonVictim</A>:</H3>
+<DL>
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>An encapsulation of a Factory pattern. Instanciate for a specific factory 
+by providing type of the label and type of the product that will be 
+fabricated. Only one instance of thespecific factory will be created per 
+application (the Factory is a Singleton).
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="assign"></A>
+<A NAME="DOC.1.2.5.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void assign(  <!1><A HREF="Method.html">Method</A>&lt;LABEL_TYPE, PRODUCT&gt;&amp; factoryMethod )</B></TT>
+<DD>Assign new factory method to the factory instance.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>factoryMethod</B> -  - a reference to a <!1><A HREF="Method.html">Method</A> to be assigned<BR><DD></DL><P>
+<A NAME="create"></A>
+<A NAME="DOC.1.2.5.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>PRODUCT* create( LABEL_TYPE <!1><A HREF="Method.html#DOC.1.2.4.4">label</A> )</B></TT>
+<DD>Create a product associated with specified label.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Method.html#DOC.1.2.4.4">label</A> - the lable of the product to be created
+<BR><DT><B>Returns:</B><DD>  a base product pointer<BR><DD></DL><P>
+<A NAME="~Factory"></A>
+<A NAME="DOC.1.2.5.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~Factory()</B></TT>
+<DD>The Factory distractor
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Parameters:</B><DD><B>LABEL_TYPE</B> -  - a <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> of the methods' lables
+<BR><B>BASE_PRODUCT</B> -  - the factory's base product
+<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

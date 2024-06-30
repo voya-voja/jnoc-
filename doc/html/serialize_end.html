@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>#define serialize_end</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>#define <A HREF="#DOC.DOCU">serialize_end</A></H2></H2><BLOCKQUOTE>The end of a serialize section that defines the map of members of a  C++ Serializable class.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>The end of a serialize section that defines the map of members of a 
+C++ Serializable class.
+
+<P>Example (file MyClass.cpp):
+
+<P>.serialize_begin("com.myPackage.MyClass", MyClass, "", 0)
+
+<P>..	serialize_by_value("com.myPackage.MyAnotherClass", "m_another", m_another)
+
+<P>..	serialize_pointer("java.lang.Integer", "m_int", m_pInt);
+
+<P>..	serialize_by_value("I", "m_i", m_int);
+
+<P>.serialize_end
+
+<P>
+</BLOCKQUOTE>
+<DL><DT><DT><B>Preconditions:</B><DD>  serialize_end is follows by the definition of zero or 
+more of serialize_by_value or serialize_pointer macros, 
+which are preceded by serialize_begin macro.
+<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DT><B>See Also:</B><DD><!1><A HREF="Serialize.html">inexum::OSP::Serialize</A>
+<BR><!1><A HREF="serialize.2.html">serialize</A>
+<BR><!1><A HREF="serialize_begin.html">serialize_begin</A>
+<BR><!1><A HREF="serialize_by_value.html">serialize_by_value</A>
+<BR><!1><A HREF="serialize_pointer.html">serialize_pointer</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

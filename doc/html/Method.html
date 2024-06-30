@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>template< class LABEL_TYPE, class BASE_PRODUCT > class  inexum::stl::Method</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>template&lt; class LABEL_TYPE, class BASE_PRODUCT &gt; class  <A HREF="#DOC.DOCU">inexum::stl::Method</A></H2></H2><BLOCKQUOTE>A factory method abstarction (encapsulation of factory pattern).</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=125>
+<param name=classes value="CMethod,MMethod.html,CStringLableCreator,MStringLableCreator.html,CCreator,MCreator.html,CCreateWithStringLable,MCreateWithStringLable.html">
+<param name=before value="M,M|_,MR_,Mr_">
+<param name=after value="M,M,M,M">
+<param name=indent value="0,0,0,0">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <B><A HREF="#DOC.1.2.4.1">~Method</A></B>()
+<DD><I>Method's destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   BASE_PRODUCT* <B><A HREF="#DOC.1.2.4.2">operator()</A></B>() const  = 0
+<DD><I>override to fabricate an instance of desired product.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <!1><A HREF="Method.html">Method</A>&lt;LABEL_TYPE, BASE_PRODUCT&gt; * <B><A HREF="#DOC.1.2.4.3">clone</A></B>() const  = 0
+<DD><I>override to dynamicaly create an instance of derived class</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>LABEL_TYPE <B><A HREF="#DOC.1.2.4.4">label</A></B>() const 
+<DD><I>Label getter.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.2.4.5">Method</A></B>( const <!1><A HREF="Method.html#DOC.1.2.4.5">Method</A>&lt;LABEL_TYPE, BASE_PRODUCT&gt;&amp; right )
+<DD><I>The method's copy constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.2.4.6">Method</A></B>( LABEL_TYPE <!1><A HREF="Method.html#DOC.1.2.4.4">label</A> )
+<DD><I>The Method overloaded constructor.</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>A factory method abstarction (encapsulation of factory pattern).
+It would be Factory class if MS compiler supported instantiation of
+template class Map with pointer to nested class.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="~Method"></A>
+<A NAME="DOC.1.2.4.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~Method()</B></TT>
+<DD>Method's destructor
+<DL><DT><DD></DL><P>
+<A NAME="operator()"></A>
+<A NAME="DOC.1.2.4.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   BASE_PRODUCT* operator()() const  = 0</B></TT>
+<DD>override to fabricate an instance of desired product. 
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a base class pointer to created instance.<BR><DD></DL><P>
+<A NAME="clone"></A>
+<A NAME="DOC.1.2.4.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="Method.html">Method</A>&lt;LABEL_TYPE, BASE_PRODUCT&gt; * clone() const  = 0</B></TT>
+<DD>override to dynamicaly create an instance of derived class
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a factory Method pointer.<BR><DD></DL><P>
+<A NAME="label"></A>
+<A NAME="DOC.1.2.4.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>LABEL_TYPE label() const </B></TT>
+<DD>Label getter.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the lable value of this method<BR><DD></DL><P>
+<A NAME="Method"></A>
+<A NAME="DOC.1.2.4.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Method( const <!1><A HREF="Method.html#DOC.1.2.4.5">Method</A>&lt;LABEL_TYPE, BASE_PRODUCT&gt;&amp; right )</B></TT>
+<DD>The method's copy constructor
+<DL><DT><DD></DL><P>
+<A NAME="Method"></A>
+<A NAME="DOC.1.2.4.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Method( LABEL_TYPE <!1><A HREF="Method.html#DOC.1.2.4.4">label</A> )</B></TT>
+<DD>The Method overloaded constructor.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>lable</B> -  - a product <!1><A HREF="Method.html#DOC.1.2.4.4">label</A> value.<BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="StringLableCreator.html">StringLableCreator</A><BR>
+<A HREF="Creator.html">Creator</A><BR>
+<A HREF="CreateWithStringLable.html">CreateWithStringLable</A><BR>
+</DL>
+
+<DL><DT><DT><B>Parameters:</B><DD><B>LABEL_TYPE</B> -  - the method lable type.
+<BR><B>BASE_PRODUCT</B> -  - the base product returned by <!1><A HREF="Factory.html#DOC.1.2.5.2">create</A> method
+<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

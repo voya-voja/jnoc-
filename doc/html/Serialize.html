@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>template<class TYPE> class  inexum::OSP::Serialize</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>template&lt;class TYPE&gt; class  <A HREF="#DOC.DOCU">inexum::OSP::Serialize</A></H2></H2><BLOCKQUOTE>Specialization of Serializable class that provides means to define a C++ class a serializable.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="CSerializable,MSerializable.html,CSerialize,MSerialize.html">
+<param name=before value="M,M">
+<param name=after value="Md_,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.24.1">Serialize</A></B>(const std::string&amp; <!1><A HREF="Serializable.html#DOC.1.1.17.8">className</A>)
+<DD><I>Default constructor.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void* <B><A HREF="#DOC.1.1.24.2">addressOf</A></B>(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)
+<DD><I>Provide the address of a specified member .</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Serialize.html#DOC.1.1.24.3">MembersMap</A>&amp; <B><A HREF="#DOC.1.1.24.6">members</A></B>()
+<DD><I>Provide the members map for the serializable object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.24.7">addMember</A></B>(const char* <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>, <!1><A HREF="Member.html">Member</A>* pMember)
+<DD><I>Add a member of the C++ serializable object to the list of  serializables.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void* <B><A HREF="#DOC.1.1.24.8">instantiateObject</A></B>()
+<DD><I>Instantiate an object of serializable class TYPE.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.24.9">load</A></B>(TYPE&amp; obj)
+<DD><I>Load the object's map of members.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.24.10">initializeObject</A></B>(void* pObject, const <!1><A HREF="Class.html">Class</A>&amp; aClass)
+<DD><I>Initialize a serializable object of type TYPE.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.24.11">serialize</A></B>(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, <!1><A HREF="JavaObjectSerializer.html">JavaObjectSerializer</A>&amp; serializer)
+<DD><I>Serialize the C++ serializable object of type TYPE using the provided Java object serializer.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.24.12">superClass</A></B>(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)
+<DD><I>The setter of super class name (Java class name format).</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Members</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::map&lt;std::string, <!1><A HREF="Member.html">Member</A>*&gt; <B><A HREF="#DOC.1.1.24.3">MembersMap</A></B>
+<DD><I>The map of member names to member pointers</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  MembersMap::value_type <B><A HREF="#DOC.1.1.24.4">MemberPair</A></B>
+<DD><I>The map's pair of member name and member pointer</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::vector&lt;std::string&gt; <B><A HREF="#DOC.1.1.24.5">MembersList</A></B>
+<DD><I>The list of member names</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Serializable.html">Serializable</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>void* <B>object</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>initialize</B>(void* pObject, const <!1><A HREF="Class.html">Class</A>&amp; aClass )
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>initialize</B>(const <!1><A HREF="Class.html">Class</A>&amp; aClass)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>className</B>(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>isSuperClass</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   <!1><A HREF="JLong.html">JLong</A> <B>serialVersionUID</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   const char <B>ArrayCode</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   const size_t <B>ClassSize</B>()
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Members</H3><DD><DT>
+class  DeclarationSpecifier <B><A HREF="CppJavaNamesRegister.html">CppJavaNamesRegister</A></B>
+<DD><I>The functional object that registers names of serializable classes.</I>
+<DT>
+class  DeclarationSpecifier <B><A HREF="ObjectHandler.html">ObjectHandler</A></B>
+<DD><I>Remove object from referenced list if object is deleted.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   <!1><A HREF="byte.2.html">byte</A> <B>objectTypeCode</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>const std::string&amp; <B>className</B>() const 
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Specialization of Serializable class that provides means to define
+a C++ class a serializable.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="Serialize"></A>
+<A NAME="DOC.1.1.24.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Serialize(const std::string&amp; <!1><A HREF="Serializable.html#DOC.1.1.17.8">className</A>)</B></TT>
+<DD>Default constructor. Creates a new instance of class TYPE and loads 
+the members map.
+<DL><DT><DD></DL><P>
+<A NAME="addressOf"></A>
+<A NAME="DOC.1.1.24.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void* addressOf(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)</B></TT>
+<DD>Provide the address of a specified member .
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the member name.
+<BR><DT><B>Returns:</B><DD>  void pointer address of the specified member.<BR><DD></DL><P>
+<A NAME="MembersMap"></A>
+<A NAME="DOC.1.1.24.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::map&lt;std::string, <!1><A HREF="Member.html">Member</A>*&gt; MembersMap</B></TT>
+<DD>The map of member names to member pointers
+<DL><DT><DD></DL><P>
+<A NAME="MemberPair"></A>
+<A NAME="DOC.1.1.24.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  MembersMap::value_type MemberPair</B></TT>
+<DD>The map's pair of member name and member pointer
+<DL><DT><DD></DL><P>
+<A NAME="MembersList"></A>
+<A NAME="DOC.1.1.24.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::vector&lt;std::string&gt; MembersList</B></TT>
+<DD>The list of member names
+<DL><DT><DD></DL><P>
+<A NAME="members"></A>
+<A NAME="DOC.1.1.24.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Serialize.html#DOC.1.1.24.3">MembersMap</A>&amp; members()</B></TT>
+<DD>Provide the members map for the serializable object.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the map of members.<BR><DD></DL><P>
+<A NAME="addMember"></A>
+<A NAME="DOC.1.1.24.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void addMember(const char* <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>, <!1><A HREF="Member.html">Member</A>* pMember)</B></TT>
+<DD>Add a member of the C++ serializable object to the list of 
+serializables.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - a member name.
+<BR><B>pObject</B> -  - a member pointer.<BR><DD></DL><P>
+<A NAME="instantiateObject"></A>
+<A NAME="DOC.1.1.24.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void* instantiateObject()</B></TT>
+<DD>Instantiate an object of serializable class TYPE.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the void pointer address of a serializable object.<BR><DD></DL><P>
+<A NAME="load"></A>
+<A NAME="DOC.1.1.24.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void load(TYPE&amp; obj)</B></TT>
+<DD>Load the object's map of members. The method body is not provided.
+It is expected that any instantiation of the class would provide
+specific implementation of this method.
+<DL><DT><DD></DL><P>
+<A NAME="initializeObject"></A>
+<A NAME="DOC.1.1.24.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void initializeObject(void* pObject, const <!1><A HREF="Class.html">Class</A>&amp; aClass)</B></TT>
+<DD>Initialize a serializable object of type TYPE.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>pObject</B> -  - the <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of an <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> to be initialized.
+<BR><B>aClass</B> -  - the class <!1><A HREF="Member.html#DOC.1.1.12.5">description</A> corresponding to the object.<BR><DD></DL><P>
+<A NAME="serialize"></A>
+<A NAME="DOC.1.1.24.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void serialize(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, <!1><A HREF="JavaObjectSerializer.html">JavaObjectSerializer</A>&amp; serializer)</B></TT>
+<DD>Serialize the C++ serializable object of type TYPE using the
+provided Java object serializer.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> 
+<BR><B>serializer</B> -  - Java <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> serializer.<BR><DD></DL><P>
+<A NAME="superClass"></A>
+<A NAME="DOC.1.1.24.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void superClass(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)</B></TT>
+<DD>The setter of super class name (Java class name format).
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the super class <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> <BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Parameters:</B><DD><B>TYPE</B> -  - A C++ serializable class .
+<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DT><B>See Also:</B><DD><!1><A HREF="Serialize.html#DOC.1.1.24.11">serialize</A>
+<BR><!1><A HREF="serialize_begin.html">serialize_begin</A>
+<BR><!1><A HREF="serialize_by_value.html">serialize_by_value</A>
+<BR><!1><A HREF="serialize_pointer.html">serialize_pointer</A>
+<BR><!1><A HREF="serialize_end.html">serialize_end</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>#define Serialize Example</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>#define <A HREF="#DOC.DOCU">Serialize Example</A></H2></H2><BLOCKQUOTE>Serializable class MyClass. </BLOCKQUOTE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>All non static Java class members will be sent by Java object stream.
+However, on the C++ side JNOC++ requires that corresponding C++ class
+has as a minimum corresponding Java class members, allowing additional
+class members like m_memberJustInCpp bellow.
+
+<P>All Java arrays in JNOC++ are supported only with the use of std::vector 
+and inexum::VectorPtr classes.
+
+<P>The C++ classes do not have to be inhereted from any class that corresponds
+to java.lang.Object class. The java.lang.Object array  is supported by  
+JNOC++ through the use of std::vector&lt;void*&gt;. So, in a way JNOC++ treats
+java.lang.Object reference as a void pointer in C++.
+
+<P>The name of a C++ class or a member does not have to be the same as Java
+class or member name, respectivly. 
+
+<P>The accessibility of a member within the class does not have to be the same,
+e.g. bellow, class member m_array is private in Java and protected in C++,
+while the member m_ints is protected in Java and corresponding m_pInts is
+private in C++.
+
+<P>MyClass.java:
+
+<P>.public class MyClass implements Serializable {
+
+<P>..	private MyAnotherClass			m_another;
+
+<P>..	protected Integer[]				m_ints;
+
+<P>..	private int[]					m_array;
+
+<P>..	private	Object[]				m_objects;
+
+<P>... ...
+
+<P>..	private static final long serialVersionUID = 0;
+
+<P>.};
+
+<P>MyCppClass.h:
+
+<P>.class MyCppClass {
+
+<P>..	serialize(MyClass);
+
+<P>..	AnotherClass			m_another;
+
+<P>..	std::vector&lt;java::lang::Integer*&gt;*	m_pInts;
+
+<P>..	std::vector&lt;void*&gt;		m_objects;
+
+<P>..	bool					m_memberJustInCpp;
+
+<P>.protected:
+
+<P>..	std::vector&lt;int&gt;		m_array;
+
+<P>... ...
+
+<P>.};
+
+<P>
+MyCppClass.cpp:
+
+<P>.serialize_begin("com.myPackage.MyClass", MyCppClass, "", 0)
+
+<P>..	serialize_by_value("com.myPackage.MyAnotherClass", "m_another", m_another);
+
+<P>..	serialize_pointer("[java.lang.Integer", "m_ints", m_pInts);
+
+<P>..	serialize_by_value("[java.lang.Object", "m_objects", m_objects);
+
+<P>..	serialize_by_value("[I", "m_array", m_array);
+
+<P>.serialize_end
+
+<P></BLOCKQUOTE>
+<DL><DT><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DT><B>See Also:</B><DD><!1><A HREF="Serialize.html">inexum::OSP::Serialize</A>
+<BR><!1><A HREF="serialize.2.html">serialize</A>
+<BR><!1><A HREF="serialize_begin.html">serialize_begin</A>
+<BR><!1><A HREF="serialize_by_value.html">serialize_by_value</A>
+<BR><!1><A HREF="serialize_pointer.html">serialize_pointer</A>
+<BR><!1><A HREF="serialize_end.html">serialize_end</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

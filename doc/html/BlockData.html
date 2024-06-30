@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  inexum::OSP::BlockData</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">inexum::OSP::BlockData</A></H2></H2><BLOCKQUOTE>Java object parser symbol encapsulates the manipulation of data block.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="MEntity,M,CObject,MObject.html,CBlockData,MBlockData.html">
+<param name=before value="M,M,M">
+<param name=after value="Md_SP,Md_,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.3.1">BlockData</A></B>(const <!1><A HREF="BlockData.html#DOC.1.1.3.1">BlockData</A>&amp; right)
+<DD><I>Array symbol copy constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.3.2">BlockData</A></B>(size_t size)
+<DD><I>Construct the block data with the buffer of a specified size.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.3.3">~BlockData</A></B>()
+<DD><I>Object symbol destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Object.html">Object</A>* <B><A HREF="#DOC.1.1.3.4">clone</A></B>() const 
+<DD><I>Object symbol clone method:</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.3.5">add</A></B>(<!1><A HREF="byte.2.html">byte</A> aByte)
+<DD><I>Override to initialize the provided C++ object that is of appropriate  type.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.1.1.3.6">isFull</A></B>() const 
+<DD><I>Verify is block data buffer full.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.1.1.3.7">isEmpty</A></B>() const 
+<DD><I>Verify is block data buffer empty.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.3.8">initialize</A></B>(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, size_t size)
+<DD><I>Initialize the provided C++ object that is of appropriate  type.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void* <B><A HREF="#DOC.1.1.3.9">instantiate</A></B>(size_t size)
+<DD><I>Create and initialize the appropriate C++ object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="byte.2.html">byte</A>* <B><A HREF="#DOC.1.1.3.10">read</A></B>(size_t&amp; size, int offset = 0, size_t len = -1)
+<DD><I>Create byte buffer and load it with available data.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>size_t <B><A HREF="#DOC.1.1.3.11">read</A></B>(<!1><A HREF="byte.2.html">byte</A>* buffer, size_t maxSize)
+<DD><I>Load the buffer with available data.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.3.12">operator byte*</A></B>()
+<DD><I>byte pointer operator</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.3.13">full</A></B>()
+<DD><I>Set the BlockData oject in full buffer state</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void* <B><A HREF="#DOC.1.1.3.14">instantiateObject</A></B>() const 
+<DD><I>Not applicable to a BlockData.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.3.15">initializeObject</A></B>(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>) const 
+<DD><I>Not applicable to BlockData.</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Object.html">Object</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   JavaObjectParser::State <B>getState</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   int <B>getEndToken</B>() const 
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Java object parser symbol encapsulates the manipulation of data block.
+Responsible to deserialize byte buffers and builtin type objects. 
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="BlockData"></A>
+<A NAME="DOC.1.1.3.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BlockData(const <!1><A HREF="BlockData.html#DOC.1.1.3.1">BlockData</A>&amp; right)</B></TT>
+<DD>Array symbol copy constructor
+<DL><DT><DD></DL><P>
+<A NAME="BlockData"></A>
+<A NAME="DOC.1.1.3.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BlockData(size_t size)</B></TT>
+<DD>Construct the block data with the buffer of a specified size.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> <!1><A HREF="Member.html#DOC.1.1.12.7">name</A><BR><DD></DL><P>
+<A NAME="~BlockData"></A>
+<A NAME="DOC.1.1.3.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~BlockData()</B></TT>
+<DD>Object symbol destructor
+<DL><DT><DD></DL><P>
+<A NAME="clone"></A>
+<A NAME="DOC.1.1.3.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Object.html">Object</A>* clone() const </B></TT>
+<DD>Object symbol clone method:
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a cloned instance of the Object symbol<BR><DD></DL><P>
+<A NAME="add"></A>
+<A NAME="DOC.1.1.3.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void add(<!1><A HREF="byte.2.html">byte</A> aByte)</B></TT>
+<DD>Override to initialize the provided C++ object that is of appropriate 
+type.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the void pointer <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A>
+<BR><B>size</B> -  - the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> size<BR><DD></DL><P>
+<A NAME="isFull"></A>
+<A NAME="DOC.1.1.3.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isFull() const </B></TT>
+<DD>Verify is block data buffer full.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  true if buffer is full, otherwise false.<BR><DD></DL><P>
+<A NAME="isEmpty"></A>
+<A NAME="DOC.1.1.3.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isEmpty() const </B></TT>
+<DD>Verify is block data buffer empty.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  true if buffer is empty, otherwise false.<BR><DD></DL><P>
+<A NAME="initialize"></A>
+<A NAME="DOC.1.1.3.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void initialize(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, size_t size)</B></TT>
+<DD>Initialize the provided C++ object that is of appropriate 
+type.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the void pointer <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A>
+<BR><B>size</B> -  - the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> size<BR><DD></DL><P>
+<A NAME="instantiate"></A>
+<A NAME="DOC.1.1.3.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void* instantiate(size_t size)</B></TT>
+<DD>Create and initialize the appropriate C++ object.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>size</B> -  - the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> size
+<BR><DT><B>Returns:</B><DD>  the void pointer address of the object<BR><DD></DL><P>
+<A NAME="read"></A>
+<A NAME="DOC.1.1.3.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="byte.2.html">byte</A>* read(size_t&amp; size, int offset = 0, size_t len = -1)</B></TT>
+<DD>Create byte buffer and load it with available data.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>size</B> -  - the number of available bytes
+<BR><B>offset</B> -  - the start of data offset.
+<BR><B>len</B> -  - a maximum number of a bytes to be read. If -1,
+<!1><A HREF="BlockData.html#DOC.1.1.3.10">read</A> the block data buffer size from the stream.
+<BR><DT><B>Returns:</B><DD>  a pointer to a byte buffer.<BR><DD></DL><P>
+<A NAME="read"></A>
+<A NAME="DOC.1.1.3.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>size_t read(<!1><A HREF="byte.2.html">byte</A>* buffer, size_t maxSize)</B></TT>
+<DD>Load the buffer with available data.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>buffer</B> -  - a <!1><A HREF="byte.2.html">byte</A> buffer.
+<BR><B>maxSize</B> -  - a size of a <!1><A HREF="byte.2.html">byte</A> buffer.
+<BR><DT><B>Returns:</B><DD>  the number of available bytes<BR><DD></DL><P>
+<A NAME="operator byte*"></A>
+<A NAME="DOC.1.1.3.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> operator byte*()</B></TT>
+<DD>byte pointer operator
+<DL><DT><DD></DL><P>
+<A NAME="full"></A>
+<A NAME="DOC.1.1.3.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void full()</B></TT>
+<DD>Set the BlockData oject in full buffer state
+<DL><DT><DD></DL><P>
+<A NAME="instantiateObject"></A>
+<A NAME="DOC.1.1.3.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void* instantiateObject() const </B></TT>
+<DD>Not applicable to a BlockData.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  NULL<BR><DD></DL><P>
+<A NAME="initializeObject"></A>
+<A NAME="DOC.1.1.3.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void initializeObject(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>) const </B></TT>
+<DD>Not applicable to BlockData.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the void pointer <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A><BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

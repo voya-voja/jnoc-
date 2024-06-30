@@ -1,0 +1,386 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  java::net::InetAddress</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">java::net::InetAddress</A></H2></H2><BLOCKQUOTE>This class represents an Internet Protocol (IP) address.</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.1.1">isMulticastAddress</A></B>() const 
+<DD><I>Utility routine to check if the InetAddress is an IP multicast address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.1.2">isAnyLocalAddress</A></B>() const 
+<DD><I>Utility routine to check if the InetAddress in a wildcard address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.1.3">isLoopbackAddress</A></B>() const 
+<DD><I>Utility routine to check if the InetAddress is a loopback address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.1.4">isLinkLocalAddress</A></B>() const 
+<DD><I>Utility routine to check if the InetAddress is an link local address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.1.5">isSiteLocalAddress</A></B>() const 
+<DD><I>Utility routine to check if the InetAddress is a site local address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.1.6">isMCGlobal</A></B>() const 
+<DD><I>Utility routine to check if the multicast address has global scope.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.1.7">isMCNodeLocal</A></B>() const 
+<DD><I>Utility routine to check if the multicast address has node scope.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.1.8">isMCLinkLocal</A></B>() const 
+<DD><I>Utility routine to check if the multicast address has link scope.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.1.9">isMCSiteLocal</A></B>() const 
+<DD><I>Utility routine to check if the multicast address has site scope.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.1.10">isMCOrgLocal</A></B>() const 
+<DD><I>Utility routine to check if the multicast address has organization  scope.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>std::string <B><A HREF="#DOC.6.3.1.11">getHostName</A></B>() const 
+<DD><I>Gets the host name for this IP address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>std::string <B><A HREF="#DOC.6.3.1.12">getCanonicalHostName</A></B>() const 
+<DD><I>Gets the fully qualified domain name for this IP address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="byte.2.html">byte</A>* <B><A HREF="#DOC.6.3.1.13">getAddress</A></B>() const 
+<DD><I>Returns the raw IP address of this InetAddress object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>std::string <B><A HREF="#DOC.6.3.1.14">getHostAddress</A></B>() const 
+<DD><I>Returns the IP address std::string in textual presentation.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.6.3.1.15">hashCode</A></B>() const 
+<DD><I>Returns a hashcode for this IP address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.1.16">equals</A></B>(const void* obj) const 
+<DD><I>Compares this object against the specified object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>std::string <B><A HREF="#DOC.6.3.1.17">toString</A></B>() const 
+<DD><I>Converts this IP address to a std::string.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   <!1><A HREF="InetAddress.html">InetAddress</A> <B><A HREF="#DOC.6.3.1.18">getByAddress</A></B>(const std::string&amp; host, <!1><A HREF="byte.2.html">byte</A>* addr) throw(UnknownHostException*)
+<DD><I>Create an InetAddress based on the provided host name and IP address No  name service is checked for the validity of the address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   <!1><A HREF="InetAddress.html">InetAddress</A> <B><A HREF="#DOC.6.3.1.19">getByName</A></B>(const std::string&amp; host) throw(UnknownHostException*)
+<DD><I>Determines the IP address of a host, given the host's name.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   std::vector&lt;<!1><A HREF="InetAddress.html">InetAddress</A>&gt;  <B><A HREF="#DOC.6.3.1.20">getAllByName</A></B>(const std::string&amp; host) throw(UnknownHostException*)
+<DD><I>Given the name of a host, returns an array of its IP addresses, based on the configured name service on the system.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   <!1><A HREF="InetAddress.html">InetAddress</A> <B><A HREF="#DOC.6.3.1.21">getByAddress</A></B>(<!1><A HREF="byte.2.html">byte</A>* addr) throw(UnknownHostException*)
+<DD><I>Returns an InetAddress object given the raw IP address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   <!1><A HREF="InetAddress.html">InetAddress</A> <B><A HREF="#DOC.6.3.1.22">getLocalHost</A></B>() throw(UnknownHostException*)
+<DD><I>Returns the local host.</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>This class represents an Internet Protocol (IP) address. 
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="isMulticastAddress"></A>
+<A NAME="DOC.6.3.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isMulticastAddress() const </B></TT>
+<DD>Utility routine to check if the InetAddress is an IP multicast address.
+Returns:
+a bool indicating if the InetAddress is an IP multicast address
+<DL><DT><DD></DL><P>
+<A NAME="isAnyLocalAddress"></A>
+<A NAME="DOC.6.3.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isAnyLocalAddress() const </B></TT>
+<DD>Utility routine to check if the InetAddress in a wildcard address. 
+Returns:
+a bool indicating if the Inetaddress is a wildcard address.
+<DL><DT><DD></DL><P>
+<A NAME="isLoopbackAddress"></A>
+<A NAME="DOC.6.3.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isLoopbackAddress() const </B></TT>
+<DD>Utility routine to check if the InetAddress is a loopback address. 
+Returns:
+a bool indicating if the InetAddress is a loopback address; or 
+false otherwise.
+<DL><DT><DD></DL><P>
+<A NAME="isLinkLocalAddress"></A>
+<A NAME="DOC.6.3.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isLinkLocalAddress() const </B></TT>
+<DD>Utility routine to check if the InetAddress is an link local address. 
+Returns:
+a bool indicating if the InetAddress is a link local address; or 
+false if address is not a link local unicast address.
+<DL><DT><DD></DL><P>
+<A NAME="isSiteLocalAddress"></A>
+<A NAME="DOC.6.3.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isSiteLocalAddress() const </B></TT>
+<DD>Utility routine to check if the InetAddress is a site local address. 
+Returns:
+a bool indicating if the InetAddress is a site local address; or 
+false if address is not a site local unicast address.
+<DL><DT><DD></DL><P>
+<A NAME="isMCGlobal"></A>
+<A NAME="DOC.6.3.1.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isMCGlobal() const </B></TT>
+<DD>Utility routine to check if the multicast address has global scope.
+Returns:
+a bool indicating if the address has is a multicast address of 
+global scope, false if it is not of global scope or it is not a 
+multicast address
+<DL><DT><DD></DL><P>
+<A NAME="isMCNodeLocal"></A>
+<A NAME="DOC.6.3.1.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isMCNodeLocal() const </B></TT>
+<DD>Utility routine to check if the multicast address has node scope. 
+Returns:
+a bool indicating if the address has is a multicast address of 
+node-local scope, false if it is not of node-local scope or it is 
+not a multicast address
+<DL><DT><DD></DL><P>
+<A NAME="isMCLinkLocal"></A>
+<A NAME="DOC.6.3.1.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isMCLinkLocal() const </B></TT>
+<DD>Utility routine to check if the multicast address has link scope.
+Returns:
+a bool indicating if the address has is a multicast address of 
+link-local scope, false if it is not of link-local scope or it is 
+not a multicast address
+<DL><DT><DD></DL><P>
+<A NAME="isMCSiteLocal"></A>
+<A NAME="DOC.6.3.1.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isMCSiteLocal() const </B></TT>
+<DD>Utility routine to check if the multicast address has site scope.
+Returns:
+a bool indicating if the address has is a multicast address of 
+site-local scope, false if it is not of site-local scope or it is 
+not a multicast address
+<DL><DT><DD></DL><P>
+<A NAME="isMCOrgLocal"></A>
+<A NAME="DOC.6.3.1.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isMCOrgLocal() const </B></TT>
+<DD>Utility routine to check if the multicast address has organization 
+scope. 
+Returns:
+a bool indicating if the address has is a multicast address of 
+organization-local scope, false if it is not of organization-local 
+scope or it is not a multicast address
+<DL><DT><DD></DL><P>
+<A NAME="getHostName"></A>
+<A NAME="DOC.6.3.1.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::string getHostName() const </B></TT>
+<DD>Gets the host name for this IP address. 
+If this InetAddress was created with a host name, this host name will
+be remembered and returned; otherwise, a reverse name lookup will be 
+performed and the result will be returned based on the system 
+configured name lookup service. If a lookup of the name service is 
+required, call getCanonicalHostName. 
+If there is a security manager, its checkConnect method is first called 
+with the hostname and -1 as its arguments to see if the operation is 
+allowed. If the operation is not allowed, it will return the textual 
+representation of the IP address. 
+Returns:
+the host name for this IP address, or if the operation is not allowed by
+the security check, the textual representation of the IP address.
+See Also:
+getCanonicalHostName(), SecurityManager.checkConnect(java.lang.const std::string&amp;, int)
+<DL><DT><DD></DL><P>
+<A NAME="getCanonicalHostName"></A>
+<A NAME="DOC.6.3.1.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::string getCanonicalHostName() const </B></TT>
+<DD>Gets the fully qualified domain name for this IP address. Best effort 
+method, meaning we may not be able to return the FQDN depending on the 
+underlying system configuration. 
+If there is a security manager, this method first calls its 
+checkConnect method with the hostname and -1 as its arguments to see 
+if the calling code is allowed to know the hostname for this IP address,
+i.e., to connect to the host. If the operation is not allowed, it will
+return the textual representation of the IP address. 
+Returns:
+the fully qualified domain name for this IP address, or if the operation 
+is not allowed by the security check, the textual representation of the 
+IP address.
+See Also:
+SecurityManager.checkConnect(java.lang.std::string, int)
+<DL><DT><DD></DL><P>
+<A NAME="getAddress"></A>
+<A NAME="DOC.6.3.1.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="byte.2.html">byte</A>* getAddress() const </B></TT>
+<DD>Returns the raw IP address of this InetAddress object. The result is in 
+network byte order: the highest order byte of the address is in 
+getAddress()[0]. 
+Returns:
+the raw IP address of this object.
+<DL><DT><DD></DL><P>
+<A NAME="getHostAddress"></A>
+<A NAME="DOC.6.3.1.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::string getHostAddress() const </B></TT>
+<DD>Returns the IP address std::string in textual presentation. 
+Returns:
+the raw IP address in a std::string format.
+<DL><DT><DD></DL><P>
+<A NAME="hashCode"></A>
+<A NAME="DOC.6.3.1.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int hashCode() const </B></TT>
+<DD>Returns a hashcode for this IP address. 
+Overrides:
+hashCode in class Object
+Returns:
+a hash code value for this IP address.
+See Also:
+Object.equals(java.lang.Object), Hashtable
+<DL><DT><DD></DL><P>
+<A NAME="equals"></A>
+<A NAME="DOC.6.3.1.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool equals(const void* obj) const </B></TT>
+<DD>Compares this object against the specified object. The result is true if
+and only if the argument is not null and it represents the same IP 
+address as this object. 
+Two instances of InetAddress represent the same IP address if the length
+of the byte arrays returned by getAddress is the same for both, and each
+of the array components is the same for the byte arrays. 
+Overrides:
+equals in class Object
+Parameters:
+obj - the object to compare against. 
+Returns:
+true if the objects are the same; false otherwise.
+See Also:
+getAddress()
+<DL><DT><DD></DL><P>
+<A NAME="toString"></A>
+<A NAME="DOC.6.3.1.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::string toString() const </B></TT>
+<DD>Converts this IP address to a std::string. The std::string returned is of the form: hostname / literal IP address. If the host name is unresolved, no reverse name service loopup is performed. The hostname part will be represented by an empty std::string. 
+Overrides:
+tostd::string in class Object
+Returns:
+a std::string representation of this IP address.
+<DL><DT><DD></DL><P>
+<A NAME="getByAddress"></A>
+<A NAME="DOC.6.3.1.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="InetAddress.html">InetAddress</A> getByAddress(const std::string&amp; host, <!1><A HREF="byte.2.html">byte</A>* addr) throw(UnknownHostException*)</B></TT>
+<DD>Create an InetAddress based on the provided host name and IP address No 
+name service is checked for the validity of the address. 
+The host name can either be a machine name, such as "java.sun.com", or 
+a textual representation of its IP address. 
+
+<P>For host specified in literal IPv6 address, either the form defined in 
+RFC 2732 or the literal IPv6 address format defined in RFC 2373 is 
+accepted. 
+
+<P>If addr specifies an IPv4 address an instance of Inet4Address will be 
+returned; otherwise, an instance of Inet6Address will be returned. 
+
+<P>IPv4 address byte array must be 4 bytes long and IPv6 byte array must 
+be 16 bytes long
+Parameters:
+host - the specified host
+addr - the raw IP address in network byte order 
+Returns:
+an InetAddress object created from the raw IP address. 
+Throws: 
+UnknownHostException* - if IP address is of illegal length
+<DL><DT><DD></DL><P>
+<A NAME="getByName"></A>
+<A NAME="DOC.6.3.1.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="InetAddress.html">InetAddress</A> getByName(const std::string&amp; host) throw(UnknownHostException*)</B></TT>
+<DD>Determines the IP address of a host, given the host's name. 
+The host name can either be a machine name, such as "java.sun.com", 
+or a textual representation of its IP address. If a literal IP 
+address is supplied, only the validity of the address format is checked. 
+For host specified in literal IPv6 address, either the form defined in 
+RFC 2732 or the literal IPv6 address format defined in RFC 2373 is 
+accepted. 
+If the host is null then an InetAddress representing an address of 
+the loopback interface is returned. See RFC 3330 section 2 and RFC 
+2373 section 2.5.3. 
+Parameters:
+host - the specified host, or null. 
+Returns:
+an IP address for the given host name. 
+Throws: 
+UnknownHostException* - if no IP address for the host could be found. 
+SecurityException - if a security manager exists and its checkConnect
+method doesn't allow the operation
+<DL><DT><DD></DL><P>
+<A NAME="getAllByName"></A>
+<A NAME="DOC.6.3.1.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   std::vector&lt;<!1><A HREF="InetAddress.html">InetAddress</A>&gt;  getAllByName(const std::string&amp; host) throw(UnknownHostException*)</B></TT>
+<DD>Given the name of a host, returns an array of its IP addresses, based
+on the configured name service on the system. 
+The host name can either be a machine name, such as "java.sun.com", 
+or a textual representation of its IP address. If a literal IP address
+is supplied, only the validity of the address format is checked. 
+For host specified in literal IPv6 address, either the form defined in 
+RFC 2732 or the literal IPv6 address format defined in RFC 2373 is 
+accepted. 
+If the host is null then an InetAddress representing an address of the
+loopback interface is returned. See RFC 3330 section 2 and RFC 2373 
+section 2.5.3. 
+If there is a security manager and host is not null and host.length()
+is not equal to zero, the security manager's checkConnect method is 
+called with the hostname and -1 as its arguments to see if the 
+operation is allowed. 
+Parameters:
+host - the name of the host, or null. 
+Returns:
+an array of all the IP addresses for a given host name. 
+Throws: 
+UnknownHostException* - if no IP address for the host could be found. 
+SecurityException - if a security manager exists and its checkConnect
+method doesn't allow the operation.
+See Also:
+SecurityManager.checkConnect(java.lang.std::string, int)
+<DL><DT><DD></DL><P>
+<A NAME="getByAddress"></A>
+<A NAME="DOC.6.3.1.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="InetAddress.html">InetAddress</A> getByAddress(<!1><A HREF="byte.2.html">byte</A>* addr) throw(UnknownHostException*)</B></TT>
+<DD>Returns an InetAddress object given the raw IP address. The argument 
+is in network byte order: the highest order byte of the address is 
+in getAddress()[0]. 
+This method doesn't block, i.e. no reverse name service lookup is 
+performed. 
+IPv4 address byte array must be 4 bytes long and IPv6 byte array must
+be 16 bytes long 
+Parameters:
+addr - the raw IP address in network byte order 
+Returns:
+an InetAddress object created from the raw IP address. 
+Throws: 
+UnknownHostException* - if IP address is of illegal length
+<DL><DT><DD></DL><P>
+<A NAME="getLocalHost"></A>
+<A NAME="DOC.6.3.1.22"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="InetAddress.html">InetAddress</A> getLocalHost() throw(UnknownHostException*)</B></TT>
+<DD>Returns the local host.
+If there is a security manager, its checkConnect method is called 
+with the local host name and -1 as its arguments to see if the 
+operation is allowed. If the operation is not allowed, an 
+InetAddress representing the loopback address is returned. 
+Returns:
+the IP address of the local host. 
+Throws: 
+UnknownHostException* - if no IP address for the host could be found.
+See Also:
+SecurityManager.checkConnect(java.lang.std::string, int)
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

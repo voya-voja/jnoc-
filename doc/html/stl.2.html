@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>namespace inexum::util::inexum::stl</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>namespace <A HREF="#DOC.DOCU">inexum::util::inexum::stl</A></H2></H2><BLOCKQUOTE>Standard Template Library extensions.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+template&lt; class LABEL_TYPE, class BASE_PRODUCT &gt; class  <B><A HREF="Method.html">Method</A></B>
+<DD><I>A factory method abstarction (encapsulation of factory pattern).</I>
+<DT>
+template&lt; class LABEL_TYPE, class PRODUCT &gt; class  <B><A HREF="Factory.html">Factory</A></B>: public <!1><A HREF="Singleton.html">Singleton</A>&lt; <!1><A HREF="Factory.html">Factory</A>&lt;LABEL_TYPE, PRODUCT&gt; &gt;
+<DD><I>An encapsulation of a Factory pattern.</I>
+<DT>
+template&lt; class Key, class T &gt; class  <B><A HREF="MapPtr.html">MapPtr</A></B>: public std::map&lt;Key, T*&gt;
+<DD><I>The map of the pointers to teh objects with the garbage collection.</I>
+<DT>
+template&lt; class CHILD &gt; class  <B><A HREF="Singleton.html">Singleton</A></B>: protected <!1><A HREF="SingletonVictim.html">SingletonVictim</A>
+<DD><I>Encapsulation of singleton pattern.</I>
+<DT>
+class  DeclarationSpecifier <B><A HREF="SingletonVictim.html">SingletonVictim</A></B>
+<DD><I>An implementation of a singleton.</I>
+<DT>
+template&lt; class T &gt; class  <B><A HREF="StackPtr.html">StackPtr</A></B>: public std::stack&lt;T*&gt;
+<DD><I>The stack of pointers to the objects with garbage.</I>
+<DT>
+template&lt; class BASE_PRODUCT, class PRODUCT = BASE_PRODUCT &gt; class  <B><A HREF="StringLableCreator.html">StringLableCreator</A></B>: public <!1><A HREF="Method.html">Method</A>&lt;std::string, BASE_PRODUCT&gt;
+<DD><I>A string labeled factory Method for specific base product and  product type.</I>
+<DT>
+template&lt; class BASE_PRODUCT, class PRODUCT = BASE_PRODUCT &gt; class  <B><A HREF="CreateWithStringLable.html">CreateWithStringLable</A></B>: public <!1><A HREF="Method.html">Method</A>&lt;std::string, BASE_PRODUCT&gt;
+<DD><I>Specialization of Creator class that creates a product by useing its  overloaded constructor that receives the lable.</I>
+<DT>
+template&lt; class T &gt; class  <B><A HREF="VectorPtr.html">VectorPtr</A></B>: public std::vector&lt;T*&gt;
+<DD><I>The array of pointers to the objects with garbage collection.</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Standard Template Library extensions.
+
+<P></BLOCKQUOTE>
+<DL>
+</DL>
+<DL><DT><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

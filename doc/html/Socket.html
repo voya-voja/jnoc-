@@ -1,0 +1,852 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  DeclarationSpecifier java::net::Socket</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  DeclarationSpecifier <A HREF="#DOC.DOCU">java::net::Socket</A></H2></H2><BLOCKQUOTE>A socket implementation as a stream buffer.</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.6.3.3.1">Socket</A></B>() throw(net::SocketException*)
+<DD><I>Creates an unconnected socket, with the system-default type of SocketImpl</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.6.3.3.2">Socket</A></B>(const std::string&amp; host, int port) throw(net::SocketException*)
+<DD><I>Creates a stream socket and connects it to the specified port number on the named host.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.6.3.3.3">Socket</A></B>(const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, int port) throw(net::SocketException*)
+<DD><I>Creates a stream socket and connects it to the specified port number at  the specified IP address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.6.3.3.4">Socket</A></B>(const std::string&amp; host, int port, const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; localAddr, int localPort) throw(net::SocketException*)
+<DD><I>Creates a socket and connects it to the specified remote host on the  specified remote port.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.6.3.3.5">Socket</A></B>(const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, int port, const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; localAddr, int localPort)
+<DD><I>Creates a socket and connects it to the specified remote address on the  specified remote port.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.6">connect</A></B>(const SocketAddress&amp; endpoint) throw(net::SocketException*)
+<DD><I>Connects this socket to the server.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.7">connect</A></B>(const SocketAddress&amp; endpoint, int timeout) throw(net::SocketException*)
+<DD><I>Connects this socket to the server with a specified timeout value.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.8">bind</A></B>(const SocketAddress&amp; bindpoint) throw(net::SocketException*)
+<DD><I>Binds the socket to a local address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; <B><A HREF="#DOC.6.3.3.9">getInetAddress</A></B>() const 
+<DD><I>Returns the address to which the socket is connected.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; <B><A HREF="#DOC.6.3.3.10">getLocalAddress</A></B>() const 
+<DD><I>Gets the local address to which the socket is bound.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.6.3.3.11">getPort</A></B>() const 
+<DD><I>Returns the remote port to which this socket is connected.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.6.3.3.12">getLocalPort</A></B>() const 
+<DD><I>Returns the local port to which this socket is bound.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const SocketAddress&amp; <B><A HREF="#DOC.6.3.3.13">getRemoteSocketAddress</A></B>() const 
+<DD><I>Returns the address of the endpoint this socket is connected to, or null  if it is unconnected.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const SocketAddress&amp; <B><A HREF="#DOC.6.3.3.14">getLocalSocketAddress</A></B>() const 
+<DD><I>Returns the address of the endpoint this socket is bound to, or null if  it is not bound yet.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const SocketChannel&amp; <B><A HREF="#DOC.6.3.3.15">getChannel</A></B>() const 
+<DD><I>Returns the unique SocketChannel object associated with this socket, if any.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>istream&amp; <B><A HREF="#DOC.6.3.3.16">getInputStream</A></B>() throw(net::SocketException*)
+<DD><I>Returns an input stream for this socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ostream&amp; <B><A HREF="#DOC.6.3.3.17">getOutputStream</A></B>() throw(net::SocketException*)
+<DD><I>Returns an output stream for this socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.18">setTcpNoDelay</A></B>(bool on) throw(net::SocketException*)
+<DD><I>Enable/disable TCP_NODELAY (disable/enable Nagle's algorithm).</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.3.19">getTcpNoDelay</A></B>() throw(net::SocketException*)
+<DD><I>Tests if TCP_NODELAY is enabled.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.20">setSoLinger</A></B>(bool on, int linger) throw(net::SocketException*)
+<DD><I>Enable/disable SO_LINGER with the specified linger time in seconds.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.6.3.3.21">getSoLinger</A></B>() throw(net::SocketException*)
+<DD><I>Returns setting for SO_LINGER.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.22">sendUrgentData</A></B>(int data) throw(net::SocketException*)
+<DD><I>Send one byte of urgent data on the socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.23">setOOBInline</A></B>(bool on) throw(net::SocketException*)
+<DD><I>Enable/disable OOBINLINE (receipt of TCP urgent data) By default, this option is disabled and TCP urgent data received on a socket is silently discarded.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.3.24">getOOBInline</A></B>() throw(net::SocketException*)
+<DD><I>Tests if OOBINLINE is enabled.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.25">setSoTimeout</A></B>(int timeout) throw(net::SocketException*)
+<DD><I>Enable/disable SO_TIMEOUT with the specified timeout, in milliseconds.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.6.3.3.26">getSoTimeout</A></B>() throw(net::SocketException*)
+<DD><I>Returns setting for SO_TIMEOUT.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.27">setSendBufferSize</A></B>(int size) throw(net::SocketException*)
+<DD><I>Sets the SO_SNDBUF option to the specified value for this Socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.6.3.3.28">getSendBufferSize</A></B>() throw(net::SocketException*)
+<DD><I>Get value of the SO_SNDBUF option for this Socket, that is the buffer size used by the platform for output on this Socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.29">setReceiveBufferSize</A></B>(int size) throw(net::SocketException*)
+<DD><I>Sets the SO_RCVBUF option to the specified value for this Socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.6.3.3.30">getReceiveBufferSize</A></B>() throw(net::SocketException*)
+<DD><I>Gets the value of the SO_RCVBUF option for this Socket, that is the  buffer size used by the platform for input on this Socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.31">setKeepAlive</A></B>(bool on) throw(net::SocketException*)
+<DD><I>Enable/disable SO_KEEPALIVE.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.3.32">getKeepAlive</A></B>() throw(net::SocketException*)
+<DD><I>Tests if SO_KEEPALIVE is enabled.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.33">setTrafficClass</A></B>(int tc) throw(net::SocketException*)
+<DD><I>Sets traffic class or type-of-service octet in the IP header for packets sent from this Socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.6.3.3.34">getTrafficClass</A></B>() throw(net::SocketException*)
+<DD><I>Gets traffic class or type-of-service in the IP header for packets sent  from this Socket  As the underlying network implementation may ignore the traffic class or type-of-service set using <TT>setTrafficClass()&nbsp;this&nbsp;method&nbsp;may&nbsp;return&nbsp;a&nbsp;&nbsp;different&nbsp;value&nbsp;than&nbsp;was&nbsp;previously&nbsp;set&nbsp;using&nbsp;the&nbsp;</TT>setTrafficClass()  method on this Socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.35">setReuseAddress</A></B>(bool on) throw(net::SocketException*)
+<DD><I>Enable/disable the SO_REUSEADDR socket option.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.3.36">getReuseAddress</A></B>() throw(net::SocketException*)
+<DD><I>Tests if SO_REUSEADDR is enabled.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.37">close</A></B>() throw(net::SocketException*)
+<DD><I>Closes this socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.38">shutdownInput</A></B>() throw(net::SocketException*)
+<DD><I>Places the input stream for this socket at "end of stream".</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.6.3.3.39">shutdownOutput</A></B>() throw(net::SocketException*)
+<DD><I>Disables the output stream for this socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const std::string&amp; <B><A HREF="#DOC.6.3.3.40">toString</A></B>() const 
+<DD><I>Converts this socket to a String.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.3.41">isConnected</A></B>() const 
+<DD><I>Returns the connection state of the socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.3.42">isBound</A></B>() const 
+<DD><I>Returns the binding state of the socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.3.43">isClosed</A></B>() const 
+<DD><I>Returns the closed state of the socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.3.44">isInputShutdown</A></B>() const 
+<DD><I>Returns wether the read-half of the socket connection is closed.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.6.3.3.45">isOutputShutdown</A></B>() const 
+<DD><I>Returns wether the write-half of the socket connection is closed.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   void <B><A HREF="#DOC.6.3.3.46">setSocketImplFactory</A></B>(const SocketImplFactory&amp; fac) throw(net::SocketException*)
+<DD><I>Sets the client socket implementation factory for the application.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.6.3.3.47">Socket</A></B>(SocketImpl&amp; impl) throw(<!1><A HREF="SocketException.html">SocketException</A>*)
+<DD><I>Creates an unconnected Socket with a user-specified SocketImpl.</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>A socket implementation as a stream buffer.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="Socket"></A>
+<A NAME="DOC.6.3.3.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Socket() throw(net::SocketException*)</B></TT>
+<DD>Creates an unconnected socket, with the system-default type of SocketImpl
+<DL><DT><DD></DL><P>
+<A NAME="Socket"></A>
+<A NAME="DOC.6.3.3.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Socket(const std::string&amp; host, int port) throw(net::SocketException*)</B></TT>
+<DD>Creates a stream socket and connects it to the specified port number on the named host.
+If the specified host is null it is the equivalent of specifying the address as
+InetAddress.getByName(null). In other words, it is equivalent to specifying an
+address of the loopback interface. 
+If the application has specified a server socket factory, that factory's 
+createSocketImpl method is called to create the actual socket implementation.
+Otherwise a "plain" socket is created. 
+If there is a security manager, its checkConnect method is called with the host
+address and port as its arguments. This could result in a SecurityException. 
+Parameters:
+host - the host name, or null for the loopback address.
+port - the port number. 
+Throws: 
+UnknownHostException - if the IP address of the host could not be determined. 
+IOException - if an I/O error occurs when creating the socket. 
+SecurityException - if a security manager exists and its checkConnect method doesn't allow the operation.
+See Also:
+setSocketImplFactory(java.net.SocketImplFactory), SocketImpl, SocketImplFactory.createSocketImpl(), SecurityManager.checkConnect(java.lang.String, int)
+<DL><DT><DD></DL><P>
+<A NAME="Socket"></A>
+<A NAME="DOC.6.3.3.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Socket(const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, int port) throw(net::SocketException*)</B></TT>
+<DD>Creates a stream socket and connects it to the specified port number at 
+the specified IP address. 
+If the application has specified a socket factory, that factory's 
+createSocketImpl method is called to create the actual socket implementation. 
+Otherwise a "plain" socket is created. 
+If there is a security manager, its checkConnect method is called with the host 
+address and port as its arguments. This could result in a SecurityException. 
+Parameters:
+address - the IP address.
+port - the port number. 
+Throws: 
+IOException - if an I/O error occurs when creating the socket. 
+SecurityException - if a security manager exists and its checkConnect 
+method doesn't allow the operation.
+See Also:
+setSocketImplFactory(java.net.SocketImplFactory), SocketImpl, 
+SocketImplFactory.createSocketImpl(), 
+SecurityManager.checkConnect(java.lang.String, int)
+<DL><DT><DD></DL><P>
+<A NAME="Socket"></A>
+<A NAME="DOC.6.3.3.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Socket(const std::string&amp; host, int port, const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; localAddr, int localPort) throw(net::SocketException*)</B></TT>
+<DD>Creates a socket and connects it to the specified remote host on the 
+specified remote port. The Socket will also bind() to the local address 
+and port supplied.
+If the specified host is null it is the equivalent of specifying the 
+address as InetAddress.getByName(null). In other words, it is equivalent
+to specifying an address of the loopback interface. 
+If there is a security manager, its checkConnect method is called with
+the host address and port as its arguments. This could result in a
+SecurityException. 
+Parameters:
+host - the name of the remote host, or null for the loopback address.
+port - the remote port
+localAddr - the local address the socket is bound to
+localPort - the local port the socket is bound to 
+Throws: 
+IOException - if an I/O error occurs when creating the socket. 
+SecurityException - if a security manager exists and its checkConnect 
+method doesn't allow the operation.
+See Also:
+SecurityManager.checkConnect(java.lang.String, int)
+<DL><DT><DD></DL><P>
+<A NAME="Socket"></A>
+<A NAME="DOC.6.3.3.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Socket(const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, int port, const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; localAddr, int localPort)</B></TT>
+<DD>Creates a socket and connects it to the specified remote address on the 
+specified remote port. The Socket will also bind() to the local address 
+and port supplied. 
+If there is a security manager, its checkConnect method is called with 
+the host address and port as its arguments. This could result in a 
+SecurityException. 
+Parameters:
+address - the remote address
+port - the remote port
+localAddr - the local address the socket is bound to
+localPort - the local port the socket is bound to 
+Throws: 
+IOException - if an I/O error occurs when creating the socket. 
+SecurityException - if a security manager exists and its checkConnect 
+method doesn't allow the operation.
+See Also:
+SecurityManager.checkConnect(java.lang.String, int)
+<DL><DT><DD></DL><P>
+<A NAME="connect"></A>
+<A NAME="DOC.6.3.3.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void connect(const SocketAddress&amp; endpoint) throw(net::SocketException*)</B></TT>
+<DD>Connects this socket to the server. 
+Parameters:
+endpoint - the SocketAddress 
+Throws: 
+IOException - if an error occurs during the connection 
+IllegalBlockingModeException - if this socket has an associated channel,
+and the channel is in non-blocking mode 
+IllegalArgumentException - if endpoint is null or is a SocketAddress 
+subclass not supported by this socket
+<DL><DT><DD></DL><P>
+<A NAME="connect"></A>
+<A NAME="DOC.6.3.3.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void connect(const SocketAddress&amp; endpoint, int timeout) throw(net::SocketException*)</B></TT>
+<DD>Connects this socket to the server with a specified timeout value. 
+A timeout of zero is interpreted as an infinite timeout. 
+The connection will then block until established or an error occurs. 
+Parameters:
+endpoint - the SocketAddress
+timeout - the timeout value to be used in milliseconds. 
+Throws: 
+IOException - if an error occurs during the connection 
+SocketTimeoutException - if timeout expires before connecting 
+IllegalBlockingModeException - if this socket has an associated channel, 
+and the channel is in non-blocking mode 
+IllegalArgumentException - if endpoint is null or is a SocketAddress 
+subclass not supported by this socket
+<DL><DT><DD></DL><P>
+<A NAME="bind"></A>
+<A NAME="DOC.6.3.3.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void bind(const SocketAddress&amp; bindpoint) throw(net::SocketException*)</B></TT>
+<DD>Binds the socket to a local address. 
+If the address is null, then the system will pick up an ephemeral port 
+and a valid local address to bind the socket. 
+Parameters:
+bindpoint - the SocketAddress to bind to 
+Throws: 
+IOException - if the bind operation fails, or if the socket is already bound. 
+IllegalArgumentException - if bindpoint is a SocketAddress subclass not 
+supported by this socket
+See Also:
+isBound()
+<DL><DT><DD></DL><P>
+<A NAME="getInetAddress"></A>
+<A NAME="DOC.6.3.3.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; getInetAddress() const </B></TT>
+<DD>Returns the address to which the socket is connected. 
+Returns:
+the remote IP address to which this socket is connected, or null if the 
+socket is not connected.
+<DL><DT><DD></DL><P>
+<A NAME="getLocalAddress"></A>
+<A NAME="DOC.6.3.3.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="InetAddress.html">InetAddress</A>&amp; getLocalAddress() const </B></TT>
+<DD>Gets the local address to which the socket is bound. 
+Returns:
+the local address to which the socket is bound or InetAddress.anyLocalAddress() 
+if the socket is not bound yet.
+<DL><DT><DD></DL><P>
+<A NAME="getPort"></A>
+<A NAME="DOC.6.3.3.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getPort() const </B></TT>
+<DD>Returns the remote port to which this socket is connected.
+Returns:
+the remote port number to which this socket is connected, or 0 if the 
+socket is not connected yet.
+<DL><DT><DD></DL><P>
+<A NAME="getLocalPort"></A>
+<A NAME="DOC.6.3.3.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getLocalPort() const </B></TT>
+<DD>Returns the local port to which this socket is bound. 
+Returns:
+the local port number to which this socket is bound or -1 if the socket 
+is not bound yet.
+<DL><DT><DD></DL><P>
+<A NAME="getRemoteSocketAddress"></A>
+<A NAME="DOC.6.3.3.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const SocketAddress&amp; getRemoteSocketAddress() const </B></TT>
+<DD>Returns the address of the endpoint this socket is connected to, or null 
+if it is unconnected. 
+Returns:
+a SocketAddress reprensenting the remote endpoint of this socket, or null 
+if it is not connected yet.
+See Also:
+getInetAddress(), getPort(), connect(SocketAddress, int), connect(SocketAddress)
+<DL><DT><DD></DL><P>
+<A NAME="getLocalSocketAddress"></A>
+<A NAME="DOC.6.3.3.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const SocketAddress&amp; getLocalSocketAddress() const </B></TT>
+<DD>Returns the address of the endpoint this socket is bound to, or null if 
+it is not bound yet. 
+Returns:
+a SocketAddress representing the local endpoint of this socket, or null 
+if it is not bound yet.
+See Also:
+getLocalAddress(), getLocalPort(), bind(SocketAddress)
+<DL><DT><DD></DL><P>
+<A NAME="getChannel"></A>
+<A NAME="DOC.6.3.3.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const SocketChannel&amp; getChannel() const </B></TT>
+<DD>Returns the unique SocketChannel object associated with this socket, if any. 
+A socket will have a channel if, and only if, the channel itself was 
+created via the SocketChannel.open or ServerSocketChannel.accept methods. 
+Returns:
+the socket channel associated with this socket, or null if this socket 
+was not created for a channel
+<DL><DT><DD></DL><P>
+<A NAME="getInputStream"></A>
+<A NAME="DOC.6.3.3.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>istream&amp; getInputStream() throw(net::SocketException*)</B></TT>
+<DD>Returns an input stream for this socket. 
+If this socket has an associated channel then the resulting input stream 
+delegates all of its operations to the channel. If the channel is in 
+non-blocking mode then the input stream's read operations will throw an 
+IllegalBlockingModeException. 
+Under abnormal conditions the underlying connection may be broken by the 
+remote host or the network software (for example a connection reset in 
+the case of TCP connections). When a broken connection is detected by the
+network software the following applies to the returned input stream :- 
+The network software may discard bytes that are buffered by the socket. 
+Bytes that aren't discarded by the network software can be read using read. 
+If there are no bytes buffered on the socket, or all buffered bytes have 
+been consumed by read, then all subsequent calls to read will throw an IOException. 
+If there are no bytes buffered on the socket, and the socket has not been
+closed using close, then available will return 0. 
+Returns:
+an input stream for reading bytes from this socket. 
+Throws: 
+IOException - if an I/O error occurs when creating the input stream, the 
+socket is closed, the socket is not connected, or the socket input has been 
+shutdown using shutdownInput()
+<DL><DT><DD></DL><P>
+<A NAME="getOutputStream"></A>
+<A NAME="DOC.6.3.3.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ostream&amp; getOutputStream() throw(net::SocketException*)</B></TT>
+<DD>Returns an output stream for this socket. 
+If this socket has an associated channel then the resulting output 
+stream delegates all of its operations to the channel. If the channel 
+is in non-blocking mode then the output stream's write operations will 
+throw an IllegalBlockingModeException. 
+Returns:
+an output stream for writing bytes to this socket. 
+Throws: 
+IOException - if an I/O error occurs when creating the output stream or
+if the socket is not connected.
+<DL><DT><DD></DL><P>
+<A NAME="setTcpNoDelay"></A>
+<A NAME="DOC.6.3.3.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setTcpNoDelay(bool on) throw(net::SocketException*)</B></TT>
+<DD>Enable/disable TCP_NODELAY (disable/enable Nagle's algorithm). 
+Parameters:
+on - true to enable TCP_NODELAY, false to disable. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, such as a TCP error.
+See Also:
+getTcpNoDelay()
+<DL><DT><DD></DL><P>
+<A NAME="getTcpNoDelay"></A>
+<A NAME="DOC.6.3.3.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool getTcpNoDelay() throw(net::SocketException*)</B></TT>
+<DD>Tests if TCP_NODELAY is enabled. 
+Returns:
+a bool indicating whether or not TCP_NODELAY is enabled. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, 
+such as a TCP error.
+See Also:
+setTcpNoDelay(bool)
+<DL><DT><DD></DL><P>
+<A NAME="setSoLinger"></A>
+<A NAME="DOC.6.3.3.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setSoLinger(bool on, int linger) throw(net::SocketException*)</B></TT>
+<DD>Enable/disable SO_LINGER with the specified linger time in seconds. 
+The maximum timeout value is platform specific. The setting only 
+affects socket close. 
+Parameters:
+on - whether or not to linger on.
+linger - how long to linger for, if on is true. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, 
+such as a TCP error. 
+IllegalArgumentException - if the linger value is negative.
+See Also:
+getSoLinger()
+<DL><DT><DD></DL><P>
+<A NAME="getSoLinger"></A>
+<A NAME="DOC.6.3.3.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getSoLinger() throw(net::SocketException*)</B></TT>
+<DD>Returns setting for SO_LINGER. -1 returns implies that the option is
+disabled. The setting only affects socket close. 
+Returns:
+the setting for SO_LINGER. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, 
+such as a TCP error.
+See Also:
+setSoLinger(bool, int)
+<DL><DT><DD></DL><P>
+<A NAME="sendUrgentData"></A>
+<A NAME="DOC.6.3.3.22"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void sendUrgentData(int data) throw(net::SocketException*)</B></TT>
+<DD>Send one byte of urgent data on the socket. The byte to be sent is the 
+lowest eight bits of the data parameter. The urgent byte is sent after 
+any preceding writes to the socket OutputStream and before any future writes 
+to the OutputStream. 
+Parameters:
+data - The byte of data to send 
+Throws: 
+IOException - if there is an error sending the data.
+<DL><DT><DD></DL><P>
+<A NAME="setOOBInline"></A>
+<A NAME="DOC.6.3.3.23"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setOOBInline(bool on) throw(net::SocketException*)</B></TT>
+<DD>Enable/disable OOBINLINE (receipt of TCP urgent data) By default, this
+option is disabled and TCP urgent data received on a socket is silently
+discarded. If the user wishes to receive urgent data, then this option must
+be enabled. When enabled, urgent data is received inline with normal data. 
+Note, only limited support is provided for handling incoming urgent data. 
+In particular, no notification of incoming urgent data is provided and there
+is no capability to distinguish between normal data and urgent data unless
+provided by a higher level protocol. 
+Parameters:
+on - true to enable OOBINLINE, false to disable. 
+Throws: 
+SocketException - if there is an error in the underlying protocol,
+such as a TCP error.
+See Also:
+getOOBInline()
+<DL><DT><DD></DL><P>
+<A NAME="getOOBInline"></A>
+<A NAME="DOC.6.3.3.24"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool getOOBInline() throw(net::SocketException*)</B></TT>
+<DD>Tests if OOBINLINE is enabled. 
+Returns:
+a bool indicating whether or not OOBINLINE is enabled. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, 
+such as a TCP error.
+See Also:
+setOOBInline(bool)
+<DL><DT><DD></DL><P>
+<A NAME="setSoTimeout"></A>
+<A NAME="DOC.6.3.3.25"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setSoTimeout(int timeout) throw(net::SocketException*)</B></TT>
+<DD>Enable/disable SO_TIMEOUT with the specified timeout, in milliseconds. 
+With this option set to a non-zero timeout, a read() call on the 
+InputStream associated with this Socket will block for only this amount 
+of time. If the timeout expires, a java.net.SocketTimeoutException is 
+raised, though the Socket is still valid. The option must be enabled 
+prior to entering the blocking operation to have effect. The timeout 
+must be &gt; 0. A timeout of zero is interpreted as an infinite timeout. 
+Parameters:
+timeout - the specified timeout, in milliseconds. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, 
+such as a TCP error.
+See Also:
+getSoTimeout()
+<DL><DT><DD></DL><P>
+<A NAME="getSoTimeout"></A>
+<A NAME="DOC.6.3.3.26"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getSoTimeout() throw(net::SocketException*)</B></TT>
+<DD>Returns setting for SO_TIMEOUT. 0 returns implies that the option is
+disabled (i.e., timeout of infinity). 
+Returns:
+the setting for SO_TIMEOUT 
+Throws: 
+SocketException - if there is an error in the underlying protocol, 
+such as a TCP error.
+See Also:
+setSoTimeout(int)
+<DL><DT><DD></DL><P>
+<A NAME="setSendBufferSize"></A>
+<A NAME="DOC.6.3.3.27"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setSendBufferSize(int size) throw(net::SocketException*)</B></TT>
+<DD>Sets the SO_SNDBUF option to the specified value for this Socket. 
+The SO_SNDBUF option is used by the platform's networking code as 
+a hint for the size to set the underlying network I/O buffers. 
+Because SO_SNDBUF is a hint, applications that want to verify what 
+size the buffers were set to should call getSendBufferSize(). 
+Parameters:
+size - the size to which to set the send buffer size. This value must
+be greater than 0. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, such 
+as a TCP error. 
+IllegalArgumentException - if the value is 0 or is negative.
+See Also:
+getSendBufferSize()
+<DL><DT><DD></DL><P>
+<A NAME="getSendBufferSize"></A>
+<A NAME="DOC.6.3.3.28"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getSendBufferSize() throw(net::SocketException*)</B></TT>
+<DD>Get value of the SO_SNDBUF option for this Socket, that is the buffer
+size used by the platform for output on this Socket. 
+Returns:
+the value of the SO_SNDBUF option for this Socket. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, such 
+as a TCP error.
+See Also:
+setSendBufferSize(int)
+<DL><DT><DD></DL><P>
+<A NAME="setReceiveBufferSize"></A>
+<A NAME="DOC.6.3.3.29"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setReceiveBufferSize(int size) throw(net::SocketException*)</B></TT>
+<DD>Sets the SO_RCVBUF option to the specified value for this Socket. The 
+SO_RCVBUF option is used by the platform's networking code as a hint 
+for the size to set the underlying network I/O buffers. 
+Increasing the receive buffer size can increase the performance of 
+network I/O for high-volume connection, while decreasing it can help 
+reduce the backlog of incoming data. 
+Because SO_RCVBUF is a hint, applications that want to verify what size 
+the buffers were set to should call getReceiveBufferSize(). 
+The value of SO_RCVBUF is also used to set the TCP receive window that is 
+advertized to the remote peer. Generally, the window size can be modified 
+at any time when a socket is connected. However, if a receive window larger 
+than 64K is required then this must be requested before the socket is 
+connected to the remote peer. There are two cases to be aware of:
+For sockets accepted from a ServerSocket, this must be done by calling 
+ServerSocket.setReceiveBufferSize(int) before the ServerSocket is bound
+to a local address.
+For client sockets, setReceiveBufferSize() must be called before 
+connecting the socket to its remote peer.
+Parameters:
+size - the size to which to set the receive buffer size. This value 
+must be greater than 0. 
+Throws: 
+IllegalArgumentException - if the value is 0 or is negative. 
+SocketException - if there is an error in the underlying protocol, such 
+as a TCP error.
+See Also:
+getReceiveBufferSize(), ServerSocket.setReceiveBufferSize(int)
+<DL><DT><DD></DL><P>
+<A NAME="getReceiveBufferSize"></A>
+<A NAME="DOC.6.3.3.30"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getReceiveBufferSize() throw(net::SocketException*)</B></TT>
+<DD>Gets the value of the SO_RCVBUF option for this Socket, that is the 
+buffer size used by the platform for input on this Socket. 
+Returns:
+the value of the SO_RCVBUF option for this Socket. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, such 
+as a TCP error.
+See Also:
+setReceiveBufferSize(int)
+<DL><DT><DD></DL><P>
+<A NAME="setKeepAlive"></A>
+<A NAME="DOC.6.3.3.31"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setKeepAlive(bool on) throw(net::SocketException*)</B></TT>
+<DD>Enable/disable SO_KEEPALIVE. 
+Parameters:
+on - whether or not to have socket keep alive turned on. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, such 
+as a TCP error.
+See Also:
+getKeepAlive()
+<DL><DT><DD></DL><P>
+<A NAME="getKeepAlive"></A>
+<A NAME="DOC.6.3.3.32"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool getKeepAlive() throw(net::SocketException*)</B></TT>
+<DD>Tests if SO_KEEPALIVE is enabled. 
+Returns:
+a bool indicating whether or not SO_KEEPALIVE is enabled. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, such 
+as a TCP error.
+See Also:
+setKeepAlive(bool)
+<DL><DT><DD></DL><P>
+<A NAME="setTrafficClass"></A>
+<A NAME="DOC.6.3.3.33"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setTrafficClass(int tc) throw(net::SocketException*)</B></TT>
+<DD>Sets traffic class or type-of-service octet in the IP header for packets
+sent from this Socket. As the underlying network implementation may 
+ignore this value applications should consider it a hint. 
+The tc must be in the range 0 &lt;= tc &lt;= 255 or an 
+IllegalArgumentException will be thrown. 
+Notes: 
+for Internet Protocol v4 the value consists of an octet with precedence
+and TOS fields as detailed in RFC 1349. The TOS field is bitset created
+by bitwise-or'ing values such the following :- 
+IPTOS_LOWCOST (0x02) 
+IPTOS_RELIABILITY (0x04) 
+IPTOS_THROUGHPUT (0x08) 
+IPTOS_LOWDELAY (0x10) 
+The last low order bit is always ignored as this corresponds to the MBZ 
+(must be zero) bit. 
+Setting bits in the precedence field may result in a SocketException 
+indicating that the operation is not permitted. 
+for Internet Protocol v6 tc is the value that would be placed into the 
+sin6_flowinfo field of the IP header. 
+Parameters:
+tc - an int value for the bitset. 
+Throws: 
+SocketException - if there is an error setting the traffic class or 
+type-of-service
+See Also:
+getTrafficClass()
+<DL><DT><DD></DL><P>
+<A NAME="getTrafficClass"></A>
+<A NAME="DOC.6.3.3.34"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getTrafficClass() throw(net::SocketException*)</B></TT>
+<DD>Gets traffic class or type-of-service in the IP header for packets sent 
+from this Socket 
+As the underlying network implementation may ignore the traffic class or
+type-of-service set using <TT>setTrafficClass()&nbsp;this&nbsp;method&nbsp;may&nbsp;return&nbsp;a&nbsp;</TT>different value than was previously set using the <TT>setTrafficClass()&nbsp;</TT>method on this Socket. 
+
+<P>
+Returns:
+the traffic class or type-of-service already set 
+Throws: 
+SocketException - if there is an error obtaining the traffic class or 
+type-of-service value.
+See Also:
+setTrafficClass(int)
+<DL><DT><DD></DL><P>
+<A NAME="setReuseAddress"></A>
+<A NAME="DOC.6.3.3.35"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setReuseAddress(bool on) throw(net::SocketException*)</B></TT>
+<DD>Enable/disable the SO_REUSEADDR socket option. 
+When a TCP connection is closed the connection may remain in a timeout
+state for a period of time after the connection is closed (typically
+known as the TIME_WAIT state or 2MSL wait state). For applications using
+a well known socket address or port it may not be possible to bind a 
+socket to the required SocketAddress if there is a connection in the
+timeout state involving the socket address or port. 
+Enabling SO_REUSEADDR prior to binding the socket using 
+bind(SocketAddress) allows the socket to be bound even though a previous
+connection is in a timeout state. 
+When a Socket is created the initial setting of SO_REUSEADDR is disabled. 
+The behaviour when SO_REUSEADDR is enabled or disabled after a socket is 
+bound (See isBound()) is not defined. 
+Parameters:
+on - whether to enable or disable the socket option 
+Throws: 
+SocketException - if an error occurs enabling or disabling the SO_RESUEADDR 
+socket option, or the socket is closed.
+See Also:
+getReuseAddress(), bind(SocketAddress), isClosed(), isBound()
+<DL><DT><DD></DL><P>
+<A NAME="getReuseAddress"></A>
+<A NAME="DOC.6.3.3.36"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool getReuseAddress() throw(net::SocketException*)</B></TT>
+<DD>Tests if SO_REUSEADDR is enabled. 
+Returns:
+a bool indicating whether or not SO_REUSEADDR is enabled. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, such 
+as a TCP error.
+See Also:
+setReuseAddress(bool)
+<DL><DT><DD></DL><P>
+<A NAME="close"></A>
+<A NAME="DOC.6.3.3.37"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void close() throw(net::SocketException*)</B></TT>
+<DD>Closes this socket.
+Any thread currently blocked in an I/O operation upon this socket will
+throw a SocketException. 
+Once a socket has been closed, it is not available for further networking
+use (i.e. can't be reconnected or rebound). A new socket needs to be created. 
+If this socket has an associated channel then the channel is closed as well. 
+Throws: 
+IOException - if an I/O error occurs when closing this socket.
+See Also:
+isClosed()
+<DL><DT><DD></DL><P>
+<A NAME="shutdownInput"></A>
+<A NAME="DOC.6.3.3.38"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void shutdownInput() throw(net::SocketException*)</B></TT>
+<DD>Places the input stream for this socket at "end of stream". Any data 
+sent to the input stream side of the socket is acknowledged and then 
+silently discarded. 
+If you read from a socket input stream after invoking shutdownInput() 
+on the socket, the stream will return EOF. 
+Throws: 
+IOException - if an I/O error occurs when shutting down this socket.
+See Also:
+shutdownOutput(), close(), setSoLinger(bool, int), isInputShutdown()
+<DL><DT><DD></DL><P>
+<A NAME="shutdownOutput"></A>
+<A NAME="DOC.6.3.3.39"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void shutdownOutput() throw(net::SocketException*)</B></TT>
+<DD>Disables the output stream for this socket. For a TCP socket, any 
+previously written data will be sent followed by TCP's normal connection
+termination sequence. If you write to a socket output stream after 
+invoking shutdownOutput() on the socket, the stream will throw an IOException. 
+Throws: 
+IOException - if an I/O error occurs when shutting down this socket.
+See Also:
+shutdownInput(), close(), setSoLinger(bool, int), isOutputShutdown()
+<DL><DT><DD></DL><P>
+<A NAME="toString"></A>
+<A NAME="DOC.6.3.3.40"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const std::string&amp; toString() const </B></TT>
+<DD>Converts this socket to a String. 
+Overrides:
+toString in class Object
+Returns:
+a string representation of this socket.
+<DL><DT><DD></DL><P>
+<A NAME="isConnected"></A>
+<A NAME="DOC.6.3.3.41"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isConnected() const </B></TT>
+<DD>Returns the connection state of the socket.
+Returns:
+true if the socket successfuly connected to a server
+<DL><DT><DD></DL><P>
+<A NAME="isBound"></A>
+<A NAME="DOC.6.3.3.42"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isBound() const </B></TT>
+<DD>Returns the binding state of the socket. 
+Returns:
+true if the socket successfuly bound to an address
+See Also:
+bind(java.net.SocketAddress)
+<DL><DT><DD></DL><P>
+<A NAME="isClosed"></A>
+<A NAME="DOC.6.3.3.43"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isClosed() const </B></TT>
+<DD>Returns the closed state of the socket. 
+Returns:
+true if the socket has been closed
+See Also:
+close()
+<DL><DT><DD></DL><P>
+<A NAME="isInputShutdown"></A>
+<A NAME="DOC.6.3.3.44"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isInputShutdown() const </B></TT>
+<DD>Returns wether the read-half of the socket connection is closed.
+Returns:
+true if the input of the socket has been shutdown
+See Also:
+shutdownInput()
+<DL><DT><DD></DL><P>
+<A NAME="isOutputShutdown"></A>
+<A NAME="DOC.6.3.3.45"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isOutputShutdown() const </B></TT>
+<DD>Returns wether the write-half of the socket connection is closed. 
+Returns:
+true if the output of the socket has been shutdown
+See Also:
+shutdownOutput()
+<DL><DT><DD></DL><P>
+<A NAME="setSocketImplFactory"></A>
+<A NAME="DOC.6.3.3.46"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void setSocketImplFactory(const SocketImplFactory&amp; fac) throw(net::SocketException*)</B></TT>
+<DD>Sets the client socket implementation factory for the application.
+The factory can be specified only once. 
+When an application creates a new client socket, the socket 
+implementation factory's createSocketImpl method is called to create 
+the actual socket implementation. 
+If there is a security manager, this method first calls the security 
+manager's checkSetFactory method to ensure the operation is allowed. 
+This could result in a SecurityException. 
+Parameters:
+fac - the desired factory. 
+Throws: 
+IOException - if an I/O error occurs when setting the socket factory. 
+SocketException - if the factory is already defined. 
+SecurityException - if a security manager exists and its checkSetFactory 
+method doesn't allow the operation.
+See Also:
+SocketImplFactory.createSocketImpl(), SecurityManager.checkSetFactory()
+<DL><DT><DD></DL><P>
+<A NAME="Socket"></A>
+<A NAME="DOC.6.3.3.47"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Socket(SocketImpl&amp; impl) throw(<!1><A HREF="SocketException.html">SocketException</A>*)</B></TT>
+<DD>Creates an unconnected Socket with a user-specified SocketImpl.
+Parameters:
+impl - an instance of a SocketImpl the subclass wishes to use on the Socket. 
+Throws: 
+SocketException - if there is an error in the underlying protocol, such as a TCP error.
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Friends:</B><DD>  class <!1><A HREF="ServerSocket.html">ServerSocket</A><BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

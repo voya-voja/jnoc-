@@ -1,0 +1,323 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  DeclarationSpecifier inexum::util::Debug</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  DeclarationSpecifier <A HREF="#DOC.DOCU">inexum::util::Debug</A></H2></H2><BLOCKQUOTE>An abstract handler of debug statements.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=125>
+<param name=classes value="CDebug,MDebug.html,CDebugLine,MDebugLine.html,CDebugFunction,MDebugFunction.html,CDebugClass,MDebugClass.html">
+<param name=before value="M,M|_,MR_,Mr_">
+<param name=after value="M,M,M,M">
+<param name=indent value="0,0,0,0">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   void <B><A HREF="#DOC.1.3.1.2">addMode</A></B>(int mode)
+<DD><I>Adds a debug mode to the list of modes to be captured.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   <!1><A HREF="Debug.html#DOC.1.3.1.1">Mode</A> <B><A HREF="#DOC.1.3.1.3">getMode</A></B>()
+<DD><I>Active debug modes.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   ostream&amp; <B><A HREF="#DOC.1.3.1.4">output</A></B>()
+<DD><I>Debug output stream.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   void <B><A HREF="#DOC.1.3.1.5">increaseIndent</A></B>()
+<DD><I>Increase the indent level for all the debug statements recorded in the future</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   void <B><A HREF="#DOC.1.3.1.6">decreaseIndent</A></B>()
+<DD><I>Decrease the indent level for all the debug statements recorded in the future</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   const std::string&amp; <B><A HREF="#DOC.1.3.1.7">indent</A></B>()
+<DD><I>Debug indent level.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ostream&amp; <B><A HREF="#DOC.1.3.1.8">output</A></B>(const std::string&amp; msg)
+<DD><I>Record the message in debug log.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   ostream&amp; <B><A HREF="#DOC.1.3.1.9">output</A></B>(const char* formatMsg, ...)
+<DD><I>Record the formated message with its arguments in debug log.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const std::string&amp; <B><A HREF="#DOC.1.3.1.10">preMessage</A></B>() const 
+<DD><I>Debug statement preceding message.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const std::string&amp; <B><A HREF="#DOC.1.3.1.11">postMessage</A></B>() const 
+<DD><I>Debug statement post message.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Members</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>enum  <B><A HREF="#DOC.1.3.1.1">Mode</A></B>
+<DD><I>Debug modes.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.1.12">Debug</A></B>(<!1><A HREF="Debug.html#DOC.1.3.1.1">Mode</A> mode = <!1><A HREF="Debug.html#DOC.1.3.1.1.2">c_basic</A>)
+<DD><I>Default constructor would initialize the debug statement in basic mode,  without pre or post message.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.1.13">Debug</A></B>(const std::string&amp; preMsg, <!1><A HREF="Debug.html#DOC.1.3.1.1">Mode</A> mode = <!1><A HREF="Debug.html#DOC.1.3.1.1.2">c_basic</A>)
+<DD><I>Overloaded constructor would initialize the debug statement in basic mode, without post message</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.1.14">Debug</A></B>(const std::string&amp; preMsg, const std::string&amp; postMsg, <!1><A HREF="Debug.html#DOC.1.3.1.1">Mode</A> mode = <!1><A HREF="Debug.html#DOC.1.3.1.1.2">c_basic</A>)
+<DD><I>Overloaded constructor would initialize the debug statement in basic mode.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.3.1.15">print</A></B>()
+<DD><I>Override to provide the specific behavior when debug specialization  object is referenced with %D tag and passed in a variable argument  list to output() or print()  methods.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.3.1.16">print</A></B>(const std::string&amp; formatMsg, va_list&amp; argList)
+<DD><I>Record the formated message with its arguments in debug log.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>std::string <B><A HREF="#DOC.1.3.1.17">time</A></B>() const 
+<DD><I>Current time.</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>An abstract handler of debug statements. The debug statements will be
+captured in 'debug.log' file if the mode of a debug statement has been 
+added to the list of debug modes to be filtered. By default the mode is
+'no debug statements'.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="Mode"></A>
+<A NAME="DOC.1.3.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  Mode</B></TT>
+<DD>Debug modes. 
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="c_non"></A>
+<A NAME="DOC.1.3.1.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> c_non</B></TT>
+<DD>no debug statements
+<DL><DT><DD></DL><P>
+<A NAME="c_basic"></A>
+<A NAME="DOC.1.3.1.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> c_basic</B></TT>
+<DD>basic statements
+<DL><DT><DD></DL><P>
+<A NAME="c_net"></A>
+<A NAME="DOC.1.3.1.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> c_net</B></TT>
+<DD>network statements
+<DL><DT><DD></DL><P>
+<A NAME="c_security"></A>
+<A NAME="DOC.1.3.1.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> c_security</B></TT>
+<DD>sequrity statements
+<DL><DT><DD></DL><P>
+<A NAME="c_db"></A>
+<A NAME="DOC.1.3.1.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> c_db</B></TT>
+<DD>database statements
+<DL><DT><DD></DL><P>
+<A NAME="c_transaction"></A>
+<A NAME="DOC.1.3.1.1.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> c_transaction</B></TT>
+<DD>transaction statements
+<DL><DT><DD></DL><P>
+<A NAME="c_profile"></A>
+<A NAME="DOC.1.3.1.1.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> c_profile</B></TT>
+<DD>profile statements
+<DL><DT><DD></DL><P>
+<A NAME="c_ui"></A>
+<A NAME="DOC.1.3.1.1.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> c_ui</B></TT>
+<DD>user interface statements
+<DL><DT><DD></DL><P>
+<A NAME="c_serialize"></A>
+<A NAME="DOC.1.3.1.1.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> c_serialize</B></TT>
+<DD>serialization statements
+<DL><DT><DD></DL><P>
+<A NAME="c_io"></A>
+<A NAME="DOC.1.3.1.1.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> c_io</B></TT>
+<DD>io statements
+<DL><DT><DD></DL><P>
+<A NAME="c_app0"></A>
+<A NAME="DOC.1.3.1.1.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> c_app0</B></TT>
+<DD>7 additional application specific debug modes
+<DL><DT><DD></DL><P>
+<A NAME="c_all"></A>
+<A NAME="DOC.1.3.1.1.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> c_all</B></TT>
+<DD>all/any debug statements
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="addMode"></A>
+<A NAME="DOC.1.3.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void addMode(int mode)</B></TT>
+<DD>Adds a debug mode to the list of modes to be captured.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>mode</B> -  - the debug mode to be captured<BR><DD></DL><P>
+<A NAME="getMode"></A>
+<A NAME="DOC.1.3.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="Debug.html#DOC.1.3.1.1">Mode</A> getMode()</B></TT>
+<DD>Active debug modes.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the debug modes that have been captured<BR><DD></DL><P>
+<A NAME="output"></A>
+<A NAME="DOC.1.3.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   ostream&amp; output()</B></TT>
+<DD>Debug output stream.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  debug output stream.<BR><DD></DL><P>
+<A NAME="increaseIndent"></A>
+<A NAME="DOC.1.3.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void increaseIndent()</B></TT>
+<DD>Increase the indent level for all the debug statements recorded in the future
+<DL><DT><DD></DL><P>
+<A NAME="decreaseIndent"></A>
+<A NAME="DOC.1.3.1.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void decreaseIndent()</B></TT>
+<DD>Decrease the indent level for all the debug statements recorded in the future
+<DL><DT><DD></DL><P>
+<A NAME="indent"></A>
+<A NAME="DOC.1.3.1.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   const std::string&amp; indent()</B></TT>
+<DD>Debug indent level.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the string containing the indent number of tabs.<BR><DD></DL><P>
+<A NAME="output"></A>
+<A NAME="DOC.1.3.1.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ostream&amp; output(const std::string&amp; msg)</B></TT>
+<DD>Record the message in debug log. The mesage would be preceded by pre and 
+followed by post messages if the Debug instance has been instantiated with
+the messages.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>msg</B> -  - a free <!1><A HREF="DebugFunction.html#DOC.1.3.2.7">format</A> text message
+<BR><DT><B>Returns:</B><DD>  debug output stream.<BR><DD></DL><P>
+<A NAME="output"></A>
+<A NAME="DOC.1.3.1.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ostream&amp; output(const char* formatMsg, ...)</B></TT>
+<DD>Record the formated message with its arguments in debug log. The mesage 
+would be preceded by pre and followed by post messages if the Debug instance 
+has been instantiated with the messages. The syntax of a formated message is 
+same as printf() formated message syntax, with additional tag %D that
+represents a reference to an instance of Debug specializations.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>formatMsg</B> -  - a <!1><A HREF="DebugFunction.html#DOC.1.3.2.7">format</A> message describing the variable argument list
+<BR><B>va_list</B> -  - variable argument list.
+<BR><DT><B>Returns:</B><DD>  debug output stream.<BR><DD></DL><P>
+<A NAME="preMessage"></A>
+<A NAME="DOC.1.3.1.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const std::string&amp; preMessage() const </B></TT>
+<DD>Debug statement preceding message.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  debug pre message.<BR><DD></DL><P>
+<A NAME="postMessage"></A>
+<A NAME="DOC.1.3.1.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const std::string&amp; postMessage() const </B></TT>
+<DD>Debug statement post message.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  debug post message.<BR><DD></DL><P>
+<A NAME="Debug"></A>
+<A NAME="DOC.1.3.1.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Debug(<!1><A HREF="Debug.html#DOC.1.3.1.1">Mode</A> mode = <!1><A HREF="Debug.html#DOC.1.3.1.1.2">c_basic</A>)</B></TT>
+<DD>Default constructor would initialize the debug statement in basic mode, 
+without pre or post message.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>mode</B> -  - the debug statement mode.<BR><DD></DL><P>
+<A NAME="Debug"></A>
+<A NAME="DOC.1.3.1.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Debug(const std::string&amp; preMsg, <!1><A HREF="Debug.html#DOC.1.3.1.1">Mode</A> mode = <!1><A HREF="Debug.html#DOC.1.3.1.1.2">c_basic</A>)</B></TT>
+<DD>Overloaded constructor would initialize the debug statement in basic mode,
+without post message
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Debug.html#DOC.1.3.1.10">preMessage</A> - the debug statement preceding message.
+<BR><B>mode</B> -  - the debug statement mode.<BR><DD></DL><P>
+<A NAME="Debug"></A>
+<A NAME="DOC.1.3.1.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Debug(const std::string&amp; preMsg, const std::string&amp; postMsg, <!1><A HREF="Debug.html#DOC.1.3.1.1">Mode</A> mode = <!1><A HREF="Debug.html#DOC.1.3.1.1.2">c_basic</A>)</B></TT>
+<DD>Overloaded constructor would initialize the debug statement in basic mode.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Debug.html#DOC.1.3.1.10">preMessage</A> - the debug statement preceding message.
+<BR><B></B> - <!1><A HREF="Debug.html#DOC.1.3.1.11">postMessage</A> - the debug statement following message.
+<BR><B>mode</B> -  - the debug statement mode.<BR><DD></DL><P>
+<A NAME="print"></A>
+<A NAME="DOC.1.3.1.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void print()</B></TT>
+<DD>Override to provide the specific behavior when debug specialization 
+object is referenced with %D tag and passed in a variable argument 
+list to output() or print()  methods.
+
+<DL><DT><DD></DL><P>
+<A NAME="print"></A>
+<A NAME="DOC.1.3.1.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void print(const std::string&amp; formatMsg, va_list&amp; argList)</B></TT>
+<DD>Record the formated message with its arguments in debug log. The mesage 
+would be preceded by pre and followed by post messages if the Debug instance 
+has been instantiated with the messages. The syntax of a formated message is 
+same as printf() formated message syntax, with additional tag %D that
+represents a reference to an instance of Debug specializations.
+
+<P>This method should be used by specilized classes which provide a method
+with variable argument list, like output() method in this class.
+
+<P>void method(const char* formatMsg, ...)
+
+<P>{
+
+<P>va_list argList;
+
+<P>va_start(argList, formatMsg);
+
+<P>Debug::print(formatMsg, argList);
+
+<P>va_end(argList);
+
+<P>}
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>formatMsg</B> -  - a <!1><A HREF="DebugFunction.html#DOC.1.3.2.7">format</A> message describing the variable argument list
+<BR><B>argList</B> -  - variable argument list.<BR><DD></DL><P>
+<A NAME="time"></A>
+<A NAME="DOC.1.3.1.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::string time() const </B></TT>
+<DD>Current time.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a current time as a string.<BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="DebugLine.html">DebugLine</A><BR>
+<A HREF="DebugFunction.html">DebugFunction</A><BR>
+<A HREF="DebugClass.html">DebugClass</A><BR>
+</DL>
+
+<DL><DT><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

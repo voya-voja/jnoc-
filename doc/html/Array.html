@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  inexum::OSP::Array</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">inexum::OSP::Array</A></H2></H2><BLOCKQUOTE>Java object parser symbol encapsulates the class description of an array.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="MEntity,M,CClass,MClass.html,CArray,MArray.html">
+<param name=before value="M,M,M">
+<param name=after value="Md_SP,Md_,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.1.1">Array</A></B>()
+<DD><I>Array symbol default constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.1.2">Array</A></B>(const <!1><A HREF="Array.html#DOC.1.1.1.2">Array</A>&amp; right)
+<DD><I>Array symbol copy constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.1.3">~Array</A></B>()
+<DD><I>Array symbol destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.1.4">setName</A></B>(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)
+<DD><I>Provide more descriptive array name and to capture the elements' type.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.1.5">addElements</A></B>(int count)
+<DD><I>Add specified number of elements of arrays type.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <!1><A HREF="Class.html">Class</A>* <B><A HREF="#DOC.1.1.1.6">clone</A></B>() const 
+<DD><I>Array symbol clone method:</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.1.1.1.7">classDescriptionFlag2Token</A></B>() const 
+<DD><I>Array does not provide conversion of class description flags to parser tokens.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void* <B><A HREF="#DOC.1.1.1.8">instantiate</A></B>() const 
+<DD><I>Create an instance of std::vector for appropriate element type and initialize elements with values from this array symbol.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.1.9">initialize</A></B>(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>) const 
+<DD><I>Initialize elements of an std:vector instantiated for appropriate  element type with array's deserialized values.</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Class.html">Class</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>int <B>membersCount</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>membersCount</B>( int count )
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="Class.html">Class</A>&amp; <B>superClass</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>const <!1><A HREF="Class.html">Class</A>&amp; <B>superClass</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>superClass</B>( <!1><A HREF="Class.html">Class</A>&amp; aClass )
+<DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>isComplete</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>isLastMember</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>add</B>( <!1><A HREF="Object.html">Object</A>&amp; member )
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="Class.html#DOC.1.1.6.5">const_MemberIterator</A> <B>memberBegin</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="Class.html#DOC.1.1.6.4">MemberIterator</A> <B>memberBegin</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="Class.html#DOC.1.1.6.5">const_MemberIterator</A> <B>memberEnd</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="Class.html#DOC.1.1.6.4">MemberIterator</A> <B>memberEnd</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>classDescriptionFlags</B>( <!1><A HREF="byte.2.html">byte</A> flags )
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>moveToMember</B>( int index )
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="Object.html">Object</A>&amp; <B>nextMember</B>()
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Members</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>typedef  std::vector&lt;<!1><A HREF="Object.html">Object</A>*&gt; <B>ObjectList</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>typedef  ObjectList::iterator <B>MemberIterator</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>typedef  ObjectList::const_iterator <B>const_MemberIterator</B>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Java object parser symbol encapsulates the class description of an array.
+Responsible for deserialization of an array.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="Array"></A>
+<A NAME="DOC.1.1.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Array()</B></TT>
+<DD>Array symbol default constructor
+<DL><DT><DD></DL><P>
+<A NAME="Array"></A>
+<A NAME="DOC.1.1.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Array(const <!1><A HREF="Array.html#DOC.1.1.1.2">Array</A>&amp; right)</B></TT>
+<DD>Array symbol copy constructor
+<DL><DT><DD></DL><P>
+<A NAME="~Array"></A>
+<A NAME="DOC.1.1.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~Array()</B></TT>
+<DD>Array symbol destructor
+<DL><DT><DD></DL><P>
+<A NAME="setName"></A>
+<A NAME="DOC.1.1.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setName(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)</B></TT>
+<DD>Provide more descriptive array name
+and to capture the elements' type. The name should corresponde to
+java serialization format, e.g. '[B' or '[Ljava.lang.Long;'.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - a string <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> in Java serialization <!1><A HREF="DebugFunction.html#DOC.1.3.2.7">format</A><BR><DD></DL><P>
+<A NAME="addElements"></A>
+<A NAME="DOC.1.1.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void addElements(int count)</B></TT>
+<DD>Add specified number of elements of arrays type. It can be called
+only after setName, because it requires elements' type.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>count</B> -  - the number of elemnets to be added<BR><DD></DL><P>
+<A NAME="clone"></A>
+<A NAME="DOC.1.1.1.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="Class.html">Class</A>* clone() const </B></TT>
+<DD>Array symbol clone method:
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a cloned array symbol instance as a Class symbol<BR><DD></DL><P>
+<A NAME="classDescriptionFlag2Token"></A>
+<A NAME="DOC.1.1.1.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int classDescriptionFlag2Token() const </B></TT>
+<DD>Array does not provide conversion of class description flags to
+parser tokens.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  JavaObjectParser::InsertNoToken()<BR><DD></DL><P>
+<A NAME="instantiate"></A>
+<A NAME="DOC.1.1.1.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void* instantiate() const </B></TT>
+<DD>Create an instance of std::vector for appropriate element type
+and initialize elements with values from this array symbol.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the address of a created object as a void pointer. Return NULL if error.<BR><DD></DL><P>
+<A NAME="initialize"></A>
+<A NAME="DOC.1.1.1.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void initialize(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>) const </B></TT>
+<DD>Initialize elements of an std:vector instantiated for appropriate 
+element type with array's deserialized values.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the void pointer <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> to be 
+initialized.<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

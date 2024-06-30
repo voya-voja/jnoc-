@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  inexum::OSP::ClassObject</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">inexum::OSP::ClassObject</A></H2></H2><BLOCKQUOTE>Java object parser symbol that encapsulates the description of a class instance.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=155>
+<param name=classes value="MEntity,M,CObject,MObject.html,CClassObject,MClassObject.html,CExceptionObject,MExceptionObject.html,CArrayObject,MArrayObject.html">
+<param name=before value="M,M,M,M|_,Mr_">
+<param name=after value="Md_SP,Md_,M,M,M">
+<param name=indent value="0,1,2,2,2">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.7.1">ClassObject</A></B>()
+<DD><I>Class object symbol default constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.7.2">ClassObject</A></B>(const <!1><A HREF="ClassObject.html#DOC.1.1.7.2">ClassObject</A>&amp; right)
+<DD><I>Class object symbol copy constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.7.3">ClassObject</A></B>(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)
+<DD><I>Overloaded Class Object symbol constructor:</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.7.4">ClassObject</A></B>(const <!1><A HREF="Class.html">Class</A>&amp; aClass)
+<DD><I>Overloaded Class Object symbol constructor, creates the instance  of the object symbol for a given class symbol.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.7.5">~ClassObject</A></B>()
+<DD><I>Class Object symbol destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Object.html">Object</A>* <B><A HREF="#DOC.1.1.7.6">clone</A></B>() const 
+<DD><I>Class Object symbol clone method:</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.1.7.7">isComplete</A></B>() const 
+<DD><I>Check have been all class member symbols loaded to the class symbol  instance that is referenced by this object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.1.7.8">isLastMember</A></B>() const 
+<DD><I>Verify does the class's internal cursor points to the last member of the class description for this object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.7.9">setClass</A></B>(<!1><A HREF="Class.html">Class</A>* pClass)
+<DD><I>The class name setter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.1.1.7.10">membersCount</A></B>() const 
+<DD><I>Class Symbol's member count getter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.7.11">moveToMember</A></B>(int index)
+<DD><I>Sets the internal cursor of referenced class symbol to the specified  class member symbol.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Object.html">Object</A>&amp; <B><A HREF="#DOC.1.1.7.12">nextMember</A></B>()
+<DD><I>Return the current member symbol and move to the next member of a  referenced class symbol.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.1.1.7.13">getEndToken</A></B>() const 
+<DD><I>Overridden to return class object's end.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Class.html">Class</A>&amp; <B><A HREF="#DOC.1.1.7.14">type</A></B>()
+<DD><I>The class getter.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void* <B><A HREF="#DOC.1.1.7.15">instantiateObject</A></B>() const 
+<DD><I>Overridden to create and initialize the appropriate C++ class instance.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.7.16">initializeObject</A></B>(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>) const 
+<DD><I>Overriden to initialize the provided instance of the class that is  described by the class symbol refrenced by this class object symbol.</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Object.html">Object</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   JavaObjectParser::State <B>getState</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void* <B>instantiate</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>initialize</B>(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Java object parser symbol that encapsulates the description of a class
+instance.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="ClassObject"></A>
+<A NAME="DOC.1.1.7.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ClassObject()</B></TT>
+<DD>Class object symbol default constructor
+<DL><DT><DD></DL><P>
+<A NAME="ClassObject"></A>
+<A NAME="DOC.1.1.7.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ClassObject(const <!1><A HREF="ClassObject.html#DOC.1.1.7.2">ClassObject</A>&amp; right)</B></TT>
+<DD>Class object symbol copy constructor
+<DL><DT><DD></DL><P>
+<A NAME="ClassObject"></A>
+<A NAME="DOC.1.1.7.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ClassObject(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)</B></TT>
+<DD>Overloaded Class Object symbol constructor:
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the class <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string<BR><DD></DL><P>
+<A NAME="ClassObject"></A>
+<A NAME="DOC.1.1.7.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ClassObject(const <!1><A HREF="Class.html">Class</A>&amp; aClass)</B></TT>
+<DD>Overloaded Class Object symbol constructor, creates the instance 
+of the object symbol for a given class symbol.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>aClass</B> -  - the instance of a class symbol.<BR><DD></DL><P>
+<A NAME="~ClassObject"></A>
+<A NAME="DOC.1.1.7.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~ClassObject()</B></TT>
+<DD>Class Object symbol destructor
+<DL><DT><DD></DL><P>
+<A NAME="clone"></A>
+<A NAME="DOC.1.1.7.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Object.html">Object</A>* clone() const </B></TT>
+<DD>Class Object symbol clone method:
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a cloned Class Object symbol instance as an Object symbol<BR><DD></DL><P>
+<A NAME="isComplete"></A>
+<A NAME="DOC.1.1.7.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool isComplete() const </B></TT>
+<DD>Check have been all class member symbols loaded to the class symbol 
+instance that is referenced by this object.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  true is all the symbols have been loaded, otherwise false.<BR><DD></DL><P>
+<A NAME="isLastMember"></A>
+<A NAME="DOC.1.1.7.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool isLastMember() const </B></TT>
+<DD>Verify does the class's internal cursor points to the last member of
+the class description for this object.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  true if cursor is at last member, otherwise false.<BR><DD></DL><P>
+<A NAME="setClass"></A>
+<A NAME="DOC.1.1.7.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setClass(<!1><A HREF="Class.html">Class</A>* pClass)</B></TT>
+<DD>The class name setter. If there is class symbol referenced by the 
+instance of class object symbol it will be deleted.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>pClass</B> -  - a pointer to a <!1><A HREF="Class.html">Class</A> symbol<BR><DD></DL><P>
+<A NAME="membersCount"></A>
+<A NAME="DOC.1.1.7.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int membersCount() const </B></TT>
+<DD>Class Symbol's member count getter. Return the number of members of
+referenced class symbol.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the number of Class symbol members<BR><DD></DL><P>
+<A NAME="moveToMember"></A>
+<A NAME="DOC.1.1.7.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void moveToMember(int index)</B></TT>
+<DD>Sets the internal cursor of referenced class symbol to the specified 
+class member symbol.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>index</B> -  - the member's index<BR><DD></DL><P>
+<A NAME="nextMember"></A>
+<A NAME="DOC.1.1.7.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Object.html">Object</A>&amp; nextMember()</B></TT>
+<DD>Return the current member symbol and move to the next member of a 
+referenced class symbol.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a reference to an Object symbol instance representing the 
+current member<BR><DD></DL><P>
+<A NAME="getEndToken"></A>
+<A NAME="DOC.1.1.7.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getEndToken() const </B></TT>
+<DD>Overridden to return class object's end.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the end of object token<BR><DD></DL><P>
+<A NAME="type"></A>
+<A NAME="DOC.1.1.7.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Class.html">Class</A>&amp; type()</B></TT>
+<DD>The class getter.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the reference to the class symbol.<BR><DD></DL><P>
+<A NAME="instantiateObject"></A>
+<A NAME="DOC.1.1.7.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void* instantiateObject() const </B></TT>
+<DD>Overridden to create and initialize the appropriate C++ class instance.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the void pointer address of the instance of the class that is 
+described by the class symbol refrenced by this class object.<BR><DD></DL><P>
+<A NAME="initializeObject"></A>
+<A NAME="DOC.1.1.7.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void initializeObject(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>) const </B></TT>
+<DD>Overriden to initialize the provided instance of the class that is 
+described by the class symbol refrenced by this class object symbol.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the void pointer <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A><BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="ExceptionObject.html">ExceptionObject</A><BR>
+<A HREF="ArrayObject.html">ArrayObject</A><BR>
+</DL>
+
+<DL><DT><DT><B>Friends:</B><DD>  util::DebugClass&lt;<!1><A HREF="ClassObject.html">ClassObject</A>&gt;<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>template<class TYPE> class  inexum::OSP::PushBack</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>template&lt;class TYPE&gt; class  <A HREF="#DOC.DOCU">inexum::OSP::PushBack</A></H2></H2><BLOCKQUOTE>A functional object to be used when adding objects to std::vector&lt;void*&gt; records objects' type information.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="MSerializableVoidPointerArray::AddObjectType,M,CPushBack,MPushBack.html">
+<param name=before value="M,M">
+<param name=after value="Md_,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.23.1">PushBack</A></B>( std::vector&lt;void*&gt;&amp; objectArray )
+<DD><I>Overloaded constructor.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.23.2">operator()</A></B>( TYPE* pElement )
+<DD><I>Overloaded operator().</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>A functional object to be used when adding objects to std::vector&lt;void*&gt;
+records objects' type information.
+
+<P>...
+
+<P>.	std::vector&lt;void*&gt; objects;
+
+<P>...
+
+<P>.	PushBack&lt;B&gt; pushBackB( objects );
+
+<P>.	pushBackB( new B( 555, 666, 777 ) );
+
+<P>.	PushBack&lt;java::lang::Integer&gt;(objects)(new java::lang::Short( 31 ));
+
+<P>...
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="PushBack"></A>
+<A NAME="DOC.1.1.23.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PushBack( std::vector&lt;void*&gt;&amp; objectArray )</B></TT>
+<DD>Overloaded constructor.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>objectArray</B> -  - the reference to a C++ <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> array (
+std::vector&lt;void*&gt; )<BR><DD></DL><P>
+<A NAME="operator()"></A>
+<A NAME="DOC.1.1.23.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void operator()( TYPE* pElement )</B></TT>
+<DD>Overloaded operator().
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>pElement</B> -  - the <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of C++ <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> to be added to the array<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Parameters:</B><DD><B>TYPE</B> -  - A <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> of the array element.
+<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DT><B>See Also:</B><DD>inexum::SerializableVoidPointerArray
+<BR><!1><A HREF="serialize_array.html">serialize_array</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

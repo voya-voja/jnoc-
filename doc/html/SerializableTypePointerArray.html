@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>template<class TYPE> class  inexum::OSP::SerializableTypePointerArray</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>template&lt;class TYPE&gt; class  <A HREF="#DOC.DOCU">inexum::OSP::SerializableTypePointerArray</A></H2></H2><BLOCKQUOTE>Specialization of Serializable class that provides means to define a C++ serializable array of pointers.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="CSerializable,MSerializable.html,CSerializablePointerArray,MSerializablePointerArray.html,CSerializableTypePointerArray,MSerializableTypePointerArray.html">
+<param name=before value="M,M,M">
+<param name=after value="Md_SP,Md_,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.21.1">SerializableTypePointerArray</A></B>( const std::string&amp; <!1><A HREF="Serializable.html#DOC.1.1.17.8">className</A> )
+<DD><I>Overloaded constructor creates a serializable wrapper for an array of pointers.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="JLong.html">JLong</A> <B><A HREF="#DOC.1.1.21.2">serialVersionUID</A></B>() const 
+<DD><I>Specialize for diferent instantiation of SerializableTypePointerArray.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   std::string <B><A HREF="#DOC.1.1.21.3">elementType</A></B>( void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> ) const 
+<DD><I>Type of an element at the specified address.</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="SerializablePointerArray.html">SerializablePointerArray</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>void* <B>instantiateObject</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>initializeObject</B>(void* pObject, const <!1><A HREF="Class.html">Class</A>&amp; aClass)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>serialize</B>(const void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>, <!1><A HREF="JavaObjectSerializer.html">JavaObjectSerializer</A>&amp; serializer)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Serializable.html">Serializable</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>void* <B>object</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>initialize</B>(void* pObject, const <!1><A HREF="Class.html">Class</A>&amp; aClass )
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>initialize</B>(const <!1><A HREF="Class.html">Class</A>&amp; aClass)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>className</B>(const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>superClass</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>isSuperClass</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   const char <B>ArrayCode</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   const size_t <B>ClassSize</B>()
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Members</H3><DD><DT>
+class  DeclarationSpecifier <B><A HREF="CppJavaNamesRegister.html">CppJavaNamesRegister</A></B>
+<DD><I>The functional object that registers names of serializable classes.</I>
+<DT>
+class  DeclarationSpecifier <B><A HREF="ObjectHandler.html">ObjectHandler</A></B>
+<DD><I>Remove object from referenced list if object is deleted.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   <!1><A HREF="byte.2.html">byte</A> <B>objectTypeCode</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>const std::string&amp; <B>className</B>() const 
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Specialization of Serializable class that provides means to define
+a C++ serializable array of pointers. The class uses inexum::VectorPtr 
+provide the support of a Java array and garbage collection of contained
+objects.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="SerializableTypePointerArray"></A>
+<A NAME="DOC.1.1.21.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> SerializableTypePointerArray( const std::string&amp; <!1><A HREF="Serializable.html#DOC.1.1.17.8">className</A> )</B></TT>
+<DD>Overloaded constructor creates a serializable wrapper for an array
+of pointers. The class name is expected to be in format 
+'['&lt;base element type&gt;.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Serializable.html#DOC.1.1.17.8">className</A> - the Java <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> stream array name.<BR><DD></DL><P>
+<A NAME="serialVersionUID"></A>
+<A NAME="DOC.1.1.21.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="JLong.html">JLong</A> serialVersionUID() const </B></TT>
+<DD>Specialize for diferent instantiation of SerializableTypePointerArray.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a serializable version unique identifier.<BR><DD></DL><P>
+<A NAME="elementType"></A>
+<A NAME="DOC.1.1.21.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   std::string elementType( void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> ) const </B></TT>
+<DD>Type of an element at the specified address.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> 
+<BR><DT><B>Returns:</B><DD>  the element type.<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Parameters:</B><DD><B>TYPE</B> -  - A <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A> of array's elements.
+<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DT><B>See Also:</B><DD>inexum::SerializablePointerArray<void>
+<BR>inexum::SerializableVoidPointerArray
+<BR><!1><A HREF="serialize_array.html">serialize_array</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

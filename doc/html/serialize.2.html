@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>#define serialize</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>#define <A HREF="#DOC.DOCU">serialize</A></H2><H2>(_class_)</H2><BLOCKQUOTE>Promote a C++ class as Serializable.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Promote a C++ class as Serializable. This macro must be used in a class 
+declaration section to promote a C++ class to be Serializable. The macro 
+assigns the instantiation of inexum::OSP::Serialize class for the C++ class as a 
+friend to the C++ class.
+
+<P>Example:
+
+<P>.class MyClass {
+
+<P>..	serialize(MyClass);
+
+<P>..	MyAnotherClass			m_another;
+
+<P>..	java::lang::Integer*	m_pInt;
+
+<P>..	int						m_int;
+
+<P>.};
+
+<P>
+</BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>_class_</B> -  - a class <!1><A HREF="Member.html#DOC.1.1.12.7">name</A>
+<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DT><B>See Also:</B><DD><!1><A HREF="Serialize.html">inexum::OSP::Serialize</A>
+<BR><!1><A HREF="serialize_begin.html">serialize_begin</A>
+<BR><!1><A HREF="serialize_by_value.html">serialize_by_value</A>
+<BR><!1><A HREF="serialize_pointer.html">serialize_pointer</A>
+<BR><!1><A HREF="serialize_end.html">serialize_end</A>
+<BR><!1><A HREF="serialize_array.html">serialize_array</A>
+<BR><!1><A HREF="serialize_pointer_array.html">serialize_pointer_array</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

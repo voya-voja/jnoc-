@@ -1,0 +1,325 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  inexum::OSP::Class</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">inexum::OSP::Class</A></H2></H2><BLOCKQUOTE>Symbol of a java object parser that encapsulates a class description.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="MEntity,M,CClass,MClass.html,CArray,MArray.html">
+<param name=before value="M,M,M^_">
+<param name=after value="Md_,M,M">
+<param name=indent value="0,1,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.6.6">Class</A></B>()
+<DD><I>Class symbol default constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.6.7">Class</A></B>( const <!1><A HREF="Class.html#DOC.1.1.6.7">Class</A>&amp; right )
+<DD><I>Class symbol copy constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.6.8">Class</A></B>( const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> )
+<DD><I>Overloaded Class symbol constructor:</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <B><A HREF="#DOC.1.1.6.9">~Class</A></B>()
+<DD><I>Class symbol destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <!1><A HREF="Class.html">Class</A>* <B><A HREF="#DOC.1.1.6.10">clone</A></B>() const 
+<DD><I>Class symbol clone method:</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.1.1.6.11">membersCount</A></B>() const 
+<DD><I>Class Symbol's member count getter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.6.12">membersCount</A></B>( int count )
+<DD><I>Class Symbol's member count setter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Class.html">Class</A>&amp; <B><A HREF="#DOC.1.1.6.13">superClass</A></B>()
+<DD><I>Super class symbol getter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const <!1><A HREF="Class.html">Class</A>&amp; <B><A HREF="#DOC.1.1.6.14">superClass</A></B>() const 
+<DD><I>Constant super class symbol getter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.6.15">superClass</A></B>( <!1><A HREF="Class.html">Class</A>&amp; aClass )
+<DD><I>Super class symbol setter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.1.1.6.16">isComplete</A></B>() const 
+<DD><I>Check have been all class member symbols loaded to the class.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.1.6.17">isLastMember</A></B>() const 
+<DD><I>Verify does the internal cursor points to the last member of the  class description.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.6.18">add</A></B>( <!1><A HREF="Object.html">Object</A>&amp; member )
+<DD><I>Add a member's objet symbol reference to the class.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Class.html#DOC.1.1.6.5">const_MemberIterator</A> <B><A HREF="#DOC.1.1.6.19">memberBegin</A></B>() const 
+<DD><I>Member symbol iterator positioned to the beginning of the member list.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Class.html#DOC.1.1.6.4">MemberIterator</A> <B><A HREF="#DOC.1.1.6.20">memberBegin</A></B>()
+<DD><I>Member symbol iterator positioned to the beginning of the member list.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Class.html#DOC.1.1.6.5">const_MemberIterator</A> <B><A HREF="#DOC.1.1.6.21">memberEnd</A></B>() const 
+<DD><I>Member symbol iterator positioned to the end of the member list.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Class.html#DOC.1.1.6.4">MemberIterator</A> <B><A HREF="#DOC.1.1.6.22">memberEnd</A></B>()
+<DD><I>Member symbol iterator positioned to the end of the member list.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.6.23">classDescriptionFlags</A></B>( <!1><A HREF="byte.2.html">byte</A> flags )
+<DD><I>Sets Java class description flags for this class symbol.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   int <B><A HREF="#DOC.1.1.6.24">classDescriptionFlag2Token</A></B>() const 
+<DD><I>Converts Java class description flags to internal parser token.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.6.25">moveToMember</A></B>( int index )
+<DD><I>Sets the internal cursor to the specified class member symbol, where  the complete member list for a class is created as a concatenation of a class's member list to a super class's member list, eg.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Object.html">Object</A>&amp; <B><A HREF="#DOC.1.1.6.26">nextMember</A></B>()
+<DD><I>Return the current member symbol and move to the next member in the  complete list of members for the class symbol, where  the complete member list for a class is created as a concatenation of a class's member list to a super class's member list, eg.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void* <B><A HREF="#DOC.1.1.6.27">instantiate</A></B>() const 
+<DD><I>Create an C++ object of the C++ class described by this class symbol and initialize object values with values from this class symbol.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.1.6.28">initialize</A></B>( void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> ) const 
+<DD><I>Initialize an C++ object of the C++ class described by this class symbol with values from this class symbol.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Members</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::vector&lt;<!1><A HREF="Object.html">Object</A>*&gt; <B><A HREF="#DOC.1.1.6.3">ObjectList</A></B>
+<DD><I>List of member object symbols</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  ObjectList::iterator <B><A HREF="#DOC.1.1.6.4">MemberIterator</A></B>
+<DD><I>Member object symbol list iterator</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  ObjectList::const_iterator <B><A HREF="#DOC.1.1.6.5">const_MemberIterator</A></B>
+<DD><I>Constant member object symbol list iterator</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Symbol of a java object parser that encapsulates a class description.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="ObjectList"></A>
+<A NAME="DOC.1.1.6.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::vector&lt;<!1><A HREF="Object.html">Object</A>*&gt; ObjectList</B></TT>
+<DD>List of member object symbols
+<DL><DT><DD></DL><P>
+<A NAME="MemberIterator"></A>
+<A NAME="DOC.1.1.6.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  ObjectList::iterator MemberIterator</B></TT>
+<DD>Member object symbol list iterator
+<DL><DT><DD></DL><P>
+<A NAME="const_MemberIterator"></A>
+<A NAME="DOC.1.1.6.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  ObjectList::const_iterator const_MemberIterator</B></TT>
+<DD>Constant member object symbol list iterator
+<DL><DT><DD></DL><P>
+<A NAME="Class"></A>
+<A NAME="DOC.1.1.6.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Class()</B></TT>
+<DD>Class symbol default constructor
+<DL><DT><DD></DL><P>
+<A NAME="Class"></A>
+<A NAME="DOC.1.1.6.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Class( const <!1><A HREF="Class.html#DOC.1.1.6.7">Class</A>&amp; right )</B></TT>
+<DD>Class symbol copy constructor
+<DL><DT><DD></DL><P>
+<A NAME="Class"></A>
+<A NAME="DOC.1.1.6.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Class( const std::string&amp; <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> )</B></TT>
+<DD>Overloaded Class symbol constructor:
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> - the class <!1><A HREF="Member.html#DOC.1.1.12.7">name</A> string<BR><DD></DL><P>
+<A NAME="~Class"></A>
+<A NAME="DOC.1.1.6.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~Class()</B></TT>
+<DD>Class symbol destructor
+<DL><DT><DD></DL><P>
+<A NAME="clone"></A>
+<A NAME="DOC.1.1.6.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="Class.html">Class</A>* clone() const </B></TT>
+<DD>Class symbol clone method:
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a cloned instance of the Class symbol<BR><DD></DL><P>
+<A NAME="membersCount"></A>
+<A NAME="DOC.1.1.6.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int membersCount() const </B></TT>
+<DD>Class Symbol's member count getter.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the number of Class symbol members<BR><DD></DL><P>
+<A NAME="membersCount"></A>
+<A NAME="DOC.1.1.6.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void membersCount( int count )</B></TT>
+<DD>Class Symbol's member count setter.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>count</B> -  - the number of <!1><A HREF="Class.html">Class</A> symbol <!1><A HREF="Serialize.html#DOC.1.1.24.6">members</A><BR><DD></DL><P>
+<A NAME="superClass"></A>
+<A NAME="DOC.1.1.6.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Class.html">Class</A>&amp; superClass()</B></TT>
+<DD>Super class symbol getter.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a reference to a base class symbol<BR><DD></DL><P>
+<A NAME="superClass"></A>
+<A NAME="DOC.1.1.6.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="Class.html">Class</A>&amp; superClass() const </B></TT>
+<DD>Constant super class symbol getter.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a constant reference to a base class symbol<BR><DD></DL><P>
+<A NAME="superClass"></A>
+<A NAME="DOC.1.1.6.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void superClass( <!1><A HREF="Class.html">Class</A>&amp; aClass )</B></TT>
+<DD>Super class symbol setter.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>aClass</B> -  - a reference class symbol that represents a base class<BR><DD></DL><P>
+<A NAME="isComplete"></A>
+<A NAME="DOC.1.1.6.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isComplete() const </B></TT>
+<DD>Check have been all class member symbols loaded to the class.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  true is all the symbols have been loaded, otherwise false.<BR><DD></DL><P>
+<A NAME="isLastMember"></A>
+<A NAME="DOC.1.1.6.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool isLastMember() const </B></TT>
+<DD>Verify does the internal cursor points to the last member of the 
+class description.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  true if cursor is at last member, otherwise false.<BR><DD></DL><P>
+<A NAME="add"></A>
+<A NAME="DOC.1.1.6.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void add( <!1><A HREF="Object.html">Object</A>&amp; member )</B></TT>
+<DD>Add a member's objet symbol reference to the class.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>member</B> -  - the reference to a <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> symbol<BR><DD></DL><P>
+<A NAME="memberBegin"></A>
+<A NAME="DOC.1.1.6.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Class.html#DOC.1.1.6.5">const_MemberIterator</A> memberBegin() const </B></TT>
+<DD>Member symbol iterator positioned to the beginning of the member list.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a constant member symbol iterator<BR><DD></DL><P>
+<A NAME="memberBegin"></A>
+<A NAME="DOC.1.1.6.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Class.html#DOC.1.1.6.4">MemberIterator</A> memberBegin()</B></TT>
+<DD>Member symbol iterator positioned to the beginning of the member list.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a member symbol iterator<BR><DD></DL><P>
+<A NAME="memberEnd"></A>
+<A NAME="DOC.1.1.6.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Class.html#DOC.1.1.6.5">const_MemberIterator</A> memberEnd() const </B></TT>
+<DD>Member symbol iterator positioned to the end of the member list.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a constant member symbol iterator<BR><DD></DL><P>
+<A NAME="memberEnd"></A>
+<A NAME="DOC.1.1.6.22"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Class.html#DOC.1.1.6.4">MemberIterator</A> memberEnd()</B></TT>
+<DD>Member symbol iterator positioned to the end of the member list.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a member symbol iterator<BR><DD></DL><P>
+<A NAME="classDescriptionFlags"></A>
+<A NAME="DOC.1.1.6.23"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void classDescriptionFlags( <!1><A HREF="byte.2.html">byte</A> flags )</B></TT>
+<DD>Sets Java class description flags for this class symbol.
+The flag values are:
+
+<P>SC_SERIALIZABLE = 0x02		- Java Serializable class;
+
+<P>SC_EXTERNALIZABLE = 0x04	- Java External class description;
+
+<P>SC_WRITE_METHOD = 0x01		- Only with SC_SERIALIZABLE, if the
+class description has been provided;
+
+<P>SC_BLOCK_DATA = 0x08		- Only with SC_EXTERNALIZABLE, if the
+class description has been provided;
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>flags</B> -  - a <!1><A HREF="byte.2.html">byte</A> code<BR><DD></DL><P>
+<A NAME="classDescriptionFlag2Token"></A>
+<A NAME="DOC.1.1.6.24"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   int classDescriptionFlag2Token() const </B></TT>
+<DD>Converts Java class description flags to internal parser token.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a token value<BR><DD></DL><P>
+<A NAME="moveToMember"></A>
+<A NAME="DOC.1.1.6.25"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void moveToMember( int index )</B></TT>
+<DD>Sets the internal cursor to the specified class member symbol, where 
+the complete member list for a class is created as a concatenation of
+a class's member list to a super class's member list, eg. the index 0
+would position the cursor to point to a member 0 in the base class if 
+such is available.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>index</B> -  - the member's index in the complete list of <!1><A HREF="Serialize.html#DOC.1.1.24.6">members</A><BR><DD></DL><P>
+<A NAME="nextMember"></A>
+<A NAME="DOC.1.1.6.26"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Object.html">Object</A>&amp; nextMember()</B></TT>
+<DD>Return the current member symbol and move to the next member in the 
+complete list of members for the class symbol, where 
+the complete member list for a class is created as a concatenation of
+a class's member list to a super class's member list, eg. the index 0
+would position the cursor to point to a member 0 in the base class if 
+such is available.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a reference to an Object symbol instance representing the 
+current member<BR><DD></DL><P>
+<A NAME="instantiate"></A>
+<A NAME="DOC.1.1.6.27"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void* instantiate() const </B></TT>
+<DD>Create an C++ object of the C++ class described by this class symbol
+and initialize object values with values from this class symbol.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the address of a created object as a void pointer, NULL if failed.<BR><DD></DL><P>
+<A NAME="initialize"></A>
+<A NAME="DOC.1.1.6.28"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void initialize( void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> ) const </B></TT>
+<DD>Initialize an C++ object of the C++ class described by this class symbol
+with values from this class symbol.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the void pointer <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> to be 
+initialized.<BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="Array.html">Array</A><BR>
+</DL>
+
+<DL><DT><DT><B>Friends:</B><DD>  util::DebugClass&lt;<!1><A HREF="Class.html">Class</A>&gt;<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

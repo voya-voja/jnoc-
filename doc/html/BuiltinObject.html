@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>template<class TYPE, JavaObjectParser::State state> class  inexum::OSP::BuiltinObject</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>template&lt;class TYPE, JavaObjectParser::State <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.12">state</A>&gt; class  <A HREF="#DOC.DOCU">inexum::OSP::BuiltinObject</A></H2></H2><BLOCKQUOTE>PrimitiveObject Specialization implements Java object parser symbol  description for each Java bultin types.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=125>
+<param name=classes value="MEntity,M,CObject,MObject.html,CPrimitiveObject,MPrimitiveObject.html,CBuiltinObject,MBuiltinObject.html">
+<param name=before value="M,M,M,M">
+<param name=after value="Md_SPSP,Md_SP,Md_,M">
+<param name=indent value="0,1,2,3">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.5.1">BuiltinObject</A></B>()
+<DD><I>Default constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.5.2">BuiltinObject</A></B>(const <!1><A HREF="BuiltinObject.html#DOC.1.1.5.2">BuiltinObject</A>&lt;TYPE, <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.12">state</A>&gt;&amp; right)
+<DD><I>Copy constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1.5.3">BuiltinObject</A></B>(const TYPE&amp; <!1><A HREF="BuiltinObject.html#DOC.1.1.5.5">value</A>)
+<DD><I>Overloaded constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Object.html">Object</A>* <B><A HREF="#DOC.1.1.5.4">clone</A></B>() const 
+<DD><I>Clone the object description of the Java builtin type.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const TYPE&amp; <B><A HREF="#DOC.1.1.5.5">value</A></B>() const 
+<DD><I>The object's value getter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.5.6">setValue</A></B>(const TYPE&amp; <!1><A HREF="BuiltinObject.html#DOC.1.1.5.5">value</A>)
+<DD><I>The object's value setter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.5.7">setValue</A></B>(<!1><A HREF="Value.html">Value</A>* pValue)
+<DD><I>The object's value setter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>JavaObjectParser::State <B><A HREF="#DOC.1.1.5.8">getState</A></B>() const 
+<DD><I>The getter of object's corresponding parser state.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void* <B><A HREF="#DOC.1.1.5.9">instantiateObject</A></B>() const 
+<DD><I>Create and initialize the C++ object of the type described by this  object.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.1.5.10">initializeObject</A></B>(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>) const 
+<DD><I>Initialize the C++ object that is described by this object with the  contained value.</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="PrimitiveObject.html">PrimitiveObject</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>static   const std::string&amp; <B>Types</B>()
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Object.html">Object</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   int <B>getEndToken</B>() const 
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void* <B>instantiate</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>initialize</B>(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>)
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>PrimitiveObject Specialization implements Java object parser symbol 
+description for each Java bultin types.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="BuiltinObject"></A>
+<A NAME="DOC.1.1.5.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BuiltinObject()</B></TT>
+<DD>Default constructor
+<DL><DT><DD></DL><P>
+<A NAME="BuiltinObject"></A>
+<A NAME="DOC.1.1.5.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BuiltinObject(const <!1><A HREF="BuiltinObject.html#DOC.1.1.5.2">BuiltinObject</A>&lt;TYPE, <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.12">state</A>&gt;&amp; right)</B></TT>
+<DD>Copy constructor
+<DL><DT><DD></DL><P>
+<A NAME="BuiltinObject"></A>
+<A NAME="DOC.1.1.5.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BuiltinObject(const TYPE&amp; <!1><A HREF="BuiltinObject.html#DOC.1.1.5.5">value</A>)</B></TT>
+<DD>Overloaded constructor
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="BuiltinObject.html#DOC.1.1.5.5">value</A> - the reference to the <!1><A HREF="BuiltinObject.html#DOC.1.1.5.5">value</A> assigned to the <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A><BR><DD></DL><P>
+<A NAME="clone"></A>
+<A NAME="DOC.1.1.5.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Object.html">Object</A>* clone() const </B></TT>
+<DD>Clone the object description of the Java builtin type.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  a cloned object<BR><DD></DL><P>
+<A NAME="value"></A>
+<A NAME="DOC.1.1.5.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const TYPE&amp; value() const </B></TT>
+<DD>The object's value getter.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the constant reference to the contained value<BR><DD></DL><P>
+<A NAME="setValue"></A>
+<A NAME="DOC.1.1.5.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setValue(const TYPE&amp; <!1><A HREF="BuiltinObject.html#DOC.1.1.5.5">value</A>)</B></TT>
+<DD>The object's value setter.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="BuiltinObject.html#DOC.1.1.5.5">value</A> - a constant reference to the setting <!1><A HREF="BuiltinObject.html#DOC.1.1.5.5">value</A><BR><DD></DL><P>
+<A NAME="setValue"></A>
+<A NAME="DOC.1.1.5.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setValue(<!1><A HREF="Value.html">Value</A>* pValue)</B></TT>
+<DD>The object's value setter. Retreve the the value from Value wrapper.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>pValue</B> -  - pointer to a <!1><A HREF="BuiltinObject.html#DOC.1.1.5.5">value</A> wrapper<BR><DD></DL><P>
+<A NAME="getState"></A>
+<A NAME="DOC.1.1.5.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>JavaObjectParser::State getState() const </B></TT>
+<DD>The getter of object's corresponding parser state.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  instantiated state<BR><DD></DL><P>
+<A NAME="instantiateObject"></A>
+<A NAME="DOC.1.1.5.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void* instantiateObject() const </B></TT>
+<DD>Create and initialize the C++ object of the type described by this 
+object. Copy the value to the created object and return its address.
+
+<P>
+<DL><DT><DT><B>Returns:</B><DD>  the address of created and initialized C++ object.<BR><DD></DL><P>
+<A NAME="initializeObject"></A>
+<A NAME="DOC.1.1.5.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void initializeObject(void* <!1><A HREF="Member.html#DOC.1.1.12.4">address</A>) const </B></TT>
+<DD>Initialize the C++ object that is described by this object with the 
+contained value. Copy the value at the specified address assuming that 
+C++ object is of the type that this object describes.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> - the <!1><A HREF="Member.html#DOC.1.1.12.4">address</A> of C++ <!1><A HREF="Serializable.html#DOC.1.1.17.4">object</A> to be initialized.<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Parameters:</B><DD><B>TYPE</B> -  - the builtin <!1><A HREF="ClassObject.html#DOC.1.1.7.14">type</A>
+<BR><B></B> - <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.12">state</A> - the corresponding parser <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.12">state</A>
+<BR><DT><B>Friends:</B><DD>  util::DebugClass&lt;<!1><A HREF="BuiltinObject.html">BuiltinObject</A>&lt;TYPE, <!1><A HREF="JavaObjectParser.html#DOC.1.1.9.12">state</A>&gt; &gt;<BR><DT><B>Author:</B><DD>iNexum Systems Inc.
+
+<DT><B>Version:</B><DD>1.0.0
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>
