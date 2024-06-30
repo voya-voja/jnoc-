@@ -38,7 +38,7 @@
 
 #include <map>
 #include <vector>
-#include <iostream.h>
+#include <iostream>
 #include <inexum/Types.h>
 #include "javaObjParser.h"
 #include <inexum/util/Debug.h>

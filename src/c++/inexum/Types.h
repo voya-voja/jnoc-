@@ -34,6 +34,7 @@
 #ifndef inexum_Types_h
 #define inexum_Types_h
 
+#include <iostream>
 #include <string>
 #include "JLong.h"
 
@@ -41,7 +42,7 @@
 extern template class DeclarationSpecifier std::basic_string<char>;
 
 // A string output stream operator
-DeclarationSpecifier ostream& operator<<(ostream& out, const std::string& s);
+DeclarationSpecifier std::ostream& operator<<(std::ostream& out, const std::string& s);
 
 /// Java 'byte' type corresponds to C++'s 'unsigned char'
 typedef unsigned char	byte;

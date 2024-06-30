@@ -36,7 +36,7 @@
 #ifndef inexum_OSP_JavaObjectParser_h
 #define inexum_OSP_JavaObjectParser_h
 
-#include <iostream.h>
+#include <iostream>
 #include <vector>
 #include <stack>
 #include <memory>
@@ -108,7 +108,7 @@ namespace inexum
 			  *
 			  * @param input - the input object stream
 			  */
-			JavaObjectParser(istream& input);
+			JavaObjectParser(std::istream& input);
 
 			/// Destructor
 			~JavaObjectParser();
@@ -150,7 +150,7 @@ namespace inexum
 			  *
 			  * @return the input stream
 			  */
-			istream& getStream() { return(m_input); }
+			std::istream& getStream() { return(m_input); }
 
 			/** The parser state getter
 			  *
@@ -437,7 +437,7 @@ namespace inexum
 			void resetParserVariables();
 
 			/// The input stream
-			istream&		m_input;
+			std::istream&		m_input;
 
 			/// The pointer to the object sent through the stream.
 			Object*		m_pFirstObject;

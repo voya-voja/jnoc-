@@ -38,7 +38,7 @@
 
 #include "JavaObjectParser.h"
 #include <stdlib.h>
-#include <iostream.h>
+#include <iostream>
 #include <map>
 #include <inexum/Types.h>
 #include <inexum/definitions.h>
@@ -46,7 +46,7 @@
 // Map of member names to the class member symbols
 typedef std::map<std::string, unsigned>	HandleMap;
 
-#ifdef WIN32
+#ifdef __TO_BE_FEXED__ //_WINDOWS
 	ExternTemplate template class DeclarationSpecifier std::_Tree<HandleMap::key_type, 
 																HandleMap::value_type, 
 																HandleMap::_Kfn, 
@@ -86,7 +86,7 @@ namespace inexum
 			  *
 			  * @param output - the output object stream
 			  */
-			JavaObjectSerializer(ostream& output);
+			JavaObjectSerializer(std::ostream& output);
 
 			/// Destructor
 			~JavaObjectSerializer();
@@ -278,7 +278,7 @@ namespace inexum
 			  *
 			  * @return output stream object
 			  */
-			ostream&	output(){ return(m_output); };
+			std::ostream&	output(){ return(m_output); };
 
 			/** Override to specify the state of serializer's buffer.
 			  *
@@ -300,7 +300,7 @@ namespace inexum
 			unsigned	m_NextHandle;
 
 			/// the reference to an output object stream
-			ostream&	m_output;
+			std::ostream&	m_output;
 
 			JavaObjectSerializer*	m_pBuiltinSerializer;
 		};

@@ -73,8 +73,8 @@ namespace inexum
 			/// MapPtr destructor removes all its elements
 			~MapPtr()
 			{
-				iterator theEnd = end();
-				for( iterator at = begin(); at != theEnd; at++ )
+				const_iterator theEnd = this->cend();
+				for( iterator at = this->begin(); at != theEnd; at++ )
 				{
 					delete (*at).second;
 				}

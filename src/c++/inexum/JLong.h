@@ -35,7 +35,7 @@
 #define iNexum_JLong_h
 
 #include <inexum/definitions.h>
-#include <iostream.h>
+#include <iostream>
 
 /** iNexum classes.
   *
@@ -52,7 +52,7 @@ namespace inexum
 	  * @author		iNexum System Inc.
 	  *	@version	1.0.0
 	  */
-	#ifdef WIN32
+	#ifdef _WINDOWS
 		typedef __int64                 JLong;
 	#else
 		typedef long long               JLong;
@@ -65,7 +65,7 @@ namespace inexum
 	  * @author		iNexum System Inc.
 	  *	@version	1.0.0
 	  */
-	#ifdef WIN32
+	#ifdef _WINDOWS
 		typedef unsigned __int64        UnsignedJLong;
 	#else
 		typedef unsigned long long      UnsignedJLong;
@@ -82,8 +82,8 @@ namespace inexum
 	  * @author		iNexum System Inc.
 	  *	@version	1.0.0
 	  */
-	#ifdef WIN32
-		DeclarationSpecifier ostream& operator<<( ostream& out, const JLong& value );
+	#ifdef _WINDOWS
+		DeclarationSpecifier std::ostream& operator<<(std::ostream& out, const JLong& value );
 	#endif
 	/** Out stream operator for UnsignedJLong.
 	  *
@@ -96,8 +96,8 @@ namespace inexum
 	  * @author		iNexum System Inc.
 	  *	@version	1.0.0
 	  */
-	#ifdef WIN32
-		DeclarationSpecifier ostream& operator<<( ostream& out, const UnsignedJLong& value );
+	#ifdef _WINDOWS
+		DeclarationSpecifier std::ostream& operator<<(std::ostream& out, const UnsignedJLong& value );
 	#endif
 }	// namespace inexum
 

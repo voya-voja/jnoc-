@@ -36,7 +36,7 @@
 #include "JavaObjectSerializer.h"
 #include <inexum/stl/StringLableCreator.h>
 #include <inexum/util/Debug.h>
-#include <iostream.h>
+#include <iostream>
 
 using namespace inexum;
 using namespace inexum::OSP;

@@ -46,7 +46,7 @@
 namespace inexum
 {
 	/// iNexum's C++ implementation of Throwable class
-	class Throwable : public exception
+	class Throwable : public std::exception
 	{
 	};
 }	// namespace inexum

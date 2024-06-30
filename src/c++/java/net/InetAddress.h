@@ -34,7 +34,7 @@
 #ifndef java_net_InetAddress_h
 #define java_net_InetAddress_h
 
-#ifdef WIN32
+#ifdef _WINDOWS
         #include <winsock2.h>
 #else
         #include <sys/socket.h>

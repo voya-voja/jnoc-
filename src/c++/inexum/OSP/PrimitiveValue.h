@@ -61,7 +61,7 @@ namespace inexum
 			/// Value desturctor
 			virtual ~Value() {}
 
-			virtual void print(ostream& out) const = 0;
+			virtual void print(std::ostream& out) const = 0;
 
 		protected:
 		private:
@@ -93,7 +93,7 @@ namespace inexum
 			  */
 			const TYPE& get() const { return(m_value); };
 
-			void print(ostream& out) const { out << m_value; };
+			void print(std::ostream& out) const { /* out. << m_value; */ };
 
 		protected:
 		private:

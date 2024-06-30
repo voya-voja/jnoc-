@@ -111,15 +111,16 @@ namespace inexum
 					try
 					{
 						array.push_back((TYPE)0);
-						(*at)->initialize((void*)&array[ array.size() - 1 ]);
+						auto objectLast = array[array.size() - 1];
+						(*at)->initialize((void*)&objectLast);
 					}
 					catch(...)
 					{
 						debug_line(DebugLine(Debug::c_serialize, 
 							"error S0005: Element '%s' is not serializable!", 
 																	aClass.name().data()));
-						cerr << "error S0005: Element '" << aClass.name().data() << "." 
-												<< name.data() << "' is not serializable!" <<endl;
+						std::cerr << "error S0005: Element '" << aClass.name().data() << "."
+												<< name.data() << "' is not serializable!" << std::endl;
 					}
 				}
 			}
@@ -159,21 +160,22 @@ namespace inexum
 				if(size > 0)
 				{
 					unsigned count = 0;
-					std::vector<TYPE>::const_iterator end = array.end();
+					auto end = array.cend();
 					Serializable* pObj = SerializableFactory::Instance().create(m_elementType);
-					for(std::vector<TYPE>::iterator at = array.begin(); at != end; at++)
+					for(auto at = array.begin(); at != end; at++)
 					{
 						try
 						{
-							pObj->serialize((const void*)&(*at), serializer);
+							auto objectAt = *at;
+							pObj->serialize((const void*)&objectAt, serializer);
 						}
 						catch(...)
 						{
 							debug_line(DebugLine(Debug::c_serialize, 
 								"error S0010: Element[%d] of type '%s' cannot be serialized!", 
 															count, m_elementType.data()));
-							cerr << "error S0010: Element[" << count << "] of type '"
-									<< m_elementType.data() << "' cannot be serialized!" <<endl;
+							std::cerr << "error S0010: Element[" << count << "] of type '"
+									<< m_elementType.data() << "' cannot be serialized!" << std::endl;
 						}
 						count++;
 					}

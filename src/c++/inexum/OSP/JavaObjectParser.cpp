@@ -30,6 +30,8 @@
  * ------ ---- --- -----------------------------------------------------------*
  					020615	nmv			create
  *----------------------------------------------------------------------------*/
+
+#include "inexum/definitions.h"
 #include "JavaObjectParser.h"
 
 #include "javaObjParser.h"
@@ -47,6 +49,8 @@
 #include "BlockData.h"
 #include <inexum/stl/Factory.h>
 
+#include <string.h>
+
 using namespace inexum;
 using namespace inexum::OSP;
 using namespace inexum::util;
@@ -60,7 +64,7 @@ const int JavaObjectParser::g_insertNoToken = -1;
 	namespace inexum { namespace OSP { extern int yydebug; } }
 #endif
 
-JavaObjectParser::JavaObjectParser(istream& input)
+JavaObjectParser::JavaObjectParser(std::istream& input)
 :m_input(input), 
 	m_pFirstObject(NULL),
 	m_tokenCount(0),
@@ -73,7 +77,7 @@ JavaObjectParser::JavaObjectParser(istream& input)
 	m_handle(c_baseWireHandle) 
 {
 	debug_method(DebugMethod(Debug::c_serialize, "JavaObjectParser", "JavaObjectParser", 
-				"istream& input"));
+				"std::istream& input"));
 #ifdef YYiNexumDebug
 	yydebug = 1;
 #endif
@@ -431,7 +435,7 @@ Class* JavaObjectParser::classDescReference(int handle)
 	Class* pClass = NULL;
 	debug_method(DebugMethod(Debug::c_serialize, "JavaObjectParser", "classDescReference", 
 						"%D handle : %d", &DebugClass<Class>(*pClass), ref));
-	int size = m_referencedEntities.size();
+	size_t size = m_referencedEntities.size();
 	pClass = dynamic_cast<Class*>(m_referencedEntities[ ref ]);
 	setInsertToken(pClass->classDescriptionFlag2Token());
 	return(pClass);

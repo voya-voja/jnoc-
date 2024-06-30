@@ -30,26 +30,42 @@
  * ------ ---- --- -----------------------------------------------------------*
  					021003	nmv			create
  *----------------------------------------------------------------------------*/
-#ifdef WIN32
+#ifdef _WINDOWS
 	 /* libjnocpp.dll or debug version libjnocpp.dll are available for development
 	  * of Win32 applications. The Win32 application must be compiled with /MD or
 	  * debug version /MDd compiler switch and 'iNexumDll' must be defined.
 	  */
 
-	// disable warning on 255 char debug symbols
-	#pragma warning (disable : 4786)
-
-	// disable warning on extern before template instantiation
-	#pragma warning (disable : 4231)
-
-	// disable warning template class specialization is already instantiated
-	#pragma warning (disable : 4660)
+	// disable warning 'extern ' : ignored on left of '...'
+	#pragma warning (disable : 4091)
 
 	// disable warning '<letter>' : unrecognized character escape sequence
 	#pragma warning (disable : 4129)
 
-	// disable warning 'extern ' : ignored on left of '...'
-	#pragma warning (disable : 4091)
+	// disable warning on extern before template instantiation
+	#pragma warning (disable : 4231)
+
+	// disable warning '... ' needs to have dll-interface to be used by clients of '...'
+	#pragma warning (disable : 4251)
+
+	// disable warning 'initializing': conversion from 'size_t' to 'byte', possible loss of data
+	#pragma warning (disable : 4267)
+
+	// disable warning 'type cast': truncation from 'const void *' to 'unsigned int'
+	#pragma warning (disable : 4302)
+
+	// disable warning 'type cast': pointer truncation from 'const void *' to 'unsigned int'
+	#pragma warning (disable : 4311)
+
+	// disable warning template class specialization is already instantiated
+	#pragma warning (disable : 4660)
+
+	// disable warning on 255 char debug symbols
+	#pragma warning (disable : 4786)
+
+	// disable warning '...': '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation
+	#pragma warning (disable : 4910)
+
 
 	#ifdef iNexumDll
 		#define DeclarationSpecifier	__declspec(dllexport)
@@ -59,7 +75,7 @@
 		#define ExternTemplate
 	#else
 		#if defined( _USRDLL )
-			#error Win32 dll has to be compiled with 'iNexumDll' defined.
+			#error WINDOWS dll has to be compiled with 'iNexumDll' defined.
 		#endif
 		#define DeclarationSpecifier	__declspec(dllimport)
 		#define ExternTemplate			extern		
@@ -67,4 +83,4 @@
 #else
     #define DeclarationSpecifier
     #define ExternTemplate
-#endif // WIN32
+#endif // _WINDOWS

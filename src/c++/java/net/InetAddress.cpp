@@ -31,8 +31,11 @@
  					030715	nmv			create
  *----------------------------------------------------------------------------*/
 
+ // disable warning C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+#pragma warning (disable : 4290)
+
 #include "InetAddress.h"
-#ifndef WIN32
+#ifndef _WINDOWS
 	#include <arpa/inet.h>
 #endif
 

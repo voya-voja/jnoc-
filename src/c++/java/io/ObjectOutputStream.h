@@ -35,9 +35,9 @@
 #ifndef java_io_ObjectOutputStream_h
 #define java_io_ObjectOutputStream_h
 
-#include <iostream.h>
+#include <iostream>
 #include <inexum/Types.h>
-#include <typeinfo.h>
+#include <typeinfo>
 #include <string>
 #include <inexum/OSP/Serializable.h>
 
@@ -66,14 +66,14 @@ namespace java
 		  * @author		iNexum Systems Inc.
 		  * @version	1.0.0
 		  */
-		class DeclarationSpecifier ObjectOutputStream : public ostream
+		class DeclarationSpecifier ObjectOutputStream : public std::ostream
 		{
 		public:
 			/** Overloaded constructor:
 			  *
 			  * @param input - the object output stream
 			  */
-			ObjectOutputStream(ostream& Output);
+			ObjectOutputStream(std::ostream& Output);
 
 			/// Destructor
 			~ObjectOutputStream();

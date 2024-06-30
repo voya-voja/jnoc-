@@ -31,6 +31,7 @@
  					020615	nmv			create
  *----------------------------------------------------------------------------*/
 
+#include "inexum/definitions.h"
 #include "BuiltinObject.h"
 #include <inexum/stl/Creator.h>
 #include "StringObject.h"

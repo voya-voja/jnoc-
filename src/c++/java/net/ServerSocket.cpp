@@ -31,11 +31,15 @@
  							020515	nmv			create
  *----------------------------------------------------------------------------*/
 
+#include "inexum/definitions.h"
+ // disable warning C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+#pragma warning (disable : 4290)
+
 #include "ServerSocket.h"
 #include "Socket.h"
 #include <inexum/util/Debug.h>
 
-#ifdef WIN32
+#ifdef _WINDOWS
     typedef int socklen_t;
 #else
     #define closesocket(s) shutdown(s, SHUT_RDWR)

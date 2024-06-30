@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\inexum">
+      <UniqueIdentifier>{fad76990-2b9a-41bb-b675-93612d296afd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\inexum\util">
+      <UniqueIdentifier>{052ebe12-75a7-4006-b318-0db97402b9f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\inexum\stl">
+      <UniqueIdentifier>{79ce9086-6bbb-47e5-ab6d-899110d3b4c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\inexum\OSP">
+      <UniqueIdentifier>{0d26666a-3733-455d-b0ef-19fefeff3137}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\java">
+      <UniqueIdentifier>{1dd789b5-0207-40e3-ab35-650e837f6001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\java\net">
+      <UniqueIdentifier>{d93872c1-5d03-44d4-94f6-5224fa1c8ec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\java\lang">
+      <UniqueIdentifier>{d01379bd-2f1a-4e4e-b4ed-85571f3c45fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\java\io">
+      <UniqueIdentifier>{670a2e9c-59dc-4da7-bace-74d58eb0a49b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\inexum">
+      <UniqueIdentifier>{4818a88c-0851-4f37-8877-fce0cb9a674c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\inexum\util">
+      <UniqueIdentifier>{f9d99aae-99f8-402d-b85b-b0187d2522ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\inexum\OSP">
+      <UniqueIdentifier>{3187e24c-0a19-4db1-bdae-80a1046e73e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\inexum\stl">
+      <UniqueIdentifier>{1dc52411-3296-4ed3-b744-f088e366b967}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\java">
+      <UniqueIdentifier>{8c48ded1-4b99-46c6-b3be-3316b65ddb3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\java\io">
+      <UniqueIdentifier>{dfaafe9e-83cb-4e42-9a61-5fd9ba0abe51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\java\lang">
+      <UniqueIdentifier>{9602f893-f20f-476b-aaef-300c7bbd9217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\java\net">
+      <UniqueIdentifier>{ddcc40a4-62d8-450d-90eb-be4e9bfaf056}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\definitions.h">
+      <Filter>Header Files\inexum</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\java_serializable.h">
+      <Filter>Header Files\inexum</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\JLong.h">
+      <Filter>Header Files\inexum</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\Throwable.h">
+      <Filter>Header Files\inexum</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\Types.h">
+      <Filter>Header Files\inexum</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\util\Debug.h">
+      <Filter>Header Files\inexum\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\Array.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\ArrayObject.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\BlockData.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\BuiltinObject.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\Class.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\ClassObject.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\Entity.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\ExceptionObject.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\JavaObjectParser.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\JavaObjectSerializer.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\javaObjParse.hpp">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\javaObjParser.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\Member.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\Object.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\PrimitiveValue.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\Serializable.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializableArray.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializableCreator.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializablePointerArray.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializableTypePointerArray.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializableVoidPointerArray.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\Serialize.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializeBuiltinType.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializeString.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\OSP\StringObject.h">
+      <Filter>Header Files\inexum\OSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\stl\AutoPtr.h">
+      <Filter>Header Files\inexum\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\stl\Creator.h">
+      <Filter>Header Files\inexum\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\stl\Factory.h">
+      <Filter>Header Files\inexum\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\stl\Map.h">
+      <Filter>Header Files\inexum\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\stl\Singleton.h">
+      <Filter>Header Files\inexum\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\stl\SingletonVictim.h">
+      <Filter>Header Files\inexum\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\stl\Stack.h">
+      <Filter>Header Files\inexum\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\stl\StringLableCreator.h">
+      <Filter>Header Files\inexum\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\inexum\stl\Vector.h">
+      <Filter>Header Files\inexum\stl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\java\io\IOException.h">
+      <Filter>Header Files\java\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\java\io\ObjectInputStream.h">
+      <Filter>Header Files\java\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\java\io\ObjectOutputStream.h">
+      <Filter>Header Files\java\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\java\lang\Exception.h">
+      <Filter>Header Files\java\lang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\java\lang\java_lang.h">
+      <Filter>Header Files\java\lang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\java\net\InetAddress.h">
+      <Filter>Header Files\java\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\java\net\ServerSocket.h">
+      <Filter>Header Files\java\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\java\net\Socket.h">
+      <Filter>Header Files\java\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\java\net\SocketAddress.h">
+      <Filter>Header Files\java\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\java\net\socketbuf.h">
+      <Filter>Header Files\java\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\c++\java\net\SocketException.h">
+      <Filter>Header Files\java\net</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\os\libjnocpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\Types.cpp">
+      <Filter>Source Files\inexum</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\util\Debug.cpp">
+      <Filter>Source Files\inexum\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\stl\SingletonVictim.cpp">
+      <Filter>Source Files\inexum\stl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\Array.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\BlockData.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\BuiltinObject.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\Class.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\ClassObject.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\JavaObjectParser.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\JavaObjectSerializer.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\javaObjLexer.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\javaObjParse.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\Member.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\Serializable.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\SerializableCreator.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\SerializableVoidPointerArray.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\SerializeBuiltinType.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\inexum\OSP\SerializeString.cpp">
+      <Filter>Source Files\inexum\OSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\java\net\InetAddress.cpp">
+      <Filter>Source Files\java\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\java\net\ServerSocket.cpp">
+      <Filter>Source Files\java\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\java\net\Socket.cpp">
+      <Filter>Source Files\java\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\java\net\socketbuf.cpp">
+      <Filter>Source Files\java\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\java\lang\java_lang.cpp">
+      <Filter>Source Files\java\lang</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\java\io\ObjectInputStream.cpp">
+      <Filter>Source Files\java\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\c++\java\io\ObjectOutputStream.cpp">
+      <Filter>Source Files\java\io</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\c++\inexum\OSP\javaObjParse.y">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

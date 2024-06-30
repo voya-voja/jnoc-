@@ -34,9 +34,9 @@
 #ifndef java_net_socketbuf_h
 #define java_net_socketbuf_h
 
-#include <iostream.h>
+#include <iostream>
 #include <string>
-#ifdef WIN32
+#ifdef _WINDOWS
     #include <winsock2.h>
 #else
     #include <sys/socket.h>
@@ -69,7 +69,7 @@ namespace java
 		  * @author		iNexum Systems Inc.
 		  * @version	1.0.0
 		  */
-		class DeclarationSpecifier socketbuf : public streambuf
+		class DeclarationSpecifier socketbuf : public std::streambuf
 		{
 		public:
 			/// default constructor
@@ -112,7 +112,7 @@ namespace java
 			  */
 			int sync();
 
-			//#ifndef WIN32
+			//#ifndef _WINDOWS
 				/** Tries to set up a Reserve Area.  If one already exists, or if
 				  * unbuffered, just returns 0.
 				  *
@@ -125,7 +125,7 @@ namespace java
 				  * @return allocated size
 				  */
 				int doallocate();
-			//#endif	// WIN32
+			//#endif	// _WINDOWS
 		private:
 			/** Test does socket contains data sent from the other side.
 			  *

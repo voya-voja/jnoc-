@@ -32,11 +32,13 @@
  *----------------------------------------------------------------------------*/
 #pragma warning(disable:4786)
 
+#include "inexum/definitions.h"
 #include "javaObjParser.h"
 #include "JavaObjectParser.h"
 
 #include <inexum/util/Debug.h>
 
+using namespace std;
 using namespace inexum::util;
 
 namespace inexum
@@ -45,7 +47,7 @@ namespace inexum
 	{
 		static int g_tokenCount = 0;
 
-		inline UnsignedJLong get(istream& input, int charCount)
+		inline UnsignedJLong get(std::istream& input, int charCount)
 		{
 			UnsignedJLong aULong = 0;
 			while(charCount > 0)
@@ -57,7 +59,7 @@ namespace inexum
 			return(aULong);
 		}
 
-		inline float getFloat(istream& input)
+		inline float getFloat(std::istream& input)
 		{
 			int charCount = 4;
 			float aNumber = 0;
@@ -71,7 +73,7 @@ namespace inexum
 			return(aNumber);
 		}
 
-		inline double getDouble(istream& input)
+		inline double getDouble(std::istream& input)
 		{
 			int charCount = 8;
 			double aNumber = 0;
@@ -110,7 +112,7 @@ namespace inexum
 
 			parser.incrementTokenCount();
 
-			istream& input = parser.getStream();
+			std::istream& input = parser.getStream();
 
 			g_tokenCount = parser.tokenCount();
 

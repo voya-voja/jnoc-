@@ -97,9 +97,9 @@ namespace inexum
 		protected:
 			// Visual C++ 5.0 do not initialize a static instance when parameterized class
 			// is instantiated. Therefore, instantiated class should initialize it again.
-		#if !defined(WIN32)
+		#if !defined(_WINDOWS)
 		private:
-		#endif	// WIN32
+		#endif	// _WINDOWS
 			/// Creator copy constructor
 			Creator( const 
 					Creator<LABEL_TYPE, LABEL, BASE_PRODUCT, 
@@ -122,7 +122,7 @@ namespace inexum
 									BASE_PRODUCT, PRODUCT>	g_Creator;
 		};
 
-		// NOTE:	It would not work for WIN32. Initialize it again.
+		// NOTE:	It would not work for _WINDOWS. Initialize it again.
 		template< class LABEL_TYPE, LABEL_TYPE LABEL, class BASE_PRODUCT, 
 					class PRODUCT >
 		Creator<LABEL_TYPE, LABEL, BASE_PRODUCT, PRODUCT>

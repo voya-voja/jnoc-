@@ -31,10 +31,12 @@
  					020615	nmv			create
  *----------------------------------------------------------------------------*/
 
+#include "inexum/definitions.h"
 #include <inexum/stl/Factory.h>
 #include "Object.h"
 #include "Serializable.h"
 #include <vector>
+#include <cstdio>
 
 #include "Array.h"
 #include <inexum/util/Debug.h>
@@ -86,7 +88,7 @@ void Array::addElements(int count)
 		//create an element and add it to the list of members
 		Object* pObject = ObjectFactory::Instance().create(m_elementType);
 		char number[5];
-		sprintf(number, "%d", index++);
+		sprintf_s(number, "%d", index++);
 		pObject->setName(std::string("element[") + number + "]");
 		add(*pObject);
 	}
@@ -121,8 +123,8 @@ void* Array::instantiate() const
 	{
 		debug_line(DebugLine(Debug::c_serialize, "error S0003: Array '%s' is not serializable!", 
 															name().data()));
-		cerr << "error S0003: Array '" << name().data() << 
-								"' is not serializable!" << endl;
+		std::cerr << "error S0003: Array '" << name().data() << 
+								"' is not serializable!" << std::endl;
 	}
 	return(pObject);
 }
@@ -144,6 +146,6 @@ void Array::initialize(void* address) const
 	{
 		debug_line(DebugLine(Debug::c_serialize, "error S0007: Array '%s' is not serializable!", 
 															name().data()));
-		cerr << "error S0007: Array '" << name().data() << "' is not serializable!" << endl;
+		std::cerr << "error S0007: Array '" << name().data() << "' is not serializable!" << std::endl;
 	}
 }

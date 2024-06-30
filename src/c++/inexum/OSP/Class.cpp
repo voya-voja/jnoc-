@@ -31,9 +31,10 @@
  					020615	nmv			create
  *----------------------------------------------------------------------------*/
 
+#include "inexum/definitions.h"
 #include "Object.h"
 #include "Serializable.h"
-#include <iostream.h>
+#include <iostream>
 
 #include "Class.h"
 #include <inexum/util/Debug.h>
@@ -167,8 +168,8 @@ void* Class::instantiate() const
 	{
 		debug_line(DebugLine(Debug::c_serialize, "error S0002: Class '%s' is not serializable!", 
 															name().data()));
-		cerr << "error S0002: Class '" << name().data() << 
-								"' is not serializable!" << endl;
+		std::cerr << "error S0002: Class '" << name().data() << 
+								"' is not serializable!" << std::endl;
 	}
 	return(pObject);
 }
@@ -194,8 +195,8 @@ void Class::initialize(void* address) const
 	{
 		debug_line(DebugLine(Debug::c_serialize, "error S0008: Class '%s' is not serializable!", 
 															name().data()));
-		cerr << "error S0008: Class '" << name().data() << 
-								"' is not serializable!" << endl;
+		std::cerr << "error S0008: Class '" << name().data() <<
+								"' is not serializable!" << std::endl;
 	}
 }
 

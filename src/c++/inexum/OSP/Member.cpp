@@ -30,6 +30,9 @@
  * ------ ---- --- -----------------------------------------------------------*
  							020515	nmv			create
  *----------------------------------------------------------------------------*/
+#include "inexum/definitions.h"
+ // disable warning 'type cast': conversion from 'int' to 'void *' of greater size
+#pragma warning (disable : 4312)
 
 #include "Member.h"
 #include "Serializable.h"
@@ -37,6 +40,7 @@
 #include "Object.h"
 #include <inexum/util/Debug.h>
 
+using namespace std;
 using namespace inexum::OSP;
 using namespace inexum::util;
 
@@ -84,7 +88,7 @@ void Member::serialize(JavaObjectSerializer& serializer)
 	{
 		void* address = m_address;
 		if(isPointer())
-			address = (void*)*(int*)address;
+			address = (void*)*(size_t*)address;
 		serializer.writeMember(address, m_type);
 	}
 	catch(...)

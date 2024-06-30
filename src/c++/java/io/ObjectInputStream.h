@@ -35,13 +35,13 @@
 #ifndef java_io_ObjectInputStream_h
 #define java_io_ObjectInputStream_h
 
-#include <iostream.h>
+#include <iostream>
 #include <inexum/Types.h>
 #include <typeinfo>
 
 #include <inexum/definitions.h>
 
-class DeclarationSpecifier istream;
+//class DeclarationSpecifier std::istream;
 
 namespace inexum { namespace OSP { class JavaObjectParser; } }
 
@@ -64,14 +64,14 @@ namespace java
 		  * @author		iNexum Systems Inc.
 		  * @version	1.0.0
 		  */
-		class DeclarationSpecifier ObjectInputStream : public istream
+		class DeclarationSpecifier ObjectInputStream : public std::istream
 		{
 		public:
 			/** Overloaded constructor:
 			  *
 			  * @param input - the object input stream
 			  */
-			ObjectInputStream(istream& input);
+			ObjectInputStream(std::istream& input);
 
 			/// Destructor
 			~ObjectInputStream();

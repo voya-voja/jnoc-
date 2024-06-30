@@ -31,11 +31,12 @@
  					020615	nmv			create
  *----------------------------------------------------------------------------*/
 
+#include "inexum/definitions.h"
 #include "ClassObject.h"
 #include <inexum/stl/Creator.h>
 #include "ArrayObject.h"
 
-#include <iostream.h>
+#include <iostream>
 #include <inexum/util/Debug.h>
 
 using namespace inexum;

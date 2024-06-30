@@ -36,7 +36,7 @@
 #ifndef inexum_OSP_Entity_h
 #define inexum_OSP_Entity_h
 
-#include <iostream.h>
+#include <iostream>
 #include <inexum/Types.h>
 #include <inexum/util/Debug.h>
 

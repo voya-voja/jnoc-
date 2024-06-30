@@ -31,10 +31,12 @@
  					020515	nmv			create
  *----------------------------------------------------------------------------*/
 
+#include "inexum/definitions.h"
 #include "JavaObjectSerializer.h"
 #include "Serializable.h"
 #include <inexum/util/Debug.h>
 
+using namespace std;
 using namespace inexum;
 using namespace inexum::OSP;
 using namespace inexum::util;
@@ -76,7 +78,7 @@ namespace inexum {
 			  *
 			  * @param output - the output object stream
 			  */
-			JavaBuiltinObjectSerializer(ostream& output) : JavaObjectSerializer(output), m_DataSize(0) {};
+			JavaBuiltinObjectSerializer(std::ostream& output) : JavaObjectSerializer(output), m_DataSize(0) {};
 
 			/** Write a byte array to the buffer.
 			  * If buffer is full, flush it.
@@ -118,7 +120,7 @@ JavaObjectSerializer::~JavaObjectSerializer()
 		delete m_pBuiltinSerializer;
 }
 
-JavaObjectSerializer::JavaObjectSerializer(ostream& output) 
+JavaObjectSerializer::JavaObjectSerializer(std::ostream& output)
 : m_output(output), m_NextHandle(0), m_pBuiltinSerializer(NULL)
 {
 	debug_method(DebugMethod(Debug::c_serialize, "JavaObjectSerializer", "JavaObjectSerializer", 

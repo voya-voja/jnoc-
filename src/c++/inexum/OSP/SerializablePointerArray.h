@@ -145,8 +145,8 @@ namespace inexum
 					debug_line(util::DebugLine(util::Debug::c_serialize, 
 							"error S0006: Element '%s' is not serializable!", 
 																	aClass.name().data()));
-					cerr << "error S0006: Element '" << aClass.name().data() << "." 
-											<< name.data() << "' is not serializable!" << endl;
+					std::cerr << "error S0006: Element '" << aClass.name().data() << "."
+											<< name.data() << "' is not serializable!" << std::endl;
 				}
 			}
 		}
@@ -177,10 +177,10 @@ namespace inexum
 
 			if(size > 0)
 			{
-				stl::VectorPtr<TYPE>::const_iterator end = array.end();
+				auto end = array.cend();
 
 				unsigned count = 0;
-				for(stl::VectorPtr<TYPE>::iterator at = array.begin(); at != end; at++)
+				for(auto at = array.begin(); at != end; at++)
 				{
 					if((*at) == NULL) 
 						serializer.writeNull();
@@ -196,8 +196,8 @@ namespace inexum
 						debug_line(util::DebugLine(util::Debug::c_serialize, 
 							"error S0011: Element[%d] of type '%s' cannot be serialized!", 
 														count, m_elementType.data()));
-						cerr << "error S0011: Element[" << count << "] of type '"
-								<< m_elementType.data() << "' cannot be serialized!" <<endl;
+						std::cerr << "error S0011: Element[" << count << "] of type '"
+								<< m_elementType.data() << "' cannot be serialized!" << std::endl;
 					}
 					count++;
 				}

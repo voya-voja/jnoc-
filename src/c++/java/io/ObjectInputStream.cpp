@@ -31,6 +31,7 @@
  					021003	nmv			create
  *----------------------------------------------------------------------------*/
 
+#include "inexum/definitions.h"
 
 #include "ObjectInputStream.h"
 
@@ -44,11 +45,11 @@ using namespace inexum::OSP;
 using namespace inexum::util;
 using namespace java::io;
 
-ObjectInputStream::ObjectInputStream(istream& input) 
-	:istream(input.rdbuf()), m_pObjectParser(NULL)
+ObjectInputStream::ObjectInputStream(std::istream& input)
+	:std::istream(input.rdbuf()), m_pObjectParser(NULL)
 {
 	debug_method(DebugMethod(Debug::c_net, "ObjectInputStream", "ObjectInputStream", 
-				"istream& input"));
+				"std::istream& input"));
 	m_pObjectParser = new JavaObjectParser(input);
 	unsigned short magic = 0;
 	unsigned short version = 0;
@@ -152,7 +153,7 @@ byte* ObjectInputStream::read(size_t& size, int offset, size_t len)
 
 size_t ObjectInputStream::read(byte* buffer, size_t maxSize)
 {
-	int size = 0;
+	size_t size = 0;
 	debug_method(DebugMethod(Debug::c_net, "ObjectInputStream", "read", 
 				"%d buffer: '%d', maxSize: '%d'", 
 				&size, (void*)buffer, maxSize));

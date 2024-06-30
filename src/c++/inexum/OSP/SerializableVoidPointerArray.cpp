@@ -45,7 +45,7 @@ SerializableVoidPointerArray::SerializableVoidPointerArray( const std::string& t
 std::string SerializableVoidPointerArray::elementType( void* address ) const
 {
 	return( Serializable::CppJavaNamesRegister::javaName( 
-				(*g_ObjectTypeMap.find( (unsigned)address)).second ) );
+				(*g_ObjectTypeMap.find( (size_t)address)).second ) );
 }
 
 void SerializableVoidPointerArray::AddObjectType::insert( unsigned address, 

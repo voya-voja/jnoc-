@@ -30,11 +30,13 @@
  * ------ ---- --- -----------------------------------------------------------*
  					020615	nmv			create
  *----------------------------------------------------------------------------*/
+#include "inexum/definitions.h"
 
 #include "Types.h"
 
-#include <iostream.h>
+#include <iostream>
 
+using namespace std;
 using namespace inexum;
 
 ostream& operator<<(ostream& out, const std::string& s)
@@ -43,7 +45,7 @@ ostream& operator<<(ostream& out, const std::string& s)
 	return(out);
 }
 
-#ifdef WIN32
+#ifdef _WINDOWS
 	ostream& inexum::operator<<(ostream& out, const JLong& value)
 	{
 		if(value >= 0)
@@ -83,4 +85,4 @@ ostream& operator<<(ostream& out, const std::string& s)
 		}
 		return(out);
 	}
-#endif	// WIN32
+#endif	// _WINDOWS

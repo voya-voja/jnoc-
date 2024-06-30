@@ -30,12 +30,15 @@
  * ------ ---- --- -----------------------------------------------------------*
  					030304	nmv			create
  *----------------------------------------------------------------------------*/
+#include "inexum/definitions.h"
+ // disable warning C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+#pragma warning (disable : 4290)
 
 #include "Socket.h"
 #include "SocketException.h"
 #include <inexum/util/Debug.h>
 
-#ifndef WIN32
+#ifndef _WINDOWS
     #include <tcl.h>
 
     #define Sleep(ms)		Tcl_Sleep(ms)
@@ -184,22 +187,22 @@ const java::net::SocketChannel& java::net::Socket::getChannel() const
 	return(*(SocketChannel*)NULL);
 }
 	
-istream& java::net::Socket::getInputStream() throw( java::net::SocketException*)
+std::istream& java::net::Socket::getInputStream() throw( java::net::SocketException*)
 {
 	debug_method(DebugMethod(Debug::c_net, "Socket", "getInputStream"));
 	if(mpInput == NULL)
 	{
-		mpInput = new istream(&mSocketbuf);
+		mpInput = new std::istream(&mSocketbuf);
 	}
 	return(*mpInput);
 }
 
-ostream& java::net::Socket::getOutputStream() throw( java::net::SocketException*)
+std::ostream& java::net::Socket::getOutputStream() throw( java::net::SocketException*)
 {
 	debug_method(DebugMethod(Debug::c_net, "Socket", "getOutputStream"));
 	if(mpOutput == NULL)
 	{
-		mpOutput = new ostream(&mSocketbuf);
+		mpOutput = new std::ostream(&mSocketbuf);
 	}
 	return(*mpOutput);
 }
@@ -349,7 +352,7 @@ void java::net::Socket::setSocketImplFactory(const SocketImplFactory& fac) throw
 }
 
 int java::net::Socket::gmResult = -1;
-#ifdef WIN32
+#ifdef _WINDOWS
 	WSADATA java::net::Socket::gmWsaData;
 #endif
 
@@ -359,7 +362,7 @@ void java::net::Socket::InitializeSocket() throw(SocketException*)
     // Initialize Winsock.
 	if(gmResult == -1)
 	{
-#ifdef WIN32
+#ifdef _WINDOWS
 		gmResult = WSAStartup( MAKEWORD(2,2), &gmWsaData );
 #endif
 		if ( gmResult != NO_ERROR )

@@ -37,19 +37,20 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
-#include <fstream.h>
+#include <fstream>
 #include <string>
-#include <iostream.h>
+#include <iostream>
 #include <time.h>
+
 #include <inexum/definitions.h>
 #include <inexum/Types.h>
 
-#ifdef WIN32
+#ifdef _WINDOWS
 	#ifdef _CRTDBG_MAP_ALLOC
 		#include <crtdbg.h>
 		#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
 	#endif	// _CRTDBG_MAP_ALLOC
-#endif	// WIN32
+#endif	// _WINDOWS
 
 class DeclarationSpecifier ofstream;
 
@@ -144,7 +145,7 @@ namespace inexum
 			  *
 			  * @return debug output stream.
 			  */
-			static ostream& output() { return(g_log); }
+			static std::ostream& output() { return(g_log); }
 
 			/// Increase the indent level for all the debug statements recorded in the future.
 			static void increaseIndent() { g_indent += '\t'; }
@@ -165,9 +166,9 @@ namespace inexum
 			  * @param msg - a free format text message
 			  * @return debug output stream.
 			  */
-			ostream& output(const std::string& msg)
+			std::ostream& output(const std::string& msg)
 			{
-				output() << indent() << m_preMessage << " " << msg << " " << m_postMessage << endl;
+				output() << indent() << m_preMessage << " " << msg << " " << m_postMessage << std::endl;
 				return(output());
 			}
 
@@ -181,7 +182,7 @@ namespace inexum
 			  * @param va_list - variable argument list.
 			  * @return debug output stream.
 			  */
-			virtual ostream& output(const char* formatMsg, ...)
+			virtual std::ostream& output(const char* formatMsg, ...)
 			{
 				va_list argList;
 				va_start(argList, formatMsg);
@@ -285,7 +286,7 @@ namespace inexum
 					}
 				} while(restFormatMsg[position++] != '\0');
 				print(restFormatMsg, position, argList );
-				output() << postMessage() << endl;
+				output() << postMessage() << std::endl;
 			}
 
 			/** Current time.
@@ -376,7 +377,7 @@ namespace inexum
 
 
 			/// Debug log
-			static ofstream		g_log;
+			static std::ofstream		g_log;
 
 			/// Current debug statement indent
 			static std::string	g_indent;	

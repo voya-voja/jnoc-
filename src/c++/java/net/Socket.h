@@ -35,8 +35,8 @@
 #define java_net_Socket_h
 
 #include <string>
-#include <iostream.h>
-#ifdef WIN32
+#include <iostream>
+#ifdef _WINDOWS
     #include <winsock2.h>
 #else
     #include <sys/socket.h>
@@ -327,7 +327,7 @@ namespace java
 			  * socket is closed, the socket is not connected, or the socket input has been 
 			  * shutdown using shutdownInput()
 			  */
-			istream& getInputStream() throw(net::SocketException*);
+			std::istream& getInputStream() throw(net::SocketException*);
 
 			/** Returns an output stream for this socket. 
 			  *	If this socket has an associated channel then the resulting output 
@@ -340,7 +340,7 @@ namespace java
 			  *	@exception  IOException - if an I/O error occurs when creating the output stream or
 			  * if the socket is not connected.
 			  */
-			ostream& getOutputStream() throw(net::SocketException*);
+			std::ostream& getOutputStream() throw(net::SocketException*);
 
 			/** Enable/disable TCP_NODELAY (disable/enable Nagle's algorithm). 
 			  *	
@@ -827,15 +827,15 @@ namespace java
 			int			mState;
 
 			/// socket's input stream
-			istream*	mpInput;
+			std::istream*	mpInput;
 
 			/// socket's output stream
-			ostream*	mpOutput;
+			std::ostream*	mpOutput;
 
 			/// socket initialization result
 			static int gmResult;
 
-			#ifdef WIN32
+			#ifdef _WINDOWS
 				/// windows socket initialization data
 				static WSADATA gmWsaData;
 			#endif

@@ -201,8 +201,8 @@ namespace inexum
 						inexum::util::Debug::c_serialize, 
 						"error S0010: Member '%s' is not serializable!", 
 															aClass.name().data()));
-					cerr << "error S0001: Member '" << aClass.name().data() << "." 
-											<< name.data() << "' is not serializable!" <<endl;
+					std::cerr << "error S0001: Member '" << aClass.name().data() << "."
+											<< name.data() << "' is not serializable!" << std::endl;
 				}
 			}
 		}

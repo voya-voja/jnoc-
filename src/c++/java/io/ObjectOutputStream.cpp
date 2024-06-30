@@ -30,6 +30,7 @@
  * ------ ---- --- -----------------------------------------------------------*
  					021003	nmv			create
  *----------------------------------------------------------------------------*/
+#include "inexum/definitions.h"
 
 
 #include "ObjectOutputStream.h"
@@ -39,12 +40,13 @@
 #include <inexum/util/Debug.h>
 #include <string.h>
 
+using namespace std;
 using namespace inexum::OSP;
 using namespace inexum::util;
 using namespace java::io;
 
-ObjectOutputStream::ObjectOutputStream(ostream& output) 
-	:ostream(output.rdbuf()), m_pObjectSerializer(new JavaObjectSerializer(output))
+ObjectOutputStream::ObjectOutputStream(std::ostream& output) 
+	:std::ostream(output.rdbuf()), m_pObjectSerializer(new JavaObjectSerializer(output))
 {
 	debug_method(DebugMethod(Debug::c_net, "ObjectOutputStream", "ObjectOutputStream", 
 				"ostream& output"));

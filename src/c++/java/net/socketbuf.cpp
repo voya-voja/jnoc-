@@ -30,6 +30,7 @@
  * ------ ---- --- -----------------------------------------------------------*
  					030304	nmv			create
  *----------------------------------------------------------------------------*/
+#include "inexum/definitions.h"
 
 #include "socketbuf.h"
 #include <inexum/util/Debug.h>
@@ -155,7 +156,7 @@ bool socketbuf::sendTest() const
 	return(sCount == 1);
 }
 
-//#ifndef WIN32
+//#ifndef _WINDOWS
     int socketbuf::allocate()
     {
             if (eback() || pbase())
@@ -178,4 +179,4 @@ bool socketbuf::sendTest() const
             setg(gptr, gptr + BUFSIZ, gptr + BUFSIZ);
             return(1);
     }
-//#endif	// WIN32
+//#endif	// _WINDOWS

@@ -77,8 +77,8 @@ namespace inexum
 			/// The VectorPtr destructor removes all the elements
 			~VectorPtr()
 			{
-				const_iterator theEnd = end();
-				for( iterator at = begin(); at < theEnd; at++ )
+				const_iterator theEnd = this->cend();
+				for(iterator at = this->begin(); at < theEnd; at++ )
 				{
 					delete *at;
 				}

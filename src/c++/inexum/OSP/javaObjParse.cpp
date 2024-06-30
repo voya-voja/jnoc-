@@ -1,6 +1,11 @@
 /* A Bison parser, made from C:\Documents and Settings\nvojinov.TSE\My Documents\working\jnoc++\src\c++\inexum\OSP\javaObjParse.y
    by GNU bison 1.35.  */
 
+#include "inexum/definitions.h"
+// disable warning 'argument': conversion from 'wchar_t' to '...', possible loss of data
+#pragma warning (disable : 4244)
+
+
 #define YYBISON 1  /* Identify Bison output.  */
 
 # define	TC_NULL	257

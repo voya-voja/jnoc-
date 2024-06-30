@@ -31,6 +31,7 @@
  					020515	nmv			create
  *----------------------------------------------------------------------------*/
 
+#include "inexum/definitions.h"
 #include "BlockData.h"
 #include "inexum/util/Debug.h"
 

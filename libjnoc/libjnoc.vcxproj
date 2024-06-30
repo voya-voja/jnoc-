@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f1f3b9ce-3ab2-494c-8d2a-cbb59b078acb}</ProjectGuid>
+    <RootNamespace>libjnoc</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>libjnocpp</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;LIBJNOC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;LIBJNOC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;LIBJNOC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;iNexumDll</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\src\c++;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;LIBJNOC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\c++\inexum\definitions.h" />
+    <ClInclude Include="..\src\c++\inexum\java_serializable.h" />
+    <ClInclude Include="..\src\c++\inexum\JLong.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\Array.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\ArrayObject.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\BlockData.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\BuiltinObject.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\Class.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\ClassObject.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\Entity.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\ExceptionObject.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\JavaObjectParser.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\JavaObjectSerializer.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\javaObjParse.hpp" />
+    <ClInclude Include="..\src\c++\inexum\OSP\javaObjParser.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\Member.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\Object.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\PrimitiveValue.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\Serializable.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializableArray.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializableCreator.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializablePointerArray.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializableTypePointerArray.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializableVoidPointerArray.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\Serialize.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializeBuiltinType.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\SerializeString.h" />
+    <ClInclude Include="..\src\c++\inexum\OSP\StringObject.h" />
+    <ClInclude Include="..\src\c++\inexum\stl\AutoPtr.h" />
+    <ClInclude Include="..\src\c++\inexum\stl\Creator.h" />
+    <ClInclude Include="..\src\c++\inexum\stl\Factory.h" />
+    <ClInclude Include="..\src\c++\inexum\stl\Map.h" />
+    <ClInclude Include="..\src\c++\inexum\stl\Singleton.h" />
+    <ClInclude Include="..\src\c++\inexum\stl\SingletonVictim.h" />
+    <ClInclude Include="..\src\c++\inexum\stl\Stack.h" />
+    <ClInclude Include="..\src\c++\inexum\stl\StringLableCreator.h" />
+    <ClInclude Include="..\src\c++\inexum\stl\Vector.h" />
+    <ClInclude Include="..\src\c++\inexum\Throwable.h" />
+    <ClInclude Include="..\src\c++\inexum\Types.h" />
+    <ClInclude Include="..\src\c++\inexum\util\Debug.h" />
+    <ClInclude Include="..\src\c++\java\io\IOException.h" />
+    <ClInclude Include="..\src\c++\java\io\ObjectInputStream.h" />
+    <ClInclude Include="..\src\c++\java\io\ObjectOutputStream.h" />
+    <ClInclude Include="..\src\c++\java\lang\Exception.h" />
+    <ClInclude Include="..\src\c++\java\lang\java_lang.h" />
+    <ClInclude Include="..\src\c++\java\net\InetAddress.h" />
+    <ClInclude Include="..\src\c++\java\net\ServerSocket.h" />
+    <ClInclude Include="..\src\c++\java\net\Socket.h" />
+    <ClInclude Include="..\src\c++\java\net\SocketAddress.h" />
+    <ClInclude Include="..\src\c++\java\net\socketbuf.h" />
+    <ClInclude Include="..\src\c++\java\net\SocketException.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\c++\inexum\OSP\Array.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\BlockData.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\BuiltinObject.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\Class.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\ClassObject.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\JavaObjectParser.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\JavaObjectSerializer.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\javaObjLexer.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\javaObjParse.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\Member.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\Serializable.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\SerializableCreator.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\SerializableVoidPointerArray.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\SerializeBuiltinType.cpp" />
+    <ClCompile Include="..\src\c++\inexum\OSP\SerializeString.cpp" />
+    <ClCompile Include="..\src\c++\inexum\stl\SingletonVictim.cpp" />
+    <ClCompile Include="..\src\c++\inexum\Types.cpp" />
+    <ClCompile Include="..\src\c++\inexum\util\Debug.cpp" />
+    <ClCompile Include="..\src\c++\java\io\ObjectInputStream.cpp" />
+    <ClCompile Include="..\src\c++\java\io\ObjectOutputStream.cpp" />
+    <ClCompile Include="..\src\c++\java\lang\java_lang.cpp" />
+    <ClCompile Include="..\src\c++\java\net\InetAddress.cpp" />
+    <ClCompile Include="..\src\c++\java\net\ServerSocket.cpp" />
+    <ClCompile Include="..\src\c++\java\net\Socket.cpp" />
+    <ClCompile Include="..\src\c++\java\net\socketbuf.cpp" />
+    <ClCompile Include="..\src\c++\os\libjnocpp.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\c++\inexum\OSP\javaObjParse.y" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

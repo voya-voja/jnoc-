@@ -100,9 +100,9 @@ namespace inexum
 		protected:
 			// Visual C++ 5.0 do not initialize a static instance when parameterized class
 			// is instantiated. Therefore, instantiated class should initialize it again.
-		#if !defined(WIN32)
+		#if !defined(_WINDOWS)
 		//private:
-		#endif	// WIN32
+		#endif	// _WINDOWS
 
 			/// Copy constructor.
 			StringLableCreator(const StringLableCreator<BASE_PRODUCT, PRODUCT>& right)
@@ -122,7 +122,7 @@ namespace inexum
 			static StringLableCreator<BASE_PRODUCT, PRODUCT>	g_Creator;
 		};
 
-		// NOTE:	It would not work for WIN32. Initialize it again.
+		// NOTE:	It would not work for _WINDOWS. Initialize it again.
 		template<class BASE_PRODUCT, class PRODUCT>
 		StringLableCreator<BASE_PRODUCT, PRODUCT>
 			StringLableCreator<BASE_PRODUCT, PRODUCT>::g_Creator;
@@ -188,7 +188,7 @@ namespace inexum
 		BASE_PRODUCT* 
 		CreateWithStringLable< BASE_PRODUCT, PRODUCT>::operator()() const
 		{
-			return(new PRODUCT(label()));
+			return(new PRODUCT(this->label()));
 		}
 
 		template<class BASE_PRODUCT, class PRODUCT >
